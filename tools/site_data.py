@@ -29,7 +29,7 @@ SIZE = {
     'PysSvRTfGyU': (1800, 1012), 'S47fH1-Bk_s': (1350, 1800), 'Xr6P_KRQVFU': (1001, 1800),
     'j5TewHOqdpw': (1800, 1192), 'l_LRHud6NTA': (1800, 1201), 'ptRWMbqXNUo': (1800, 1350),
     'r6uVcUq0I8E': (1136, 1800), 'wT4w_U2424Q': (1800, 1201),
-    'Qjc6QtIEjjg': (1800, 1350), 'YHaw38vhcW0': (1800, 1192), 'DBbSEEwIFU0': (1800, 1013),
+    'Qjc6QtIEjjg': (1800, 1350), 'YHaw38vhcW0': (1800, 1192),
     'HKglFAYDMDE': (1800, 1350), 'eAXKQPELln4': (1800, 1673),
     '4IE-NmsIwsA': (1800, 853), 'jDTQTylw3Bo': (1800, 1192), 'lTVdmtPQCYU': (1800, 2700),
     'htmZWzApbJE': (1800, 1200), 'g_6zBGPST_4': (1800, 1195), '28SK0CIr2Sg': (1800, 1200),
