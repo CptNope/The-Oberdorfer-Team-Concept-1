@@ -638,3 +638,36 @@ textarea.input { min-height: 112px; resize: vertical; }
 .signin { display: grid; gap: 20px; border-top: 3px solid var(--slate); }
 .signin-head { display: grid; gap: 6px; }
 .signin-head .addr { font-size: clamp(24px, 2vw, 32px); }
+
+/* ---------- Agents ---------- */
+.agents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 48px) var(--gap); }
+.agent-card { position: relative; display: grid; gap: 14px; align-content: start; border-top: 2px solid var(--slate); padding-top: 16px; }
+.agent-card .portrait { aspect-ratio: 4 / 5; }
+.agent-body { display: grid; gap: 6px; }
+.agent-name { font-family: var(--serif); font-weight: 700; font-size: clamp(26px, 2.2vw, 36px); line-height: 1.04; margin: 0; }
+.agent-name a { text-decoration: none; }
+.agent-name a::after { content: ''; position: absolute; inset: 0; }
+.agent-card:hover .agent-name a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .14em; }
+.agent-card .role { font-family: var(--sans); font-stretch: 88%; font-size: 15px; line-height: 1.45; margin: 0; }
+.aff-line { font-family: var(--sans); font-stretch: 82%; font-size: 13px; letter-spacing: .01em; color: var(--stone); margin: 0; }
+@media (max-width: 900px) { .agents { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .agents { grid-template-columns: 1fr; } .agent-card { grid-template-columns: 120px minmax(0, 1fr); } }
+.person h3 a { text-decoration: none; }
+.person h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+.agent-opener .opener-text { grid-column: 1 / span 7; }
+.agent-opener .agent-portrait { grid-column: 9 / span 4; align-self: end; }
+.portrait--lg { aspect-ratio: 4 / 5; max-height: 72vh; background-color: #D5D3CB; }
+.agent-role { margin: 0; font-family: var(--sans); font-stretch: 92%; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.45; color: var(--plaster); }
+.agent-role .ph-text, .agent-opener .textlink .ph-text { color: var(--slate); }
+.agent-aff { margin: 0; color: var(--plaster); font-size: clamp(14px, 1.2vw, 18px); }
+.agent-aff .wm { letter-spacing: .38em; }
+.agent-aff .aff { font-size: max(12px, .6em); color: var(--lichen); }
+@media (max-width: 900px) { .agent-opener .opener-text, .agent-opener .agent-portrait { grid-column: 1 / -1; } .agent-opener .agent-portrait { max-width: 320px; } }
+.agent-line { margin: 0; font-family: var(--sans); font-stretch: 92%; font-size: 15px; line-height: 1.45; }
+
+.flow-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--slate); counter-reset: fl; }
+.flow-list li { display: grid; grid-template-columns: 2.4em minmax(0, 1fr); gap: 2px 12px; padding: 14px 0 16px; border-bottom: 1px solid var(--rule); }
+.flow-list li::before { counter-increment: fl; content: counter(fl); grid-row: span 2; font-family: var(--sans); font-size: 18px; color: var(--brick); font-variant-numeric: tabular-nums; }
+.flow-list b { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 16px; }
+.flow-list span { font-size: 17px; line-height: 1.5; }

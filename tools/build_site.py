@@ -46,9 +46,15 @@ def town_line(l):
     return l['town'] + (' · ' + l['area'] if l.get('area') else '')
 
 
+def agent_of(l):
+    return next((a for a in D.AGENTS if a['id'] == l.get('agent')), None)
+
+
 def attribution(l):
     if l['own']:
-        return 'Listed by The Oberdorfer Team at REWAP Brokerage LLC · MLS PIN # [sample]'
+        a = agent_of(l)
+        who = f"{a['name']}, " if a else ''
+        return f'Listed by {who}The Oberdorfer Team at REWAP Brokerage LLC · MLS PIN # [sample]'
     return 'Listing courtesy of [Listing Brokerage] · Data © MLS PIN, deemed reliable but not guaranteed'
 
 
@@ -164,6 +170,23 @@ class Ctx:
         return (f'<a class="marker" href="{self.href(l)}" data-marker="{l["id"]}" style="left:{x}%;top:{y}%">'
                 f'{short_money(l["price"])}<span class="sr-only">, {E(l["street"])}, {E(l["town"])}</span></a>')
 
+    def agent_card(self, a, hl='h3'):
+        lic = license_html(a)
+        n = len([l for l in D.LISTINGS if l.get('agent') == a['id']])
+        tag = '<span class="sample-tag">Template</span>' if a['sample'] else ''
+        listings = (f'{n} sample listing{"s" if n != 1 else ""}' if n else 'No listings yet')
+        name = f'<span class="ph-text">{E(a["name"])}</span>' if a['sample'] else E(a['name'])
+        return f'''<article class="agent-card">
+  <div class="portrait" aria-hidden="true">Portrait to come.</div>
+  <div class="agent-body">
+    {tag}
+    <{hl} class="agent-name"><a href="{self.root}site/agents/{a['id']}.html">{name}</a></{hl}>
+    <p class="role">{E(a['role'])} · {lic}</p>
+    <p class="aff-line">The Oberdorfer Team at REWAP Brokerage LLC</p>
+    <p class="note" style="margin:0">{listings}</p>
+  </div>
+</article>'''
+
     def open_houses(self):
         ls = [l for l in D.LISTINGS if l.get('open_house')]
         order = {'Sat': 0, 'Sun': 1}
@@ -228,7 +251,7 @@ class Ctx:
 # ---------- page chrome ----------
 NAV = [('homes', 'Homes', 'site/homes.html'), ('towns', 'Towns', 'site/shrewsbury.html'),
        ('buying', 'Buying', 'site/buying.html'), ('selling', 'Selling', 'site/selling.html'),
-       ('notes', 'Field Notes', 'site/field-notes.html'), ('team', 'Team', 'site/team.html')]
+       ('notes', 'Field Notes', 'site/field-notes.html'), ('agents', 'Agents', 'site/agents.html')]
 
 
 def head(meta, root):
@@ -258,7 +281,7 @@ def header(meta, root):
         f'<li><a href="{root}{p}"' + (' aria-current="page"' if k == cur else '') + f'>{t}</a></li>' for k, t, p in NAV)
     sheet = ''.join(
         f'<li><a href="{root}{p}"' + (' aria-current="page"' if k == cur else '') + f'>{t}<span>{d}</span></a></li>'
-        for (k, t, p), d in zip(NAV, ['Search sample homes', 'Shrewsbury', 'Six steps, in order', 'Presentation and pricing', 'Local writing', 'Brandon and Kait']))
+        for (k, t, p), d in zip(NAV, ['Search sample homes', 'Shrewsbury', 'Six steps, in order', 'Presentation and pricing', 'Local writing', 'Brandon, Kait and the team']))
     return f'''<header class="site-head">
   <div class="site-head-in wrap">
     <a class="lockup" href="{root}site/index.html"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></a>
@@ -295,7 +318,7 @@ def footer(root):
     <div class="cols">
       <div><h2>Homes and towns</h2><ul><li><a href="{root}site/homes.html">Homes for sale</a></li><li><a href="{root}site/open-houses.html">Open houses</a></li><li><a href="{root}site/saved.html">Saved homes</a></li><li><a href="{root}site/shrewsbury.html">Shrewsbury</a></li><li><a href="{root}site/homes.html?town=Holden">Holden</a></li><li><a href="{root}site/homes.html?town=Worcester">Worcester</a></li></ul></div>
       <div><h2>Guidance</h2><ul><li><a href="{root}site/buying.html">Buying, in order</a></li><li><a href="{root}site/selling.html">Selling, with care</a></li><li><a href="{root}site/selling.html#valuation">What is my home worth?</a></li><li><a href="{root}site/field-notes.html">Field Notes</a></li></ul></div>
-      <div><h2>The team</h2><ul><li><a href="{root}site/team.html">Brandon and Kait</a></li><li><a href="{root}site/team.html#talk">Talk with us</a></li><li><a href="{root}site/team.html#join">Join the team</a></li></ul></div>
+      <div><h2>The team</h2><ul><li><a href="{root}site/agents.html">Agents</a></li><li><a href="{root}site/team.html">About the team</a></li><li><a href="{root}site/team.html#talk">Talk with us</a></li><li><a href="{root}site/team.html#join">Join the team</a></li></ul></div>
       <div><h2>Contact</h2><p>The Oberdorfer Team<br>at REWAP Brokerage LLC<br>[Phone] · [Email]<br>[Brokerage address], Worcester, MA</p></div>
     </div>
     <div class="legal" id="privacy">
@@ -357,6 +380,8 @@ def render(body, meta, root):
         if name == 'personfields':
             p = arg.split('|')
             return person_fields(p[0], cols=int(p[1]) if len(p) > 1 else 2)
+        if name == 'agentcards':
+            return '<div class="agents">' + ''.join(ctx.agent_card(a) for a in D.AGENTS) + '</div>'
         if name == 'openhouses':
             return ctx.open_houses()
         if name == 'savedcards':
@@ -400,8 +425,12 @@ def detail_page(l):
     others = [x for x in D.LISTINGS if x['id'] != l['id'] and (x['town'] == l['town'] or abs(x['price'] - l['price']) < 120000)][:3]
     if len(others) < 3:
         others += [x for x in D.LISTINGS if x['id'] != l['id'] and x not in others][:3 - len(others)]
+    la = agent_of(l)
     lead_attrs = (f'data-lead-form data-fub-type="Property Inquiry" data-form-name="Request a showing" '
-                  f'data-fub-property="{fub_attr(fub_property(l))}" data-tags="{E(l["town"])}"')
+                  f'data-fub-property="{fub_attr(fub_property(l))}" data-tags="{E(l["town"])}"'
+                  + (f' data-assigned-to="{E(la["name"])}"' if la else ''))
+    agent_line = (f'<p class="agent-line">Your agent for this house: <a class="textlink" href="{root}site/agents/{la["id"]}.html">{E(la["name"])}</a></p>'
+                  if la else '<p class="agent-line">Listed by another brokerage. Any of our agents can show it to you.</p>')
     meta = dict(page='S3' if l['id'] == D.FEATURED else 'S3x', nav='homes', sticky=True,
                 title=f'{l["street"]}, {l["town"]}: sample listing · The Oberdorfer Team',
                 description=f'Sample listing: {l["character"]}',
@@ -455,6 +484,7 @@ def detail_page(l):
     <aside class="detail-side" aria-label="Request a showing">
       <div class="panel panel--paper" id="showing">
         <h2 class="title" style="margin:0">Request a showing</h2>
+        {agent_line}
         <form class="form-grid" style="grid-template-columns:1fr" {lead_attrs} novalidate>
           {person_fields('sh', cols=1)}
           <div class="field"><label for="sh-when">When works</label><select class="input" id="sh-when" name="timing"><option>This weekend</option><option>A weekday evening</option>{'<option>The open house, ' + E(l['open_house']) + '</option>' if l.get('open_house') else ''}<option>Call me to arrange</option></select></div>
@@ -481,6 +511,110 @@ def detail_page(l):
     return page(meta, body, root)
 
 
+def license_html(a):
+    if a['license'].startswith('['):
+        return f'<span class="ph-text">{E(a["license"])}</span>'
+    return E(a['license']) + (f' <span class="ph-text">{E(a["license_no"])}</span>' if a['license_no'] else '')
+
+
+def agent_page(a):
+    root = '../../'
+    ctx = Ctx(root)
+    first = a['first']
+    nm = f'<span class="ph-text">{E(a["name"])}</span>' if a['sample'] else E(a['name'])
+    fst = f'<span class="ph-text">{E(first)}</span>' if a['sample'] else E(first)
+    mine = [l for l in D.LISTINGS if l.get('agent') == a['id']]
+    if mine:
+        listings = '<div class="cards">' + ''.join(ctx.card(l) for l in mine) + '</div>'
+    elif a['sample']:
+        listings = '<p class="prose" style="margin:0">Listings appear here on their own once this agent is the listing agent in MLS PIN: the IDX feed carries the agent ID, and the page lists every match.</p>'
+    else:
+        listings = f'<p class="prose" style="margin:0">{fst}\'s listings will appear here as they come on the market. Until then, <a href="{root}site/homes.html">see every home the team is showing</a>.</p>'
+    tmpl_note = ('<p class="note" style="margin:0">Template page. It shows what every agent who joins gets: the same layout, the brokerage named in the same place, and a contact form that routes to them in Follow Up Boss.</p>'
+                 if a['sample'] else '<p class="note" style="margin:0">Portrait, bio and license details are placeholders until supplied.</p>')
+    meta = dict(page=a['page'], nav='agents',
+                title=(f'{a["name"]} · Agent · The Oberdorfer Team at REWAP Brokerage LLC (concept)' if not a['sample']
+                       else 'Agent page template · The Oberdorfer Team at REWAP Brokerage LLC (concept)'),
+                description=(f'{a["name"]}, {a["role"].lower()} with The Oberdorfer Team at REWAP Brokerage LLC: how to reach them, the towns they know and their listings.'
+                             if not a['sample'] else 'The page every agent who joins The Oberdorfer Team gets, shown as a template.'),
+                folio_k='Agents ·', folio=('Agent page template' if a['sample'] else a['name']))
+    body = f'''<section class="opener stock-green agent-opener" aria-labelledby="agent-title">
+  <div class="opener-in grid wrap">
+    <div class="opener-text">
+      {'<span class="sample-tag">Template</span>' if a['sample'] else ''}
+      <h1 class="opener-title" id="agent-title">{nm}</h1>
+      <p class="agent-role">{E(a['role'])} · {license_html(a)}</p>
+      <p class="agent-aff"><span class="wm">The Oberdorfer Team</span> <span class="aff">at REWAP Brokerage LLC</span></p>
+      <div class="btn-row"><a class="btn btn--plaster" href="#talk">Talk with {fst}</a><a class="textlink" href="#talk"><span class="ph-text">[Direct phone]</span></a></div>
+    </div>
+    <div class="agent-portrait">
+      <div class="portrait portrait--lg" role="img" aria-label="Portrait placeholder for {E(a['name'])}">Portrait to come.<br>Natural light, at home or in a client's house, with permission.</div>
+    </div>
+  </div>
+</section>
+
+{folio(meta, root)}
+
+<div class="page wrap">
+  <section class="grid sub" aria-labelledby="about-title" data-folio-section="{E(a['name'])} · About">
+    <div class="sub-head"><h2 class="title" id="about-title">About {fst}</h2>{tmpl_note}</div>
+    <div class="sub-body prose">
+      <p><span class="ph-text">[Two or three sentences in {E(first)}'s own words: how they came to real estate, where they live, what they did before.]</span></p>
+      <p><span class="ph-text">[What they're known for with clients: a kind of house, a part of the county, a part of the process they're good at explaining.]</span></p>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="facts-title" data-folio-section="{E(a['name'])} · At a glance">
+    <div class="sub-head"><h2 class="title" id="facts-title">At a glance</h2></div>
+    <div class="sub-body">
+      <dl class="rows">
+        <div class="row"><dt>License</dt><dd>{license_html(a)}</dd></div>
+        <div class="row"><dt>Brokerage</dt><dd>REWAP Brokerage LLC, Worcester, Massachusetts, the brokerage of record on every transaction <span class="ph-text">[Brokerage address · License]</span></dd></div>
+        <div class="row"><dt>Team</dt><dd>The Oberdorfer Team, led by Brandon and Kait Oberdorfer</dd></div>
+        <div class="row"><dt>Towns</dt><dd><span class="ph-text">{E(a['towns'])}</span></dd></div>
+        <div class="row"><dt>Languages</dt><dd><span class="ph-text">[Languages, if more than English]</span></dd></div>
+        <div class="row"><dt>Designations</dt><dd><span class="ph-text">[Designations and training, only if held]</span></dd></div>
+        <div class="row"><dt>Reach {fst}</dt><dd><span class="ph-text">[Direct phone]</span> · <span class="ph-text">[Email]</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="listings-title" data-folio-section="{E(a['name'])} · Listings">
+    <div class="sub-head"><h2 class="title" id="listings-title">{fst}'s listings</h2><p class="note">Sample listings.</p></div>
+    <div class="sub-wide" style="margin-top:12px">{listings}</div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="work-title" data-folio-section="{E(a['name'])} · How the team works">
+    <div class="sub-head"><h2 class="title" id="work-title">How the team works</h2><p class="note">Every agent works to the same written standards. Proposed in the brand book; the team confirms each before launch.</p></div>
+    <div class="sub-body">
+      <div class="pillars">
+        <div class="pillar"><h3>Knowledge of place</h3><p>Towns, streets and houses, written down and shared across the team.</p></div>
+        <div class="pillar"><h3>Personal guidance</h3><p>Trade-offs explained plainly, and an opinion when you ask for one.</p></div>
+        <div class="pillar"><h3>Considered presentation</h3><p>Homes photographed, described and priced as if they were being published.</p></div>
+      </div>
+      <p style="margin:24px 0 0"><a class="textlink" href="{root}site/team.html">About the team</a> · <a class="textlink" href="{root}site/agents.html">All agents</a></p>
+    </div>
+  </section>
+
+  <section class="grid sub" id="talk" aria-labelledby="talk-title" data-folio-section="Talk with {E(first)}">
+    <div class="sub-head"><h2 class="title" id="talk-title">Talk with {fst}</h2><p class="note">This sample form sends nothing. On the live site it reaches {fst} directly in Follow Up Boss.</p></div>
+    <div class="sub-body">
+      <form class="form-grid" data-lead-form data-fub-type="General Inquiry" data-form-name="Talk with an agent" data-assigned-to="{E(a['name'])}" data-tags="Agent page" novalidate>
+        {person_fields('ag')}
+        <fieldset class="field full" style="border:0;padding:0;margin:0"><legend class="legend" style="margin-bottom:7px">I'm thinking about</legend>
+          <div class="choice"><label><input type="radio" name="interest" value="buying" checked><span>Buying</span></label><label><input type="radio" name="interest" value="selling"><span>Selling</span></label><label><input type="radio" name="interest" value="both"><span>Both</span></label></div>
+        </fieldset>
+        <div class="field full"><label for="ag-msg">Anything {E(first) if not a['sample'] else 'they'} should know</label><textarea class="input" id="ag-msg" name="message" placeholder="Towns, timing, the house you're in now"></textarea></div>
+        <div class="full btn-row"><button class="btn" type="submit">Send to {fst}</button></div>
+        <p class="disclose full">Your message goes to {nm}, The Oberdorfer Team at REWAP Brokerage LLC. We use it only to reply to you. <a class="textlink" href="#privacy">Privacy policy</a></p>
+        <div class="routing full" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</div>'''
+    return page(meta, body, root)
+
+
 def main():
     os.makedirs(os.path.join(OUT, 'homes'), exist_ok=True)
     os.makedirs(os.path.join(OUT, 'field-notes'), exist_ok=True)
@@ -502,6 +636,10 @@ def main():
     for l in D.LISTINGS:
         open(os.path.join(OUT, 'homes', l['id'] + '.html'), 'w', encoding='utf-8').write(detail_page(l))
         written.append('site/homes/' + l['id'] + '.html')
+    os.makedirs(os.path.join(OUT, 'agents'), exist_ok=True)
+    for a in D.AGENTS:
+        open(os.path.join(OUT, 'agents', a['id'] + '.html'), 'w', encoding='utf-8').write(agent_page(a))
+        written.append('site/agents/' + a['id'] + '.html')
     for w in written:
         print(w)
 

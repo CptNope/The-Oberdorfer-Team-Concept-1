@@ -55,6 +55,9 @@ The GitHub Pages site opens on a concept overview. Every page carries a floating
 | S9 | [Team and contact](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/team.html) | Brandon and Kait, how they work, the brokerage, the contact form |
 | S10 | [Open houses and sign-in](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/open-houses.html) | This weekend and next, and the sign-in a visitor sees at the door |
 | S11 | [Saved homes](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/saved.html) | Homes and searches saved on this device, and "Keep me posted" |
+| S12 | [Agents](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/agents.html) | The roster, and how a new agent gets a page |
+| S13 | [Agent page · Brandon Oberdorfer](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/agents/brandon-oberdorfer.html) | License and brokerage, towns, listings, a contact form that routes to him; [Kait's page](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/agents/kait-oberdorfer.html) is the same |
+| S14 | [Agent page template](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/agents/agent-template.html) | What every agent who joins gets, every field bracketed |
 | P1 | [Lead handoff to Follow Up Boss](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/follow-up-boss.html) | The event map, field map, an example request and the setup checklist |
 
 ---
@@ -473,6 +476,10 @@ The website is the Quarterly's next issue. It uses the brand book's system uncha
 | Field Notes | Band opener with a strip photograph, three open pieces led by the article, three headline-only pieces, and the four kinds of writing. |
 | Article | "What to check before you fall for an old house": a long read with a checklist table, set in the reading column with a side note. |
 | Team | Band opener, portrait placeholders and bracketed bios for Brandon and Kait, the promise, how the team works, the brokerage relationship, joining the team, and the contact form with direct contacts. |
+| Agents | A roster card per agent (portrait, name, role and license, brokerage line, listing count) linking to each agent's page, plus how a new agent's page is made. |
+| Agent page | Green opener with the name, role, license, the team-and-brokerage lockup and a portrait; about (in their words); at a glance (license, brokerage, team, towns, languages, designations, direct contact); their listings; how the team works; and a "Talk with" form that sets `person.assignedTo` so the lead reaches that agent in Follow Up Boss. |
+
+**Agents.** The roster lives in `tools/site_data.py` (`AGENTS`). Each entry generates `site/agents/<id>.html` and a card on the Agents page; the team's own sample listings name their listing agent and route showing requests to them. Adding an agent is one entry, then a rebuild. Brandon and Kait's pages keep bios, portraits, license numbers and contacts bracketed until supplied, and the template page shows a future agent's page with every field bracketed.
 
 **Sample data.** Eleven sample listings across nine towns (Auburn, Boylston, Grafton, Holden, Northborough, Princeton, Shrewsbury, Westborough, Worcester) live in `tools/site_data.py`. Eight are presented as the team's own listings and three as other brokerages' IDX listings with "Listing courtesy of [Listing Brokerage]". Addresses, prices, taxes and stories are invented for the demo and labeled "Sample" everywhere they appear.
 
@@ -492,12 +499,13 @@ The site is built to hand every lead to Follow Up Boss through its Events API. T
 | Ask what it's worth (home, selling, town pages) | Seller Inquiry | `property` parsed from the address |
 | Talk with us: selling | Seller Inquiry | message, tags |
 | Talk with us: buying, both, just reading, joining the team | General Inquiry | message, tags |
+| Talk with an agent (agent pages) | General Inquiry or Seller Inquiry | `person.assignedTo`, message |
 | Open-house sign-in | Visited Open House | `property`, agent status, "also selling" |
 | Keep me posted (saved homes) | Registration, then Saved Property per home | `property` per home |
 | Save this search | Saved Property Search | `propertySearch` |
 | Listing views and searches by a known visitor (live site) | Viewed Property, Property Search | `property`, `propertySearch` |
 
-**Fields.** `person.firstName`, `lastName`, `emails[]`, `phones[]`, `tags`, and a `customBrokerage` custom field; `property.street`, `city`, `state`, `code`, `mlsNumber`, `price`, `forRent`, `url`, `type`, `bedrooms`, `bathrooms`, `area`, `lot`; `propertySearch.city`, `state`, `type`, `maxPrice`, `minBedrooms`; `campaign.*` from UTM parameters (only when `utm_source` is present, since `campaign.source` is required); `message`, `description` (form, page, timing, agent status, and the consent line with its timestamp and exact wording), `pageUrl`, `pageTitle`, `pageReferrer`, `occurredAt`. `source` is the site's domain without "www" (to be chosen) and `system` is `OberdorferTeamSite`.
+**Fields.** `person.firstName`, `lastName`, `emails[]`, `phones[]`, `tags`, `assignedTo` (agent pages and the team's own listings), and a `customBrokerage` custom field; `property.street`, `city`, `state`, `code`, `mlsNumber`, `price`, `forRent`, `url`, `type`, `bedrooms`, `bathrooms`, `area`, `lot`; `propertySearch.city`, `state`, `type`, `maxPrice`, `minBedrooms`; `campaign.*` from UTM parameters (only when `utm_source` is present, since `campaign.source` is required); `message`, `description` (form, page, timing, agent status, and the consent line with its timestamp and exact wording), `pageUrl`, `pageTitle`, `pageReferrer`, `occurredAt`. `source` is the site's domain without "www" (to be chosen) and `system` is `OberdorferTeamSite`.
 
 **To set up in Follow Up Boss before launch:** register the site as a system, create the API key (server-side only), name the source and its lead flow, write action plans for Property Inquiry, Seller Inquiry and Visited Open House, create the Brokerage custom field, confirm the consent wording with REWAP's principal broker, finish A2P 10DLC registration before relying on texts, give any old lead sources their own names, and test end to end.
 
@@ -524,7 +532,7 @@ Sources: Follow Up Boss developer documentation, [Events POST](https://docs.foll
 | `index.html` | Concept overview, the GitHub Pages landing page (hand-written) |
 | `follow-up-boss.html` | The Follow Up Boss lead-handoff spec (hand-written) |
 | `brand-book.html` | The brand book page (generated) |
-| `site/` | The website concept (generated): `index.html`, `homes.html`, `shrewsbury.html`, `buying.html`, `selling.html`, `field-notes.html`, `team.html`, `open-houses.html`, `saved.html`, `field-notes/old-house-checklist.html`, and one page per sample listing in `homes/` |
+| `site/` | The website concept (generated): `index.html`, `homes.html`, `shrewsbury.html`, `buying.html`, `selling.html`, `field-notes.html`, `team.html`, `open-houses.html`, `saved.html`, `agents.html`, one page per agent in `agents/`, `field-notes/old-house-checklist.html`, and one page per sample listing in `homes/` |
 | `assets/css/brand-book.css`, `assets/js/brand-book.js` | Brand book CSS and JS (generated) |
 | `assets/css/site.css`, `assets/js/site.js` | Website CSS and JS (edit directly) |
 | `assets/js/demo-nav.js` | The floating "Concept pages" navigator on every page |

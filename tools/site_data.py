@@ -204,3 +204,23 @@ ARTICLES = [
          dek='What the septic inspection checks, who orders it, and what happens to a sale when a system fails.',
          photo='S47fH1-Bk_s', alt='A white six-over-six window set into barn-red clapboard above a fieldstone foundation.', pos='50% 35%'),
 ]
+
+# The team roster. Each agent gets a page at site/agents/<id>.html and a card on site/agents.html.
+# Nothing here is invented: unknown details stay bracketed until the agent supplies them.
+# `sample: True` marks the template page that shows what a future agent's page looks like.
+AGENTS = [
+    dict(id='brandon-oberdorfer', name='Brandon Oberdorfer', first='Brandon', role='Team lead',
+         license='Massachusetts real estate broker', license_no='[license #]', sample=False,
+         towns='[Towns Brandon covers most, to confirm]', page='S13'),
+    dict(id='kait-oberdorfer', name='Kait Oberdorfer', first='Kait', role='Team lead',
+         license='[Role and license details to confirm]', license_no='', sample=False,
+         towns='[Towns Kait covers most, to confirm]', page='S13x'),
+    dict(id='agent-template', name='[Agent name]', first='[First name]', role='Agent',
+         license='Massachusetts real estate salesperson', license_no='[license #]', sample=True,
+         towns='[Towns this agent covers]', page='S14'),
+]
+
+# Listing agent for the team's own sample listings (IDX listings from other brokerages have none).
+for _l in LISTINGS:
+    if _l['own']:
+        _l.setdefault('agent', 'brandon-oberdorfer')

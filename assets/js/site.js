@@ -174,6 +174,7 @@
     const tags = ['Website'].concat((form.dataset.tags || '').split(',').filter(Boolean), extraTags || []);
     if (f.consent_contact === 'yes') tags.push('Call/text consent');
     p.tags = [...new Set(tags)];
+    if (form.dataset.assignedTo) p.assignedTo = form.dataset.assignedTo;
     p.customBrokerage = 'REWAP Brokerage LLC';
     return p;
   };

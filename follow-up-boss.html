@@ -77,10 +77,11 @@
       <table class="tbl">
         <thead><tr><th scope="col">Site action</th><th scope="col">Where</th><th scope="col">Event <code>type</code></th><th scope="col">Action plan</th><th scope="col">Carries</th></tr></thead>
         <tbody>
-          <tr><td>Request a showing</td><td>Every listing</td><td>Property Inquiry</td><td class="yes">Yes</td><td><code>property</code></td></tr>
+          <tr><td>Request a showing</td><td>Every listing</td><td>Property Inquiry</td><td class="yes">Yes</td><td><code>property</code>; <code>person.assignedTo</code> on the team's own listings</td></tr>
           <tr><td>Ask what it's worth</td><td>Home, Selling, town pages</td><td>Seller Inquiry</td><td class="yes">Yes</td><td><code>property</code> from the address</td></tr>
           <tr><td>Talk with us: selling</td><td>Home, Team</td><td>Seller Inquiry</td><td class="yes">Yes</td><td>message, tags</td></tr>
           <tr><td>Talk with us: buying, both, reading, joining</td><td>Home, Team</td><td>General Inquiry</td><td class="yes">Yes</td><td>message, tags</td></tr>
+          <tr><td>Talk with an agent</td><td>Agent pages</td><td>General Inquiry or Seller Inquiry</td><td class="yes">Yes</td><td><code>person.assignedTo</code>, message</td></tr>
           <tr><td>Open-house sign-in</td><td>Open houses</td><td>Visited Open House</td><td class="yes">Yes</td><td><code>property</code>, agent status</td></tr>
           <tr><td>Keep me posted</td><td>Saved homes</td><td>Registration, then Saved Property for each home</td><td class="yes">Registration only</td><td><code>property</code> per home</td></tr>
           <tr><td>Save this search</td><td>Homes for sale</td><td>Saved Property Search</td><td class="no">No</td><td><code>propertySearch</code></td></tr>
@@ -109,6 +110,7 @@
           <tr><td>UTM parameters</td><td><code>campaign.source</code>, <code>medium</code>, <code>term</code>, <code>content</code>, <code>campaign</code>, sent only when <code>utm_source</code> is present, because Follow Up Boss requires <code>campaign.source</code> whenever <code>campaign</code> is sent</td></tr>
           <tr><td>The page</td><td><code>pageUrl</code>, <code>pageTitle</code>, <code>pageReferrer</code></td></tr>
           <tr><td>When</td><td><code>occurredAt</code>. Events more than a day old count as history and start no workflows.</td></tr>
+          <tr><td>Agent page or listing agent</td><td><code>person.assignedTo</code>: the agent's full name as it appears in Follow Up Boss, so the lead lands with them. Forms with no agent leave it out and the lead flow assigns.</td></tr>
           <tr><td>Brokerage of record</td><td><code>person.customBrokerage</code> (a custom field created in Follow Up Boss first)</td></tr>
           <tr><td>Interest and context</td><td>Tags: <code>Website</code>, <code>Buyer</code>, <code>Seller</code>, the town, <code>Open house</code>, <code>Saved search</code>, <code>Saved homes</code>, <code>Nurture</code>, <code>Agent recruit</code></td></tr>
           <tr><td>The site itself</td><td><code>source</code> = the site's domain without "www" (<code>[team website domain]</code> until it's chosen); <code>system</code> = <code>OberdorferTeamSite</code></td></tr>
@@ -151,6 +153,7 @@ Content-Type: application/json</code></pre>
       &quot;Holden&quot;,
       &quot;Call/text consent&quot;
     ],
+    <span class="k">"assignedTo"</span>: <span class="s">"Brandon Oberdorfer"</span>,
     <span class="k">"customBrokerage"</span>: <span class="s">"REWAP Brokerage LLC"</span>
   },
   <span class="k">"campaign"</span>: {
@@ -188,6 +191,7 @@ Content-Type: application/json</code></pre>
         <li><div><b>Create the API key.</b> From Admin → API in the account that should own website leads. It has that user's full privileges, so it lives only in the server's environment settings.</div></li>
         <li><div><b>Choose the source name.</b> The site's domain without "www". A lead flow rule for that source decides assignment (Brandon, Kait, or a rotation) and which action plan starts.</div></li>
         <li><div><b>Write the action plans.</b> At least one each for Property Inquiry, Seller Inquiry and Visited Open House, in the brand book's voice.</div></li>
+        <li><div><b>Add every agent as a user</b> with the same full name the website uses, so <code>person.assignedTo</code> matches. A new agent is added here when their page is added to the site.</div></li>
         <li><div><b>Create the custom field</b> "Brokerage" (<code>customBrokerage</code>), and agree the tag list above so smart lists and reports can use it.</div></li>
         <li><div><b>Confirm the consent wording</b> with REWAP's principal broker, and finish A2P 10DLC registration before relying on text follow-up; US business texting goes through it.</div></li>
         <li><div><b>Retire the old routing.</b> If the BoldTrail/kvCORE site or a lead service also sends to Follow Up Boss, give each its own source so nothing arrives twice under one name.</div></li>

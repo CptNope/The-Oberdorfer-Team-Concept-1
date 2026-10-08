@@ -31,7 +31,10 @@
       { id: 'S8', code: 'S8', title: 'Article · old-house checklist', path: 'site/field-notes/old-house-checklist.html' },
       { id: 'S9', code: 'S9', title: 'Team and contact', path: 'site/team.html' },
       { id: 'S10', code: 'S10', title: 'Open houses and sign-in', path: 'site/open-houses.html' },
-      { id: 'S11', code: 'S11', title: 'Saved homes', path: 'site/saved.html' }
+      { id: 'S11', code: 'S11', title: 'Saved homes', path: 'site/saved.html' },
+      { id: 'S12', code: 'S12', title: 'Agents', path: 'site/agents.html' },
+      { id: 'S13', code: 'S13', title: 'Agent page · Brandon Oberdorfer', path: 'site/agents/brandon-oberdorfer.html' },
+      { id: 'S14', code: 'S14', title: 'Agent page template', path: 'site/agents/agent-template.html' }
     ] },
     { name: 'Platform', items: [
       { id: 'P1', code: 'P1', title: 'Lead handoff to Follow Up Boss', path: 'follow-up-boss.html' }
@@ -42,6 +45,7 @@
 
   var current = document.documentElement.getAttribute('data-page') || '';
   if (current === 'S3x') current = 'S3';
+  if (current === 'S13x') current = 'S13';
   var idx = -1;
   FLAT.forEach(function (it, i) { if (it.id === current) idx = i; });
   var here = idx >= 0 ? FLAT[idx] : null;

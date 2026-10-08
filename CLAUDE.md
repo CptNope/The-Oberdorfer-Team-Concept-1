@@ -26,6 +26,7 @@ site/                 Website concept — generated:
   field-notes.html      editorial index             field-notes/old-house-checklist.html
   team.html             team + contact              homes/<listing-id>.html  one page per sample listing
   open-houses.html      open houses + sign-in       saved.html      saved homes + searches
+  agents.html           agent roster                agents/<agent-id>.html  one page per agent (+ agent-template)
 assets/css/site.css   Website CSS (edit directly; same tokens as DESIGN.md)
 assets/js/site.js     Website behavior: saved homes/searches, menu, folio, reveals, Follow Up Boss event builder, search, gallery
 assets/js/demo-nav.js Floating "Concept pages" navigator on every page (reviewing aid; page list lives here)
@@ -42,7 +43,7 @@ assets/img/           Unsplash sample photos + paper grain textures + favicon (p
 assets/plates/        Cover photo served to the page: WebP first, JPEG fallback
 tools/build.py        Builds the book (brand-book.html, artifact.html, assets/css + js), then runs build_site.py
 tools/build_site.py   Website templates: header, folio, footer, cards, result rows, listing detail pages
-tools/site_data.py    Sample listings, articles, photo credits/sizes, map positions (all labeled Sample)
+tools/site_data.py    Sample listings, articles, AGENTS roster, photo credits/sizes, map positions (all labeled Sample)
 tools/build.sh        Wrapper for build.py
 tools/stitch.py       Stitches chunked viewport captures into full-page review images
 tools/split_capture.py  Splits a tall PNG into parts / joins parts back (lossless)
@@ -57,7 +58,7 @@ tools/split_capture.py  Splits a tall PNG into parts / joins parts back (lossles
   surfaces/             surface briefs with direction contracts: index-html.md (brand book), site-index-html.md (website)
 ```
 
-After editing `src/`, `src/site/` or `tools/site_data.py`, run `python3 tools/build.py` (or `sh tools/build.sh`) and commit the generated files. Never edit generated files by hand. `index.html` (overview), `assets/css/site.css`, `assets/js/site.js` and `assets/js/demo-nav.js` are edited directly. When adding a page, add it to `demo-nav.js`, the overview's page list and the README's "Pages in the demo" table.
+After editing `src/`, `src/site/` or `tools/site_data.py`, run `python3 tools/build.py` (or `sh tools/build.sh`) and commit the generated files. Never edit generated files by hand. `index.html` (overview), `assets/css/site.css`, `assets/js/site.js` and `assets/js/demo-nav.js` are edited directly. To add an agent, add one entry to `AGENTS` in `tools/site_data.py` and rebuild; never invent bios or license numbers. When adding a page, add it to `demo-nav.js`, the overview's page list and the README's "Pages in the demo" table.
 
 Keep individual files small: no single file over ~10 MB. Tall review captures go through `python3 tools/split_capture.py split <png> <out_dir> <height>`; rejoin with `python3 tools/split_capture.py join <dir> <out.png>`.
 
