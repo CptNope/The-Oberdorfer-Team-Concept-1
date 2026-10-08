@@ -359,7 +359,7 @@ A palette of New England building materials, used as paper stocks and inks: thre
 ### Named Rules
 **The Stock Rule.** Color fills whole bands edge to edge. Green, oak and plaster are surfaces a region is printed on, never a rounded card floating on a page.
 
-**The Spot Ink Rule.** Brick is printed on plaster or paper only, at about 3% of a page: one brick button per view, numerals, error marks. On green, brick becomes clay. On oak, nothing is brick.
+**The Spot Ink Rule.** Brick is printed on plaster or paper only, at about 3% of a page: one brick button per view, numerals, error marks. On green, brick becomes clay. On oak, nothing is brick except the valuation panel's submit button.
 
 **The Tested Pairs Rule.** Text uses only the pairs in the table above. A pair that is not listed is not allowed, however good it looks.
 

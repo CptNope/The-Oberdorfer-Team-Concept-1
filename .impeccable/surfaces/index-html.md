@@ -1,11 +1,11 @@
 ---
 version: 1
 slug: "index-html"
-primary_target: "index.html"
+primary_target: "brand-book.html"
 related_targets: []
 ---
 
-# Surface: Brand book (index.html)
+# Surface: Brand book (brand-book.html; was index.html until the concept overview took the root)
 
 Scope: the first deliverable — a digital brand book for The Oberdorfer Team, presented to Brandon and Kait Oberdorfer at an in-person meeting. Visitor mode: Persuade (pitch-led), with full tokens and rules underneath so it also works as the build reference for the WordPress theme.
 

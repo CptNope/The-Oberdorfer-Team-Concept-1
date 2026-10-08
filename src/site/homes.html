@@ -1,0 +1,67 @@
+<!--meta {"page": "S2", "nav": "homes", "title": "Homes for sale · The Oberdorfer Team (concept, sample listings)", "description": "Search sample homes across Worcester County, with a map that trades places with the list on a phone.", "folio_k": "Homes for sale ·", "folio": "All towns"} -->
+<section class="opener opener--band stock-green" aria-labelledby="homes-title">
+  <div class="opener-in grid wrap" style="padding-block:clamp(40px,4.4vw,80px)">
+    <div class="opener-text">
+      <h1 class="opener-title" id="homes-title">Homes for sale</h1>
+      <p class="opener-deck">Houses we'd walk through with you, listed like a table of contents. Prices line up, the facts come first, and every other brokerage is credited.</p>
+    </div>
+    <p class="opener-aside cap">All {{count}} homes here are samples. On the live site this list comes from the MLS PIN feed through a vendor-neutral IDX adapter.</p>
+  </div>
+</section>
+
+<section class="wrap" aria-label="Filters" style="border-bottom:1px solid var(--rule)">
+  <form class="filters" data-filters role="search">
+    <div class="field"><label for="f-town">Town</label><select class="input" id="f-town" name="town"><option value="">All towns</option>{{townoptions}}</select></div>
+    <div class="field"><label for="f-max">Price up to</label><select class="input" id="f-max" name="max"><option value="">Any price</option><option value="500000">$500,000</option><option value="650000">$650,000</option><option value="750000">$750,000</option><option value="900000">$900,000</option></select></div>
+    <div class="field"><label for="f-beds">Bedrooms</label><select class="input" id="f-beds" name="beds"><option value="">Any</option><option value="2">2 or more</option><option value="3">3 or more</option><option value="4">4 or more</option><option value="5">5 or more</option></select></div>
+    <div class="field"><label for="f-kind">Type</label><select class="input" id="f-kind" name="kind"><option value="">Any type</option><option>Single family</option><option>Condominium</option></select></div>
+    <button class="btn btn--line reset" type="reset">Clear</button>
+  </form>
+</section>
+
+{{folio}}
+
+<div class="wrap" style="padding-block:clamp(24px,2.6vw,44px) var(--page-block)">
+  <div class="search-layout" data-view="list" data-search>
+    <div class="list-panel">
+      <div class="results-head">
+        <p class="count" style="margin:0" aria-live="polite"><b data-count>{{count}}</b> <span data-count-word>sample homes</span><span data-count-scope></span></p>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <label class="save--line save" style="cursor:pointer;position:static"><input type="checkbox" data-saved-only style="width:18px;height:18px;margin:0;accent-color:var(--brick)"> Saved only</label>
+          <div class="field"><label for="f-sort">Sort</label><select class="input" id="f-sort" data-sort><option value="price-asc">Price, low to high</option><option value="price-desc">Price, high to low</option><option value="year-asc">Oldest first</option><option value="beds-desc">Most bedrooms</option></select></div>
+          <div class="view-toggle" role="group" aria-label="View"><button type="button" aria-pressed="true" data-view-btn="list">List</button><button type="button" aria-pressed="false" data-view-btn="map">Map</button></div>
+        </div>
+      </div>
+      <h2 class="sr-only">Results</h2>
+      <ol class="results" data-results>
+{{results}}
+      </ol>
+      <div class="empty" data-empty><p>No sample homes match those filters. Widen the price, or try another town.</p><button class="btn btn--line" type="button" data-clear>Clear the filters</button></div>
+      <p class="note" style="margin-top:18px">Search results are samples. Listings from other brokerages carry "Listing courtesy of" and the MLS PIN notice, as the live IDX feed will require.</p>
+    </div>
+    <div class="map-panel">
+      <div class="map" data-map role="group" aria-label="Illustrative map of Worcester County towns with a price marker for each sample home shown in the list">
+        <svg class="base" viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="500" height="600" fill="#D9D7CF"/>
+          <path d="M0 0 H 160 C 140 60, 90 110, 40 120 L 0 130 Z" fill="#C3CCB8"/>
+          <path d="M250 70 C 300 60, 330 120, 360 160 C 330 190, 280 170, 250 140 Z" fill="#B9C6BE"/>
+          <path d="M268 220 C 276 260, 270 300, 280 340 C 284 370, 276 400, 282 430 L 270 432 C 262 400, 270 370, 264 340 C 256 300, 262 260, 256 222 Z" fill="#B9C6BE"/>
+          <path d="M60 380 C 120 360, 160 420, 210 470 C 170 520, 90 500, 40 470 Z" fill="#C3CCB8"/>
+          <path d="M360 430 C 420 420, 470 470, 500 470 L 500 600 L 340 600 C 350 540, 330 480, 360 430 Z" fill="#C3CCB8"/>
+          <g fill="none" stroke="#F2F1EE" stroke-linecap="round">
+            <path d="M-10 330 C 120 320, 200 300, 270 310 S 420 300, 510 290" stroke-width="10"/>
+            <path d="M200 -10 C 210 120, 190 230, 200 330 S 200 520, 190 610" stroke-width="8"/>
+            <path d="M60 -10 C 120 100, 160 190, 200 300" stroke-width="5"/>
+            <path d="M200 320 C 280 380, 360 410, 510 400" stroke-width="7"/>
+            <path d="M-10 520 C 100 500, 160 470, 200 420" stroke-width="5"/>
+            <path d="M300 -10 C 300 120, 310 200, 300 310" stroke-width="5"/>
+            <path d="M410 -10 C 400 120, 420 220, 400 330 S 420 480, 430 610" stroke-width="6"/>
+          </g>
+        </svg>
+        {{townlabels}}
+        {{markers}}
+      </div>
+      <p class="cap">Illustrative map, not to scale. Each marker is a sample home in the list; saved homes print in brick. On a phone, the map and list trade places with one toggle.</p>
+    </div>
+  </div>
+</div>

@@ -4,14 +4,15 @@
 
 Brand book concept for **The Oberdorfer Team**, a residential real-estate team in Worcester County operating under **REWAP Brokerage LLC**. Prepared for Brandon and Kait Oberdorfer, October 2026.
 
-**Live:** https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/
+**Live:** [Concept overview](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/) · [Brand book](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/brand-book.html) · [Website concept](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/index.html)
 
-> Every photograph is a credited Unsplash sample and every listing, price and address is illustrative. Nothing in this book is a claim about the team's sales, awards or service times; bracketed items like `[license #]` are placeholders the team and REWAP must supply.
+> Every photograph is a credited Unsplash sample and every listing, price, address and listing story is illustrative. Nothing in this book is a claim about the team's sales, awards or service times; bracketed items like `[license #]` are placeholders the team and REWAP must supply.
 
 ---
 
 ## Contents
 
+- [Pages in the demo](#pages-in-the-demo)
 - [The concept](#the-concept)
 - [01 Purpose](#01-purpose)
 - [02 Audience](#02-audience)
@@ -25,9 +26,32 @@ Brand book concept for **The Oberdorfer Team**, a residential real-estate team i
 - [10 Motion](#10-motion)
 - [11 Access](#11-access)
 - [12 Affiliation](#12-affiliation)
+- [The website concept](#the-website-concept)
 - [Open items](#open-items)
 - [Working on this repo](#working-on-this-repo)
 - [Credits](#credits)
+
+---
+
+## Pages in the demo
+
+The GitHub Pages site opens on a concept overview. Every page carries a floating **Concept pages** navigator (bottom left) that lists every page, steps to the previous and next one, and links back to this README. The navigator is a reviewing aid, not part of the design.
+
+| Code | Page | What it shows |
+|---|---|---|
+| O | [Concept overview](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/) | Title block, the chapter list, the website's page list, the shared data model and lead payload, ground rules, what to supply before launch |
+| B1 | [Brand Book No. 01](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/brand-book.html) | The full book: cover, contents spread, chapters 01–12, colophon |
+| B2 | [Interface patterns](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/brand-book.html#interface) | Chapter 09 inside the book |
+| B3 | [Affiliation and platform](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/brand-book.html#affiliation) | Chapter 12 inside the book |
+| S1 | [Home](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/index.html) | The homepage in ten movements |
+| S2 | [Homes for sale](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/homes.html) | Search results, filters, saved homes, price-marker map |
+| S3 | [Listing · 14 Orchard Lane](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/homes/holden-14-orchard-lane.html) | Property detail; ten more sample listings share the template |
+| S4 | [Town page · Shrewsbury](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/shrewsbury.html) | A town page written for people who aren't shopping yet |
+| S5 | [Buying, in order](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/buying.html) | Six steps with the Massachusetts specifics |
+| S6 | [Selling, with care](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/selling.html) | Seven commitments, what the state asks of sellers, the valuation panel |
+| S7 | [Field Notes](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/field-notes.html) | The editorial program |
+| S8 | [Article · old-house checklist](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/field-notes/old-house-checklist.html) | One full sample Field Note |
+| S9 | [Team and contact](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/team.html) | Brandon and Kait, how they work, the brokerage, the contact form |
 
 ---
 
@@ -418,10 +442,46 @@ The IDX adapter normalizes any vendor's feed into one property shape, so the fro
 
 ---
 
+## The website concept
+
+The website is the Quarterly's next issue. It uses the brand book's system unchanged (DESIGN.md): every page opens on a colored stock band with a photograph and continues on plaster reading pages, the homepage runs as the book's ten movements, and the brokerage line sits in every header, listing, form and footer. It refuses the IDX template: an aerial hero with a centered search box, a twelve-card listing grid, chat bubbles and countdown banners.
+
+**What works in the demo**
+
+- **Running folio.** A thin bar under each page's opener names where you are and updates as you scroll: the homepage movement, the town section, or the listing's address and price.
+- **Saved homes.** The bookmark toggle on any card, row or listing saves it in your browser. The header shows the count, saved homes print in brick on the search map, and "Saved only" filters the list. Nothing leaves the browser.
+- **Search.** Town, price, bedrooms and type filters, four sort orders, an empty state, and filters carried in the URL (`homes.html?town=Holden`). Hovering a result lights its map marker. On a phone the map and list trade places with one toggle.
+- **Listing gallery.** "All 6 photos" opens a full-screen gallery that slides edge to edge, with arrow keys and swipe. Interior photographs are labeled as samples that are not of the house.
+- **Forms that show their routing.** The showing request, valuation panel and contact forms validate inline, then send nothing. Instead they show the lead payload the team's CRM would receive, with the source page, property, MLS number, team, agent, brokerage, campaign and UTM fields filled in (try `?utm_source=facebook&utm_medium=paid_social&utm_campaign=fall-open-houses`).
+- **Phone patterns.** Sticky Save and Request-a-showing actions on listings, a full-width menu sheet, single-column cards and stacked forms.
+
+**The pages**
+
+| Page | Structure |
+|---|---|
+| Home | 1 Cover on green: "Home is personal.", the team and brokerage named, one October photograph. 2 Start looking: town, price, bedrooms, type. 3 Why the Oberdorfers: three commitments and the written promise. 4 Homes we're showing: one featured listing and two compact cards. 5 Towns we know: Shrewsbury, then Holden, Worcester and Grafton as filtered searches. 6 Buying, in order. 7 Selling, with care, then the valuation panel on oak. 8 Our story. 9 Field Notes. 10 Talk with us. |
+| Homes for sale | Green type band, a filter bar, results as a table of contents (thumbnail, address, town, facts, aligned price, Save), IDX attribution on other brokerages' listings, and a sticky illustrative map with price markers. |
+| Listing | Gallery first (main photograph plus two), sample tag, address, town line, price, Save, open house, the eight-cell fact table, the team-written story, an illustrative street map with a price marker, attribution, a sticky showing-request panel, and three nearby homes. |
+| Shrewsbury | Full opener (lake photograph with an oak card), the town in three paragraphs, an at-a-glance slot grid, homes here now, an architecture photo essay, a map with a list equivalent, parks and outdoors, market notes held as `[MLS PIN]` placeholders, related Field Notes, and the valuation panel. |
+| Buying | Six steps, each with what you decide and what the team does, including the Massachusetts relationship disclosure, written buyer agreements, lead paint notification, Offer to Purchase, Purchase and Sale, mortgage commitment and attorney closings; a glossary; costs to plan for. |
+| Selling | Seven commitments, walk-through to closing in six steps, what Massachusetts asks of sellers (smoke and CO certificate, Title 5, lead paint notification, the seller's attorney), how a house is presented, and the valuation panel. |
+| Field Notes | Band opener with a strip photograph, three open pieces led by the article, three headline-only pieces, and the four kinds of writing. |
+| Article | "What to check before you fall for an old house": a long read with a checklist table, set in the reading column with a side note. |
+| Team | Band opener, portrait placeholders and bracketed bios for Brandon and Kait, the promise, how the team works, the brokerage relationship, joining the team, and the contact form with direct contacts. |
+
+**Sample data.** Eleven sample listings across nine towns (Auburn, Boylston, Grafton, Holden, Northborough, Princeton, Shrewsbury, Westborough, Worcester) live in `tools/site_data.py`. Eight are presented as the team's own listings and three as other brokerages' IDX listings with "Listing courtesy of [Listing Brokerage]". Addresses, prices, taxes and stories are invented for the demo and labeled "Sample" everywhere they appear.
+
+**Kept honest.** Market figures, bios, license numbers, phone numbers, the brokerage address and reply times stay bracketed placeholders. The service commitments in the copy (plans in writing, weekly written updates) are the brand book's proposals and are marked for the team to confirm. Town facts on the Shrewsbury page are kept to stable geography (the lake, Route 9, Route 20, I-290, the commuter rail stations in Grafton and Westborough) and the page is labeled sample copy to be written and fact-checked by the team.
+
+---
+
 ## Open items
 
-- **Cover photo:** the closest stock match to the approved comp, not a match. Accept it, shoot a real Worcester County house, or use a labeled generated image.
-- **To supply:** Kait Oberdorfer's role and license, the brokerage address and license block, the IDX vendor and MLS disclaimer text, response times for forms, and real photography.
+- **Cover photo:** kept as the current stock photograph (decision, October 2026). Replace with a real Worcester County house when the shoot happens.
+- **14 Orchard Lane photo:** the flagship sample listing uses a saturated blue colonial in noon light, in both the book and the site. Keep it, or swap it for a lower-sun exterior closer to the cover's light.
+- **Service commitments:** answering their own phones, plans in writing and weekly written updates are proposals. The team confirms each, or the line comes out.
+- **To supply:** Kait Oberdorfer's role and license, the brokerage address and license block, the IDX vendor and MLS disclaimer text, response times for forms, portraits and bios, and real photography.
+- **Writing:** town pages for the launch towns beyond Shrewsbury; the first month of Field Notes.
 - **Polish:** cover headline slightly under comp scale; standfirst tracking; paper grain on green/oak was halved after the last review and not re-reviewed.
 
 ---
@@ -430,23 +490,39 @@ The IDX adapter normalizes any vendor's feed into one property shape, so the fro
 
 | Path | What it is |
 |---|---|
-| `index.html` | GitHub Pages page (generated) |
-| `assets/css/brand-book.css`, `assets/js/brand-book.js` | Page CSS and JS (generated) |
-| `artifact.html` | Single-file version for publishing as a Claude artifact (generated) |
-| `src/` | Source parts — edit these: `00-head.html` (title, fonts, tokens, cover CSS), `10-book.css`, `20-cover.html`, `30-book.html`, `40-book.js` |
+| `index.html` | Concept overview, the GitHub Pages landing page (hand-written) |
+| `brand-book.html` | The brand book page (generated) |
+| `site/` | The website concept (generated): `index.html`, `homes.html`, `shrewsbury.html`, `buying.html`, `selling.html`, `field-notes.html`, `team.html`, `field-notes/old-house-checklist.html`, and one page per sample listing in `homes/` |
+| `assets/css/brand-book.css`, `assets/js/brand-book.js` | Brand book CSS and JS (generated) |
+| `assets/css/site.css`, `assets/js/site.js` | Website CSS and JS (edit directly) |
+| `assets/js/demo-nav.js` | The floating "Concept pages" navigator on every page |
+| `artifact.html` | Single-file version of the book for publishing as a Claude artifact (generated) |
+| `src/` | Brand book source parts: `00-head.html`, `10-book.css`, `20-cover.html`, `30-book.html`, `40-book.js` |
+| `src/site/` | Website page bodies, one fragment per page, with a JSON meta line and `{{tokens}}` for shared components |
+| `tools/build.py` | Builds the book and then runs `tools/build_site.py` |
+| `tools/build_site.py`, `tools/site_data.py` | Website templates (header, folio, footer, cards, result rows, listing pages) and the sample listings and articles |
 | `assets/img/`, `assets/plates/` | Sample photos, paper grain, cover image (provenance embedded in each file) |
 | `DESIGN.md` | Design system and spec for the WordPress block theme (tokens named as `theme.json` slugs) |
 | `PRODUCT.md` | Product and brand context |
 | `CLAUDE.md` | Repo rules and layout for working with Claude |
-| `.impeccable/` | Impeccable design-workflow state: comps, measured spec, direction contract, `design.json`, review evidence |
+| `.impeccable/` | Impeccable design-workflow state: comps, measured spec, surface briefs and direction contracts, `design.json`, review evidence (`review/site/` holds the website captures) |
 
-Rebuild after editing `src/`:
+Rebuild everything after editing `src/`, `src/site/` or `tools/site_data.py`:
 
 ```sh
-sh tools/build.sh
+python3 tools/build.py
 ```
 
-Full-page review captures are stored as lossless parts in `.impeccable/review/full/`. Rejoin one with:
+Run it locally (the pages use relative paths, so any static server works):
+
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+GitHub Pages serves the `main` branch from the root; `.nojekyll` keeps the folders as they are.
+
+Full-page review captures of the book are stored as lossless parts in `.impeccable/review/full/`. Rejoin one with:
 
 ```sh
 python3 tools/split_capture.py join .impeccable/review/full/desktop desktop.png
@@ -458,6 +534,6 @@ python3 tools/split_capture.py join .impeccable/review/full/desktop desktop.png
 
 Typefaces: Inria Serif and Archivo (SIL Open Font License, via Google Fonts).
 
-Sample photographs, all from Unsplash under the Unsplash License: Jessica Langbein (cover; red colonial), Magic Fan (stair hall), I Do Nothing But Love (colonial), MV Vacation (town street), Hasnain Sikora (mailboxes, Rockport), Austin (granite and blue door), Cam Fattahi (painted mill sign), Diane Helentjaris (red clapboard), LXS Photography (gambrel house), Emi Mo (Portsmouth street), Nana Nakazwe (Worcester), Margo Evardson (renovation room), Miguel Luis (window bays), Rick Lobs (blue colonial), Brett Wharton (shingle house), Stuart Jenkins (bay window), Büsra Aksoy (interior shutter), Peyton Carroll (brick sidewalk). Paper grain derived from a photograph by Kiwihug.
+Sample photographs, all from Unsplash under the Unsplash License: Jessica Langbein (cover; red colonial), Magic Fan (stair hall), I Do Nothing But Love (colonial), MV Vacation (town street), Hasnain Sikora (mailboxes, Rockport), Austin (granite and blue door), Cam Fattahi (painted mill sign), Diane Helentjaris (red clapboard), LXS Photography (gambrel house), Emi Mo (Portsmouth street), Nana Nakazwe (Worcester), Margo Evardson (renovation room), Miguel Luis (window bays), Rick Lobs (blue colonial), Brett Wharton (shingle house), Stuart Jenkins (bay window), Büsra Aksoy (interior shutter), Peyton Carroll (brick sidewalk). Website concept, also Unsplash samples: Brett Wharton (shingled house in October), Dominik Winter (lakeside house), Clay Banks (porch, front room, kitchen), Haberdoedas (bedroom), Roger Starnes Sr (farmhouse, raised ranch, Queen Anne), Omri D. Cohen (shingled cottage, carriage house), LXS Photography (Cape), Jessica Langbein (red Federal house). Paper grain derived from a photograph by Kiwihug.
 
 Prepared by Jeremy Anderson, [jeremyanderson.tech](https://jeremyanderson.tech), for Brandon and Kait Oberdorfer.

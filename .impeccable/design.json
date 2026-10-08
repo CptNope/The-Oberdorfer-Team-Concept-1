@@ -745,7 +745,7 @@
       },
       {
         "name": "The Spot Ink Rule",
-        "body": "Brick is printed on plaster or paper only, at about 3% of a page: one brick button per view, numerals, error marks. On green, brick becomes clay. On oak, nothing is brick.",
+        "body": "Brick is printed on plaster or paper only, at about 3% of a page: one brick button per view, numerals, error marks. On green, brick becomes clay. On oak, nothing is brick except the valuation panel's submit button.",
         "section": "colors"
       },
       {
