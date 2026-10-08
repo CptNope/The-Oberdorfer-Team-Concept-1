@@ -1,0 +1,9 @@
+{
+  "prompt": "Flat front-on website design comp of a brand book's first desktop viewport laid out as an architecture magazine contents spread. Left half full-bleed interior photograph of a painted-wood staircase with oak treads beside a plaster wall, wordmark overlay THE OBERDORFER TEAM / at REWAP Brokerage LLC, caption 'Fig. 01 \u2014 Stair hall. Sample photograph.' Right half plaster ground (#E7E5DF) slate ink (#2A3136): label 'Brand Book \u00b7 No. 01', enormous serif 'Home is personal.', two-column numbered contents 01 Purpose p.04 \u2026 12 Affiliation p.60 with brick (#A3452E) numerals and hairlines; shutter-green (#23382F) block 'Central Massachusetts \u00b7 2026' bottom-right.",
+  "tool": "Higgsfield generate_image_batch",
+  "model": "nano_banana_pro (served as nano_banana_2)",
+  "aspect": "3:2",
+  "size": "2528x1696",
+  "surface": "brand book first viewport (desktop)",
+  "approval_note": "Approved as the structure of the second screen (contents spread), per user's 'Combine A + B'."
+}

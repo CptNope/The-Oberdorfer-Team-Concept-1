@@ -1,0 +1,1899 @@
+<title>The Oberdorfer Team Brand Book</title>
+<meta name="description" content="Brand book No. 01 for The Oberdorfer Team, a residential real-estate team at REWAP Brokerage LLC, Central Massachusetts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+<style>
+/* Layout: an architecture quarterly on New England stock. Cover and chapter openers are full-bleed colored stock; reading pages are plaster with a 12-column grid and a running folio. */
+:root {
+  color-scheme: light;
+  /* stocks */
+  --green: #28382D;      /* shutter green: cover + chapter openers */
+  --plaster: #E8E7E3;    /* reading pages */
+  --oak: #B98D5A;        /* second stock */
+  --brick: #9B3A29;      /* spot ink on plaster; primary action */
+  /* inks */
+  --slate: #2A3136;      /* body ink on plaster */
+  --ink-deep: #1C2124;   /* ink on oak */
+  --stone: #5E6660;      /* secondary ink on plaster */
+  --clay: #E0937A;       /* brick's tint, numerals on green */
+  --lichen: #A9B5AC;     /* secondary ink on green */
+  --rule: rgba(42, 49, 54, .22);
+  --rule-on-green: rgba(232, 231, 227, .38);
+
+  --serif: 'Inria Serif', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: 'Archivo', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+
+  /* the comp frame: 2528 x 1696 */
+  --u: calc(100vw / 2528);
+}
+html { background: var(--plaster); }
+body { margin: 0; background: var(--plaster); color: var(--slate); font-family: var(--serif); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+::selection { background: var(--brick); color: var(--plaster); }
+a { color: inherit; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--brick); outline-offset: 3px; }
+.cover :focus-visible { outline-color: var(--clay); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Cover (comp A) ---------- */
+.cover-frame { position: relative; }
+.masthead { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.wordmark { margin: 0; font-family: var(--serif); font-weight: 400; text-transform: uppercase; letter-spacing: .4464em; line-height: 1; color: var(--green); white-space: nowrap; }
+.wordmark-aff { display: block; font-family: var(--sans); font-stretch: 82%; font-weight: 400; letter-spacing: .01em; text-transform: none; color: var(--green); line-height: 1; }
+.issue-line { margin: 0; font-family: var(--sans); font-stretch: 82%; font-weight: 400; color: var(--green); line-height: 1; white-space: nowrap; }
+.cover { background: var(--green); color: var(--plaster); }
+.cover h1 { margin: 0; font-family: var(--serif); font-weight: 700; letter-spacing: -.012em; line-height: .86; color: var(--plaster); }
+.standfirst { margin: 0; font-family: var(--serif); font-weight: 400; line-height: 1.24; letter-spacing: -.006em; color: var(--plaster); }
+.open-book { display: inline-flex; align-items: center; justify-content: center; background: var(--brick); color: #F7F5F1; text-decoration: none; font-family: var(--sans); font-stretch: 88%; font-weight: 400; line-height: 1; transition: background-color .25s cubic-bezier(.2,.7,.2,1); }
+.open-book:hover { background: #87301F; }
+.cover-fig { margin: 0; }
+.cover-fig img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cover-fig figcaption, .fig-cap { font-family: var(--sans); font-stretch: 82%; font-weight: 400; line-height: 1.2; color: var(--plaster); }
+.contents-index { font-family: var(--sans); font-stretch: 82%; font-weight: 400; }
+.contents-index ol { list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; gap: 0; }
+.contents-index a { text-decoration: none; color: var(--plaster); white-space: nowrap; }
+.contents-index a:hover { text-decoration: underline; }
+.contents-index .n { color: var(--clay); font-variant-numeric: tabular-nums; margin-right: .3em; }
+.index-rule { border: 0; margin: 0; height: 1px; background: var(--rule-on-green); }
+
+/* Desktop: the cover is the measured comp frame, scaled to the viewport width. */
+@media (min-width: 1100px) {
+  .cover-frame { width: 100%; height: calc(1696 * var(--u)); overflow: hidden; }
+  .cover-frame > *, .cover > * { position: absolute; }
+  .masthead { display: contents; }
+  .wordmark, .issue-line { position: absolute; }
+  .cover-fig picture { display: block; width: 100%; height: 100%; }
+  .wordmark { left: 3.44%; top: 2.59%; font-size: calc(56 * var(--u)); letter-spacing: .38em; }
+  .wordmark-aff { position: absolute; left: 0; top: calc(64 * var(--u)); font-size: calc(35 * var(--u)); }
+  .issue-line { right: 3.25%; top: 4.13%; font-size: calc(34 * var(--u)); }
+  .cover { left: 3.56%; top: 10.73%; width: 92.88%; height: 85.67%; }
+  .cover h1 { left: calc((6.33% - 3.56%) / .9288); top: calc((28.3% - 10.73%) / .8567); font-size: calc(232 * var(--u)); }
+  .standfirst { left: calc((6.33% - 3.56%) / .9288); top: calc((58.67% - 10.73%) / .8567); width: calc(34 / 92.88 * 100%); font-size: calc(35 * var(--u)); }
+  .open-book { left: calc((6.33% - 3.56%) / .9288); top: calc((67.10% - 10.73%) / .8567); width: calc(10.76 / 92.88 * 100%); height: calc(5.31 / 85.67 * 100%); font-size: calc(30 * var(--u)); }
+  .cover-fig { left: calc((57.36% - 3.56%) / .9288); top: calc((14.21% - 10.73%) / .8567); width: calc(36.79 / 92.88 * 100%); height: calc(68.99 / 85.67 * 100%); }
+  .cover-fig figcaption { position: absolute; left: 0; top: calc(100% + 13 * var(--u)); font-size: calc(26 * var(--u)); white-space: nowrap; }
+  .index-rule { left: 0; width: 100%; top: calc((89.74% - 10.73%) / .8567 + 4 * var(--u)); height: max(1px, calc(3 * var(--u))); background: rgba(232, 231, 227, .62); }
+  .contents-index { left: calc((6.33% - 3.56%) / .9288); top: calc((91.98% - 10.73%) / .8567); width: calc(87.62 / 92.88 * 100%); font-size: calc(34 * var(--u)); }
+}
+
+/* Tablet and phone: the cover becomes a stacked issue cover. */
+@media (max-width: 1099.98px) {
+  .cover-frame { padding: 20px 16px 0; }
+  .masthead { padding-bottom: 18px; }
+  .wordmark { font-size: clamp(15px, 3.1vw, 30px); letter-spacing: .32em; }
+  .wordmark-aff { font-size: clamp(13px, 1.9vw, 17px); margin-top: .55em; }
+  .issue-line { font-size: 13px; text-align: right; white-space: normal; max-width: 15em; line-height: 1.3; }
+  .cover { display: grid; grid-template-columns: 1fr; gap: 28px; padding: 36px 24px 26px; }
+  .cover h1 { font-size: clamp(64px, 17vw, 150px); }
+  .standfirst { font-size: clamp(18px, 2.6vw, 24px); max-width: 30ch; }
+  .open-book { justify-self: start; padding: 15px 22px; font-size: 17px; min-height: 48px; box-sizing: border-box; }
+  .cover-fig { aspect-ratio: 4 / 5; max-height: 72vh; }
+  .cover-fig figcaption { margin-top: 10px; font-size: 13px; color: var(--lichen); }
+  .cover-fig { display: grid; grid-template-rows: 1fr auto; aspect-ratio: auto; }
+  .cover-fig img { aspect-ratio: 4 / 5; max-height: 72vh; }
+  .contents-index ol { flex-wrap: wrap; justify-content: flex-start; gap: 10px 18px; font-size: 15px; }
+  .contents-index a { display: inline-block; padding: 6px 0; }
+}
+@media (max-width: 560px) {
+  .masthead { flex-direction: column; gap: 10px; }
+  .issue-line { text-align: left; max-width: none; }
+  .wordmark { letter-spacing: .26em; font-size: 15px; }
+}
+
+/* ---------- Book system ---------- */
+:root {
+  --gutter: clamp(16px, 3.56vw, 90px);
+  --gap: clamp(16px, 2vw, 32px);
+  --paper: #F2F1EE;      /* input fills, inset panels on plaster */
+  --plaster-2: #DCDAD3;  /* recessed plaster */
+
+  --fs-display: clamp(46px, 6.4vw, 96px);
+  --fs-h2: clamp(32px, 3.4vw, 52px);
+  --fs-h3: clamp(23px, 1.9vw, 30px);
+  --fs-lead: clamp(20px, 1.55vw, 25px);
+  --fs-body: clamp(17px, 1.12vw, 19px);
+  --fs-small: 15px;
+  --fs-meta: 13px;
+  --fs-price: clamp(24px, 2vw, 34px);
+
+  --ease-settle: cubic-bezier(.2, .7, .2, 1);
+  --dur-quick: 160ms;
+  --dur-base: 320ms;
+  --dur-reveal: 900ms;
+}
+img { height: auto; }
+.wrap { padding-inline: var(--gutter); }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+.meta { font-family: var(--sans); font-stretch: 82%; font-size: var(--fs-meta); letter-spacing: .05em; text-transform: uppercase; line-height: 1.3; }
+.cap { font-family: var(--sans); font-stretch: 82%; font-size: 13px; line-height: 1.4; color: var(--stone); }
+.cap b { font-weight: 600; color: var(--slate); }
+.num { font-family: var(--sans); font-variant-numeric: tabular-nums; }
+.prose { font-size: var(--fs-body); line-height: 1.62; max-width: 64ch; }
+.prose p { margin: 0 0 1em; }
+.prose p:last-child { margin-bottom: 0; }
+.lead { font-size: var(--fs-lead); line-height: 1.42; max-width: 40ch; margin: 0; }
+h2, h3, h4 { text-wrap: balance; }
+.h3 { font-family: var(--serif); font-weight: 700; font-size: var(--fs-h3); line-height: 1.15; margin: 0 0 .55em; letter-spacing: -.005em; }
+.h4 { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 16px; line-height: 1.3; margin: 0 0 .5em; }
+.note { font-family: var(--sans); font-stretch: 88%; font-size: 14px; line-height: 1.5; color: var(--stone); }
+.sample-tag { display: inline-block; font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 7px 2px; border: 1px solid currentColor; line-height: 1.3; }
+code, .code { font-family: ui-monospace, 'Cascadia Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: .86em; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--plaster); }
+::-webkit-scrollbar-thumb { background: #9DA39E; border: 3px solid var(--plaster); }
+html { scrollbar-color: #9DA39E var(--plaster); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+[id] { scroll-margin-top: 56px; }
+
+/* Running folio */
+.folio { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--plaster); border-bottom: 1px solid var(--rule); }
+.folio-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; font-family: var(--sans); font-stretch: 82%; font-size: 13px; letter-spacing: .03em; color: var(--slate); }
+.folio a { text-decoration: none; }
+.folio a:hover { text-decoration: underline; }
+.folio-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.folio-title b { font-family: var(--serif); font-weight: 400; letter-spacing: .24em; text-transform: uppercase; font-size: 12px; }
+.folio-now { display: flex; align-items: baseline; gap: .5em; white-space: nowrap; }
+.folio-now .n { color: var(--brick); font-variant-numeric: tabular-nums; }
+.folio-now [data-folio-title] { display: inline-block; transition: opacity var(--dur-base) var(--ease-settle), transform var(--dur-base) var(--ease-settle); }
+.folio-now.swap [data-folio-title] { opacity: 0; transform: translateY(6px); }
+@media (max-width: 560px) { .folio-title .long { display: none; } }
+
+/* Contents spread (comp B) */
+.spread { display: grid; grid-template-columns: 1fr 1fr; min-height: min(100vh, 66.7vw); }
+.spread-photo { position: relative; margin: 0; background: var(--green); }
+.spread-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.spread-photo figcaption { position: absolute; left: var(--gutter); bottom: 20px; right: 20px; color: var(--plaster); font-family: var(--sans); font-stretch: 82%; font-size: 13px; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.spread-page { position: relative; padding: clamp(28px, 3.2vw, 60px) var(--gutter) clamp(28px, 3vw, 56px) clamp(24px, 3.2vw, 64px); display: flex; flex-direction: column; }
+.spread-page .meta { color: var(--stone); }
+.spread-page h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(48px, 6.1vw, 132px); line-height: .92; letter-spacing: -.012em; margin: clamp(28px, 3vw, 52px) 0 clamp(28px, 4vw, 72px); color: var(--slate); }
+.toc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(20px, 2.4vw, 44px); }
+.toc li { border-top: 1px solid var(--rule); }
+.toc a { display: grid; grid-template-columns: 2.4em 1fr; gap: 0 .2em; padding: 14px 0 16px; text-decoration: none; color: var(--slate); }
+.toc .n { font-family: var(--sans); font-size: clamp(18px, 1.5vw, 26px); color: var(--brick); font-variant-numeric: tabular-nums; line-height: 1.15; }
+.toc .t { font-family: var(--sans); font-stretch: 92%; font-size: clamp(18px, 1.5vw, 26px); line-height: 1.15; }
+.toc .d { grid-column: 2; font-family: var(--serif); font-size: 15px; line-height: 1.4; color: var(--stone); margin-top: 4px; }
+.toc a:hover .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.spread-stamp { margin-top: auto; align-self: flex-end; background: var(--green); color: var(--plaster); padding: clamp(18px, 2vw, 34px) clamp(20px, 2.2vw, 40px); font-family: var(--sans); font-stretch: 88%; font-size: clamp(14px, 1vw, 17px); line-height: 1.45; max-width: 23em; }
+.spread-stamp b { font-weight: 500; }
+@media (max-width: 900px) {
+  .spread { grid-template-columns: 1fr; min-height: 0; }
+  .spread-photo { aspect-ratio: 4 / 5; max-height: 80vh; }
+  .spread-page { padding: 32px var(--gutter) 40px; }
+  .spread-stamp { margin-top: 36px; align-self: stretch; max-width: none; }
+}
+@media (max-width: 560px) { .toc { grid-template-columns: 1fr; } }
+
+/* Chapter openers: colored stock */
+.opener { background: var(--green); color: var(--plaster); position: relative; overflow: hidden; }
+.opener--oak { background: var(--oak); color: var(--ink-deep); }
+.opener-in { padding-block: clamp(56px, 7vw, 132px); align-items: end; row-gap: 32px; }
+.opener-no { grid-column: 1 / span 12; font-family: var(--serif); font-weight: 300; font-size: clamp(110px, 15vw, 280px); line-height: .78; letter-spacing: -.04em; color: var(--clay); margin: 0 0 -.06em; font-variant-numeric: lining-nums; }
+.opener--oak .opener-no { color: var(--ink-deep); opacity: .9; }
+.opener-title { margin: 0; font-family: var(--serif); font-weight: 700; font-size: var(--fs-display); line-height: .94; letter-spacing: -.012em; }
+.opener-deck { margin: 0; font-size: var(--fs-lead); line-height: 1.42; max-width: 34ch; }
+.opener .cap { color: var(--lichen); }
+.opener--oak .cap { color: #3F2A16; }
+.opener-fig { margin: 0; }
+.opener-fig img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* split: text left, photo bleeding off the right edge */
+.opener--split .opener-in { grid-template-rows: auto auto 1fr; }
+.opener--split .opener-text { grid-column: 1 / span 6; display: grid; gap: 26px; align-content: end; }
+.opener--split .opener-fig { grid-column: 8 / span 5; margin-right: calc(var(--gutter) * -1); align-self: stretch; min-height: clamp(360px, 40vw, 720px); display: grid; grid-template-rows: 1fr auto; gap: 10px; }
+.opener--split .opener-fig figcaption { padding-right: var(--gutter); }
+/* band: type only */
+.opener--band .opener-in { align-items: end; }
+.opener--band .opener-no { grid-column: 1 / span 5; margin: 0; }
+.opener--band .opener-text { grid-column: 6 / span 7; display: grid; gap: 22px; }
+/* full: photograph with a pasted stock card */
+.opener--full { background: var(--oak); }
+.opener--full .opener-fig { position: relative; height: clamp(420px, 56vw, 980px); }
+.opener--full .opener-card { position: relative; z-index: 1; margin: calc(clamp(120px, 14vw, 260px) * -1) 0 0 var(--gutter); width: min(720px, 62vw); background: var(--oak); color: var(--ink-deep); padding: clamp(28px, 3vw, 56px); display: grid; gap: 20px; }
+.opener--full .opener-card .opener-no { font-size: clamp(90px, 9vw, 170px); }
+.opener--full .opener-after { padding: 18px var(--gutter) clamp(40px, 4vw, 72px); }
+@media (max-width: 900px) {
+  .opener--split .opener-text, .opener--split .opener-fig, .opener--band .opener-no, .opener--band .opener-text { grid-column: 1 / -1; }
+  .opener--split .opener-fig { margin-right: calc(var(--gutter) * -1); min-height: 0; }
+  .opener--split .opener-fig img { aspect-ratio: 4 / 5; height: auto; max-height: 78vh; }
+  .opener--full .opener-card { margin: -64px var(--gutter) 0; width: auto; }
+}
+
+/* Reading pages */
+.page { padding-top: clamp(56px, 6vw, 112px); padding-bottom: clamp(56px, 6vw, 112px); }
+.page + .page { padding-top: 0; }
+.sub { padding-top: 48px; padding-top: clamp(36px, 4vw, 72px); padding-bottom: clamp(36px, 4vw, 72px); border-top: 1px solid var(--rule); }
+.sub:first-child { border-top: 0; padding-top: 0; }
+.sub-head { grid-column: 1 / span 4; }
+.sub-body { grid-column: 5 / span 8; min-width: 0; }
+.sub-wide { grid-column: 1 / -1; min-width: 0; }
+.sub-head h3 { position: sticky; top: 64px; }
+@media (max-width: 900px) {
+  .sub-head, .sub-body { grid-column: 1 / -1; }
+  .sub-head h3 { position: static; }
+}
+
+.statement { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.4vw, 58px); line-height: 1.08; letter-spacing: -.01em; margin: 0; max-width: 22ch; text-wrap: balance; }
+.statement em { font-style: italic; color: var(--brick); }
+.pull { grid-column: 1 / -1; margin: 0; }
+
+.rows { margin: 0; }
+.row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 8px var(--gap); padding: 18px 0 20px; border-top: 1px solid var(--rule); }
+.row:last-child { border-bottom: 1px solid var(--rule); }
+.row dt { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 16px; line-height: 1.35; }
+.row dd { margin: 0; font-size: var(--fs-body); line-height: 1.55; }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+
+.cols3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+@media (max-width: 900px) { .cols3 { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .cols2 { grid-template-columns: 1fr; } }
+.pillar { border-top: 2px solid var(--slate); padding-top: 16px; }
+.pillar p { margin: 0; font-size: var(--fs-body); line-height: 1.55; }
+
+.table-scroll { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-stretch: 92%; font-size: 15px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.table th { text-align: left; font-weight: 600; font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); padding: 0 16px 10px 0; border-bottom: 1px solid var(--slate); }
+.table td { padding: 13px 16px 13px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.table td.serif { font-family: var(--serif); font-size: 17px; }
+
+/* Voice */
+.pairs { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--slate); }
+.pairs > div { padding: 16px 0 18px; border-bottom: 1px solid var(--rule); font-size: var(--fs-body); line-height: 1.45; }
+.pairs > div:nth-child(odd) { padding-right: var(--gap); }
+.pairs .head { font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); padding-block: 12px; }
+.pairs .no { color: var(--stone); text-decoration: line-through; text-decoration-color: rgba(155, 58, 41, .55); text-decoration-thickness: 1px; }
+.rewrite { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.rewrite figure { margin: 0; padding: 22px 24px 24px; }
+.rewrite .before { background: var(--plaster-2); }
+.rewrite .after { background: var(--paper); border-top: 3px solid var(--green); }
+.rewrite blockquote { margin: 10px 0 0; font-size: var(--fs-body); line-height: 1.55; }
+.rewrite .before blockquote { color: #3B4247; }
+@media (max-width: 640px) { .rewrite, .pairs { grid-template-columns: 1fr; } .pairs > div:nth-child(odd) { padding-right: 0; } }
+.ladder { list-style: none; margin: 0; padding: 0; counter-reset: l; }
+.ladder li { display: grid; grid-template-columns: 2.2em 1fr; gap: 6px 14px; padding: 16px 0 18px; border-top: 1px solid var(--rule); }
+.ladder li::before { counter-increment: l; content: counter(l); font-family: var(--sans); font-size: 15px; color: var(--brick); font-variant-numeric: tabular-nums; padding-top: .35em; }
+.ladder .lv { font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); display: block; margin-bottom: 4px; }
+.ladder .lx { font-size: var(--fs-body); line-height: 1.4; }
+.ladder li:nth-child(1) .lx { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 2.6vw, 44px); line-height: 1; }
+.ladder li:nth-child(2) .lx { font-size: clamp(21px, 1.6vw, 26px); }
+.words { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0; padding: 0; list-style: none; }
+.words li { font-family: var(--sans); font-stretch: 88%; font-size: 15px; padding: 6px 10px 5px; background: var(--plaster-2); }
+.words li s { text-decoration-color: var(--brick); }
+
+/* Identity */
+.lockup-stage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.stage { position: relative; min-height: 260px; display: grid; place-items: center; padding: 48px 28px 52px; }
+.stage .cap { position: absolute; left: 16px; bottom: 12px; right: 16px; }
+.stage--plaster { background: var(--paper); }
+.stage--green { background: var(--green); color: var(--plaster); }
+.stage--green .cap { color: var(--lichen); }
+.stage--oak { background: var(--oak); color: var(--ink-deep); }
+.stage--oak .cap { color: #3F2A16; }
+.stage--photo { background: #222 center / cover no-repeat; }
+.stage--wide { grid-column: 1 / -1; min-height: 320px; }
+.wm { font-family: var(--serif); font-weight: 400; text-transform: uppercase; letter-spacing: .38em; line-height: 1; white-space: nowrap; margin-right: -.38em; }
+.wm-lg { font-size: clamp(22px, 3.2vw, 58px); }
+.wm-md { font-size: clamp(16px, 1.8vw, 28px); }
+.wm-sm { font-size: 15px; }
+.aff { display: block; font-family: var(--sans); font-stretch: 82%; letter-spacing: .01em; text-transform: none; font-size: .6em; margin-top: .62em; }
+.lock-inline { display: flex; align-items: baseline; gap: .9em; flex-wrap: wrap; justify-content: center; }
+.lock-inline .aff { display: inline; margin: 0; font-size: .62em; }
+.lock-stacked { text-align: center; }
+.lock-stacked .wm { display: block; }
+.lock-stacked .wm + .wm { margin-top: .32em; }
+.lock-stacked .aff { margin-top: 1em; }
+.avatar { width: 112px; height: 112px; background: var(--green); color: var(--plaster); display: grid; place-items: center; font-family: var(--serif); font-size: 76px; line-height: 1; padding-bottom: 6px; box-sizing: border-box; }
+.space-demo { position: relative; padding: 40px; outline: 1px dashed rgba(155, 58, 41, .7); outline-offset: 0; }
+.space-demo::before, .space-demo::after { content: 'x'; position: absolute; font-family: var(--sans); font-size: 12px; color: var(--brick); }
+.space-demo::before { left: 14px; top: 50%; transform: translateY(-50%); }
+.space-demo::after { right: 14px; top: 50%; transform: translateY(-50%); }
+.misuse { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+.misuse figure { margin: 0; }
+.misuse .tile { background: var(--paper); height: 150px; display: grid; place-items: center; position: relative; overflow: hidden; }
+.misuse .tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(155, 58, 41, .8) 50%, transparent calc(50% + 1px)); pointer-events: none; }
+.misuse figcaption { margin-top: 10px; }
+@media (max-width: 900px) { .misuse { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lockup-stage { grid-template-columns: 1fr; } }
+
+/* Typography */
+.specimen { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.face { background: var(--paper); padding: 28px; padding: clamp(22px, 2.4vw, 40px); display: grid; gap: 14px; align-content: start; }
+.face .big { font-size: clamp(64px, 7vw, 132px); line-height: .9; margin: 0; }
+.face--serif .big { font-family: var(--serif); font-weight: 700; }
+.face--sans .big { font-family: var(--sans); font-weight: 500; font-stretch: 100%; letter-spacing: -.01em; }
+.face .glyphs { margin: 0; font-size: 22px; line-height: 1.3; word-break: break-all; }
+.face--serif .glyphs { font-family: var(--serif); }
+.face--sans .glyphs { font-family: var(--sans); }
+.widths { display: grid; gap: 4px; margin: 0; }
+.widths span { font-family: var(--sans); font-size: 28px; line-height: 1.1; }
+.widths small { font-family: var(--sans); font-stretch: 82%; font-size: 12px; color: var(--stone); letter-spacing: .05em; margin-left: .6em; }
+@media (max-width: 900px) { .specimen { grid-template-columns: 1fr; } }
+.scale { border-top: 1px solid var(--slate); }
+.scale-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: var(--gap); padding: 20px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.scale-row .spec { font-family: var(--sans); font-stretch: 88%; font-size: 13px; line-height: 1.45; color: var(--stone); }
+.scale-row .spec b { display: block; font-weight: 600; color: var(--slate); font-size: 14px; margin-bottom: 2px; }
+.scale-row .ex { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 640px) { .scale-row { grid-template-columns: 1fr; } }
+.t-display { font-family: var(--serif); font-weight: 700; font-size: clamp(56px, 6.4vw, 96px); line-height: .94; letter-spacing: -.012em; }
+.t-h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 3.6vw, 60px); line-height: 1.02; letter-spacing: -.01em; }
+.t-h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 2.4vw, 40px); line-height: 1.1; }
+.t-h3 { font-family: var(--sans); font-stretch: 92%; font-weight: 600; font-size: 22px; line-height: 1.25; }
+.t-body { font-family: var(--serif); font-size: 18px; line-height: 1.6; }
+.t-meta { font-family: var(--sans); font-stretch: 82%; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.t-cap { font-family: var(--sans); font-stretch: 82%; font-size: 13px; line-height: 1.4; color: var(--stone); }
+.t-price { font-family: var(--sans); font-stretch: 116%; font-weight: 500; font-size: var(--fs-price); letter-spacing: -.01em; font-variant-numeric: tabular-nums lining-nums; line-height: 1; }
+.t-data { font-family: var(--sans); font-stretch: 100%; font-size: 15px; font-variant-numeric: tabular-nums; }
+
+/* Color */
+.stocks { display: grid; grid-template-columns: 5fr 4fr 3fr; grid-template-rows: auto auto; gap: 6px; }
+.stock { position: relative; min-height: 240px; padding: 22px 22px 18px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+.stock h4 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 2.2vw, 36px); line-height: 1; }
+.stock p { margin: 0; font-family: var(--sans); font-stretch: 92%; font-size: 14px; line-height: 1.45; max-width: 30ch; }
+.stock .hex { display: flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: 14px; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.copy { font: inherit; font-stretch: 82%; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: inherit; background: transparent; border: 1px solid currentColor; padding: 6px 9px 5px; cursor: pointer; min-height: 32px; transition: background-color var(--dur-quick) var(--ease-settle); }
+.copy:hover { background: rgba(255, 255, 255, .12); }
+.stock--green { background: var(--green); color: var(--plaster); grid-row: span 2; min-height: 500px; }
+.stock--plaster { background: var(--plaster); color: var(--slate); outline: 1px solid var(--rule); outline-offset: -1px; grid-row: span 2; }
+.stock--oak { background: var(--oak); color: var(--ink-deep); }
+.stock--brick { background: var(--brick); color: var(--plaster); }
+.inks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 6px; }
+.ink { padding: 16px 16px 14px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; font-family: var(--sans); font-stretch: 92%; font-size: 14px; line-height: 1.35; }
+.ink b { font-family: var(--serif); font-size: 20px; font-weight: 700; }
+.ratio { display: flex; height: 64px; margin-top: 20px; }
+.ratio > span { display: flex; align-items: flex-end; padding: 8px 10px; font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .04em; min-width: 0; overflow: hidden; white-space: nowrap; }
+@media (max-width: 900px) { .stocks { grid-template-columns: 1fr 1fr; } .stock--green, .stock--plaster { grid-row: auto; min-height: 260px; } .inks { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .stocks { grid-template-columns: 1fr; } }
+.swatch-dot { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; outline: 1px solid rgba(0,0,0,.15); outline-offset: -1px; }
+.pass { color: #2D5A3A; font-weight: 600; }
+.fail { color: var(--brick); font-weight: 600; }
+
+/* Photography */
+.gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); align-items: start; }
+.gallery figure { margin: 0; display: grid; gap: 10px; }
+.gallery img { display: block; width: 100%; height: auto; object-fit: cover; }
+.g-a { grid-column: 1 / span 7; } .g-a img { aspect-ratio: 3 / 2; }
+.g-b { grid-column: 9 / span 4; margin-top: clamp(40px, 8vw, 160px) !important; } .g-b img { aspect-ratio: 4 / 5; object-position: 40% 50%; }
+.g-c { grid-column: 2 / span 4; } .g-c img { aspect-ratio: 1 / 1; object-position: 30% 50%; }
+.g-d { grid-column: 7 / span 6; margin-top: clamp(24px, 4vw, 80px) !important; } .g-d img { aspect-ratio: 16 / 10; }
+@media (max-width: 900px) { .g-a, .g-b, .g-c, .g-d { grid-column: 1 / -1; margin-top: 0 !important; } }
+.dodont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.dodont ul { margin: 0; padding: 0; list-style: none; }
+.dodont li { padding: 12px 0 13px; border-top: 1px solid var(--rule); font-size: var(--fs-body); line-height: 1.45; }
+.dodont h4 { margin: 0 0 8px; }
+@media (max-width: 640px) { .dodont { grid-template-columns: 1fr; } }
+
+/* Layout schematics */
+.schem { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.schem figure { margin: 0; }
+.board { background: var(--paper); aspect-ratio: 3 / 4; padding: 12px; display: grid; gap: 6px; grid-template-columns: repeat(12, 1fr); grid-auto-rows: minmax(0, 1fr); }
+.board i { display: block; background: var(--plaster-2); }
+.board i.g { background: var(--green); }
+.board i.o { background: var(--oak); }
+.board i.b { background: var(--brick); }
+.board i.ph { background: repeating-linear-gradient(135deg, #C9C6BD 0 2px, #D5D3CB 2px 9px); }
+.board i.t { background: transparent; border-top: 2px solid var(--slate); }
+@media (max-width: 900px) { .schem { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .schem { grid-template-columns: 1fr; } }
+.movements { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: var(--gap); }
+.movements li { break-inside: avoid; display: grid; grid-template-columns: 2.4em 1fr; gap: 2px 10px; padding: 14px 0 16px; border-top: 1px solid var(--rule); }
+.movements .n { font-family: var(--sans); color: var(--brick); font-variant-numeric: tabular-nums; font-size: 15px; padding-top: .2em; }
+.movements b { font-family: var(--serif); font-size: 20px; font-weight: 700; display: block; margin-bottom: 3px; }
+.movements span { font-size: 16px; line-height: 1.5; }
+@media (max-width: 640px) { .movements { columns: 1; } }
+
+/* Interface: controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: 0 22px; font-family: var(--sans); font-stretch: 88%; font-size: 16px; font-weight: 500; line-height: 1; text-decoration: none; border: 1px solid transparent; cursor: pointer; background: var(--brick); color: var(--plaster); transition: background-color var(--dur-quick) var(--ease-settle), color var(--dur-quick) var(--ease-settle), border-color var(--dur-quick) var(--ease-settle); }
+.btn:hover { background: #87301F; }
+.btn--line { background: transparent; color: var(--slate); border-color: var(--slate); }
+.btn--line:hover { background: var(--slate); color: var(--plaster); }
+.btn--plaster { background: var(--plaster); color: var(--green); }
+.btn--plaster:hover { background: #fff; }
+.btn[disabled], .btn[aria-disabled="true"] { background: var(--plaster-2); color: #4F5551; border-color: transparent; cursor: not-allowed; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.panel { padding: 28px; padding: clamp(22px, 2.4vw, 40px); }
+.panel--green { background: var(--green); color: var(--plaster); }
+.panel--paper { background: var(--paper); }
+.panel--oak { background: var(--oak); color: var(--ink-deep); }
+.textlink { color: var(--brick); text-decoration: underline; text-underline-offset: .2em; }
+.panel--green .textlink { color: var(--clay); }
+
+.field { display: grid; gap: 7px; }
+.field label, .field .label { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 14px; }
+.field .hint { font-family: var(--sans); font-stretch: 88%; font-size: 13px; color: var(--stone); }
+.input, select.input, textarea.input { font: inherit; font-family: var(--sans); font-stretch: 100%; font-size: 16px; color: var(--slate); background: var(--paper); border: 1px solid #7A807C; border-radius: 0; min-height: 48px; padding: 11px 13px; width: 100%; box-sizing: border-box; transition: border-color var(--dur-quick) var(--ease-settle); }
+textarea.input { min-height: 96px; resize: vertical; }
+.input::placeholder { color: #6D736F; }
+.input:hover { border-color: var(--slate); }
+.input:focus { outline: 2px solid var(--brick); outline-offset: 1px; border-color: var(--slate); }
+.field.error .input { border-color: var(--brick); box-shadow: inset 3px 0 0 var(--brick); }
+.field .err { font-family: var(--sans); font-stretch: 88%; font-size: 13px; color: var(--brick); font-weight: 500; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px var(--gap); }
+.form-grid .full { grid-column: 1 / -1; }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+.disclose { font-family: var(--sans); font-stretch: 88%; font-size: 13px; line-height: 1.5; color: var(--stone); margin: 0; }
+.confirm { display: none; border-top: 3px solid var(--green); background: var(--paper); padding: 18px 20px; font-size: 17px; line-height: 1.5; }
+.confirm.show { display: block; }
+
+/* Property presentation */
+.prop-feature { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); align-items: end; }
+.prop-feature .ph { grid-column: 1 / span 8; position: relative; margin: 0; }
+.prop-feature .ph img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: 50% 65%; }
+.prop-feature .info { grid-column: 9 / span 4; display: grid; gap: 16px; padding-bottom: 6px; }
+.addr { font-family: var(--serif); font-weight: 700; font-size: clamp(26px, 2.3vw, 40px); line-height: 1.04; margin: 0; letter-spacing: -.005em; }
+.town { font-family: var(--sans); font-stretch: 82%; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; color: var(--stone); }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; list-style: none; font-family: var(--sans); font-size: 15px; font-variant-numeric: tabular-nums; }
+.facts li + li::before { content: ''; display: inline-block; width: 1px; height: .9em; background: #7A807C; margin: 0 .7em; vertical-align: -1px; }
+.character { font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.45; margin: 0; }
+.tag { position: absolute; left: 0; top: 18px; background: var(--plaster); color: var(--slate); font-family: var(--sans); font-stretch: 88%; font-size: 13px; font-weight: 600; padding: 8px 12px 7px; }
+.tag b { color: var(--brick); font-weight: 600; }
+.save { position: absolute; right: 12px; top: 12px; display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 12px 0 10px; background: rgba(28, 33, 36, .62); color: var(--plaster); border: 0; font-family: var(--sans); font-stretch: 88%; font-size: 14px; cursor: pointer; transition: background-color var(--dur-quick) var(--ease-settle); }
+.save:hover { background: rgba(28, 33, 36, .82); }
+.save svg { width: 18px; height: 18px; }
+.save svg path { fill: transparent; stroke: currentColor; stroke-width: 1.6; transition: fill var(--dur-quick) var(--ease-settle); }
+.save[aria-pressed="true"] { background: var(--plaster); color: var(--brick); }
+.save[aria-pressed="true"] svg path { fill: currentColor; }
+.attr { font-family: var(--sans); font-stretch: 88%; font-size: 12.5px; line-height: 1.45; color: var(--stone); border-top: 1px solid var(--rule); padding-top: 10px; margin: 0; }
+@media (max-width: 900px) { .prop-feature .ph, .prop-feature .info { grid-column: 1 / -1; } }
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 40px) var(--gap); }
+.card { display: grid; gap: 10px; align-content: start; position: relative; }
+.card .ph { position: relative; margin: 0 0 4px; }
+.card .ph img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.card .addr { font-size: 22px; }
+.card .price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.card a.cover-link { position: absolute; inset: 0; z-index: 1; }
+.card .save { z-index: 2; }
+@media (max-width: 900px) { .cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+
+.results { border-top: 1px solid var(--slate); }
+.result { display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: center; }
+.result img { width: 180px; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.result .addr { font-size: 20px; }
+.result .right { text-align: right; display: grid; gap: 8px; justify-items: end; }
+.result .save { position: static; background: transparent; color: var(--slate); border: 1px solid #7A807C; }
+.result .save[aria-pressed="true"] { color: var(--brick); border-color: var(--brick); background: transparent; }
+@media (max-width: 640px) { .result { grid-template-columns: 112px minmax(0, 1fr); } .result img { width: 112px; } .result .right { grid-column: 1 / -1; justify-items: start; text-align: left; grid-auto-flow: column; justify-content: space-between; align-items: center; } }
+
+.detail { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.detail-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: 7fr 5fr; grid-template-rows: 1fr 1fr; gap: 6px; height: clamp(320px, 38vw, 620px); }
+.detail-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.detail-gallery .main { grid-row: span 2; }
+.detail-gallery .more { position: relative; }
+.detail-gallery .more span { position: absolute; right: 10px; bottom: 10px; background: var(--plaster); font-family: var(--sans); font-stretch: 88%; font-size: 13px; font-weight: 600; padding: 7px 10px 6px; }
+.detail-main { grid-column: 1 / span 8; min-width: 0; }
+.detail-side { grid-column: 9 / span 4; }
+.detail-side .panel { position: sticky; top: 64px; display: grid; gap: 14px; }
+.fact-table { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--slate); margin: 22px 0 28px; }
+.fact-table div { padding: 12px 12px 14px 0; border-bottom: 1px solid var(--rule); }
+.fact-table dt { font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); }
+.fact-table dd { margin: 4px 0 0; font-family: var(--sans); font-stretch: 108%; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.map { position: relative; aspect-ratio: 16 / 9; background: #D9D7CF; overflow: hidden; }
+.map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.map .pinlabel { position: absolute; left: 52%; top: 44%; transform: translate(-50%, -130%); background: var(--slate); color: var(--plaster); font-family: var(--sans); font-stretch: 100%; font-size: 13px; font-weight: 600; padding: 6px 9px 5px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.map .pinlabel::after { content: ''; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--slate); }
+@media (max-width: 900px) { .detail-main, .detail-side { grid-column: 1 / -1; } .fact-table { grid-template-columns: 1fr 1fr; } .detail-gallery { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; } .detail-gallery .main { grid-row: auto; aspect-ratio: 4 / 3; } .detail-gallery .more:not(:first-of-type) { display: none; } }
+
+/* Phone mocks */
+.phones { display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); justify-content: center; }
+.phone-fig { margin: 0; display: grid; gap: 12px; justify-items: center; }
+.phone { width: 276px; height: 580px; border: 10px solid var(--ink-deep); border-radius: 38px; background: var(--plaster); position: relative; overflow: hidden; font-family: var(--sans); box-sizing: content-box; }
+.phone .bar { display: flex; justify-content: space-between; align-items: center; padding: 14px 14px 10px; font-size: 11px; font-stretch: 82%; }
+.phone .bar .wm { font-size: 11px; letter-spacing: .28em; }
+.phone .p-img { height: 236px; background: center / cover no-repeat; }
+.phone .p-body { padding: 14px; display: grid; gap: 6px; }
+.phone .p-addr { font-family: var(--serif); font-weight: 700; font-size: 21px; line-height: 1.05; }
+.phone .p-price { font-stretch: 116%; font-weight: 500; font-size: 22px; font-variant-numeric: tabular-nums; }
+.phone .p-facts { font-size: 12px; color: var(--stone); font-variant-numeric: tabular-nums; }
+.phone .p-sticky { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 12px 18px; background: var(--plaster); border-top: 1px solid var(--rule); }
+.phone .p-sticky span { display: grid; place-items: center; min-height: 44px; font-size: 13px; font-stretch: 88%; font-weight: 600; }
+.phone .p-sticky .a { background: var(--brick); color: var(--plaster); }
+.phone .p-sticky .b { border: 1px solid var(--slate); }
+.phone .scrim { position: absolute; inset: 0; background: rgba(28, 33, 36, .45); }
+.phone .sheet { position: absolute; left: 0; right: 0; bottom: 0; background: var(--plaster); padding: 10px 16px 18px; display: grid; gap: 12px; }
+.phone .grab { width: 40px; height: 4px; background: #7A807C; justify-self: center; border-radius: 2px; }
+.phone .sheet h5 { margin: 0; font-family: var(--serif); font-size: 20px; }
+.phone .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.phone .chips span { font-size: 12px; font-stretch: 88%; padding: 8px 10px 7px; border: 1px solid #7A807C; }
+.phone .chips span.on { background: var(--green); color: var(--plaster); border-color: var(--green); }
+.phone .range { height: 3px; background: var(--plaster-2); position: relative; margin: 8px 4px; }
+.phone .range::before { content: ''; position: absolute; left: 22%; right: 30%; top: 0; bottom: 0; background: var(--green); }
+.phone .range i { position: absolute; top: 50%; width: 18px; height: 18px; background: var(--plaster); border: 2px solid var(--green); transform: translate(-50%, -50%); border-radius: 50%; }
+.phone .sheet .go { display: grid; place-items: center; min-height: 44px; background: var(--brick); color: var(--plaster); font-size: 13px; font-weight: 600; font-stretch: 88%; }
+.phone .maplist { display: grid; grid-template-rows: 260px 1fr; height: 100%; }
+.phone .maplist .m { position: relative; background: #D9D7CF; }
+.phone .maplist .m svg { width: 100%; height: 100%; display: block; }
+.phone .toggle { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: flex; background: var(--plaster); border: 1px solid var(--slate); font-size: 12px; font-stretch: 88%; font-weight: 600; }
+.phone .toggle span { padding: 8px 14px 7px; }
+.phone .toggle .on { background: var(--slate); color: var(--plaster); }
+.phone .mini { display: grid; grid-template-columns: 76px 1fr; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 12px; }
+.phone .mini i { display: block; height: 56px; background: center / cover no-repeat; }
+.phone .mini b { font-family: var(--serif); font-size: 15px; display: block; }
+.phone .mini .pr { font-stretch: 112%; font-weight: 500; font-variant-numeric: tabular-nums; font-size: 13px; }
+
+/* Journeys */
+.journey { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 2px solid var(--slate); }
+.journey li { padding: 18px var(--gap) 22px 0; border-right: 1px solid var(--rule); display: grid; gap: 10px; align-content: start; }
+.journey li:last-child { border-right: 0; }
+.journey li + li { padding-left: 16px; }
+.journey .step { font-family: var(--sans); font-size: 14px; color: var(--brick); font-variant-numeric: tabular-nums; }
+.journey h4 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(22px, 1.8vw, 30px); line-height: 1; }
+.journey p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+.journey .we { font-family: var(--sans); font-stretch: 88%; font-size: 13.5px; line-height: 1.45; color: var(--stone); }
+@media (max-width: 1100px) { .journey { grid-template-columns: repeat(3, minmax(0, 1fr)); } .journey li:nth-child(3) { border-right: 0; } .journey li:nth-child(4) { padding-left: 0; } .journey li:nth-child(n+4) { border-top: 1px solid var(--rule); } }
+@media (max-width: 640px) { .journey { grid-template-columns: 1fr; } .journey li { border-right: 0; padding-left: 0 !important; border-top: 1px solid var(--rule); } }
+.valuation { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--gap); align-items: end; }
+.valuation h4 { margin: 0 0 14px; font-family: var(--serif); font-weight: 700; font-size: clamp(32px, 3vw, 52px); line-height: 1; }
+.valuation .vform { display: grid; gap: 12px; }
+.valuation .vform .input { background: #F4EFE7; border-color: #6B5233; }
+@media (max-width: 900px) { .valuation { grid-template-columns: 1fr; } }
+
+/* Community + Field Notes */
+.community { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.community .c-hero { grid-column: 1 / -1; position: relative; margin: 0; }
+.community .c-hero img { width: 100%; aspect-ratio: 21 / 8; object-fit: cover; display: block; }
+.community .c-title { grid-column: 1 / span 5; }
+.community .c-title h4 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 4.4vw, 76px); line-height: .95; }
+.community .c-intro { grid-column: 6 / span 7; }
+.slots { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--slate); }
+.slots div { padding: 14px 16px 18px 0; border-bottom: 1px solid var(--rule); }
+.slots b { display: block; font-family: var(--sans); font-stretch: 88%; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.slots span { font-size: 15px; line-height: 1.45; color: var(--stone); }
+@media (max-width: 900px) { .community .c-title, .community .c-intro { grid-column: 1 / -1; } .slots { grid-template-columns: 1fr 1fr; } .community .c-hero img { aspect-ratio: 3 / 2; } }
+.notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.note-card { display: grid; gap: 10px; align-content: start; border-top: 2px solid var(--slate); padding-top: 14px; }
+.note-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.note-card h5 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.15; }
+.note-card p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+@media (max-width: 900px) { .notes { grid-template-columns: 1fr; } }
+
+/* Motion */
+.motion-demo { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap); align-items: center; }
+.motion-demo figure { margin: 0; overflow: hidden; }
+.motion-demo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.curve { width: 100%; max-width: 360px; height: auto; display: block; }
+@media (max-width: 900px) { .motion-demo { grid-template-columns: 1fr; } }
+
+/* Reveal: visible at rest; armed only for content still below the fold once the reader scrolls */
+[data-reveal] { --reveal: inset(0 0 0 0); clip-path: var(--reveal); }
+[data-reveal].armed { --reveal: inset(0 100% 0 0); }
+[data-reveal].armed.in { --reveal: inset(0 0 0 0); transition: clip-path var(--dur-reveal) var(--ease-settle); }
+[data-reveal] img { transition: transform 1400ms var(--ease-settle); }
+[data-reveal].armed img { transform: scale(1.05); }
+[data-reveal].armed.in img { transform: none; }
+@media (prefers-reduced-motion: reduce) { [data-reveal], [data-reveal].armed { --reveal: inset(0 0 0 0); } [data-reveal] img { transform: none !important; transition: none; } }
+
+/* Affiliation */
+.aff-rule { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap); align-items: center; }
+.ratio-diagram { background: var(--paper); padding: 40px 28px; display: grid; gap: 18px; justify-items: start; }
+.ratio-diagram .wm { font-size: clamp(20px, 2.4vw, 40px); }
+.ratio-diagram .aff { font-size: calc(clamp(20px, 2.4vw, 40px) * .6); margin-top: .5em; }
+.dim { font-family: var(--sans); font-stretch: 82%; font-size: 12px; color: var(--brick); letter-spacing: .04em; }
+.patterns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 3vw, 52px) var(--gap); }
+.pattern { display: grid; gap: 12px; align-content: start; }
+.pattern .demo { background: var(--paper); padding: 18px 20px; }
+.nav-demo { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.nav-demo .links { display: flex; gap: 18px; font-family: var(--sans); font-stretch: 88%; font-size: 14px; flex-wrap: wrap; }
+.foot-demo { background: var(--green) !important; color: var(--plaster); display: grid; gap: 14px; }
+.foot-demo p { margin: 0; font-family: var(--sans); font-stretch: 88%; font-size: 13px; line-height: 1.55; color: #D2D6D0; }
+.bio-demo { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: start; }
+.headshot { width: 96px; aspect-ratio: 4 / 5; background: repeating-linear-gradient(135deg, #C9C6BD 0 2px, #D5D3CB 2px 9px); display: grid; place-items: end start; padding: 6px; box-sizing: border-box; font-family: var(--sans); font-stretch: 82%; font-size: 11px; color: #3A403C; line-height: 1.2; }
+.bio-demo h5 { margin: 0; font-family: var(--serif); font-size: 22px; }
+.bio-demo p { margin: 4px 0 0; font-family: var(--sans); font-stretch: 88%; font-size: 13.5px; line-height: 1.5; color: var(--stone); }
+@media (max-width: 900px) { .aff-rule, .patterns { grid-template-columns: 1fr; } }
+.model { background: var(--paper); padding: clamp(16px, 2vw, 32px); overflow-x: auto; }
+.model svg { display: block; min-width: 760px; width: 100%; height: auto; }
+.payload { background: var(--ink-deep); color: #E3E6E2; padding: 22px 24px; overflow-x: auto; margin: 0; font-size: 14px; line-height: 1.6; }
+.payload .k { color: #E0937A; }
+.payload .s { color: #BFD0C2; }
+
+/* Colophon */
+.colophon { background: var(--green); color: var(--plaster); padding-block: clamp(56px, 7vw, 128px) 40px; }
+.colophon .wm { font-size: clamp(18px, 2.6vw, 44px); }
+.colophon .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: clamp(40px, 5vw, 88px); border-top: 1px solid var(--rule-on-green); padding-top: 22px; }
+.colophon p { margin: 0; font-family: var(--sans); font-stretch: 88%; font-size: 14px; line-height: 1.6; color: #D2D6D0; }
+.colophon h4 { margin: 0 0 8px; font-family: var(--sans); font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--lichen); font-weight: 500; }
+.colophon a { color: var(--plaster); }
+.colophon .legal { margin-top: 48px; font-size: 12.5px; color: var(--lichen); }
+@media (max-width: 900px) { .colophon .cols { grid-template-columns: 1fr; } }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); opacity: 0; background: var(--slate); color: var(--plaster); font-family: var(--sans); font-stretch: 88%; font-size: 14px; padding: 10px 14px 9px; pointer-events: none; transition: opacity var(--dur-base) var(--ease-settle), transform var(--dur-base) var(--ease-settle); z-index: 30; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.spread-folio { margin: 0; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.note-card .meta { order: 3; }
+.opener-text .opener-no { grid-column: auto; }
+.lock-stacked .wm { margin-right: 0; }
+.wm-lg { font-size: clamp(13px, 3.2vw, 58px); }
+.wm-md { font-size: clamp(12px, 3.3vw, 28px); }
+@media (max-width: 640px) { .stage { padding: 40px 16px 52px; min-height: 200px; } .lock-inline { gap: .5em; } }
+.opener-card .opener-no { grid-column: auto; }
+.aff-rule > *, .sub-wide > *, .cols2 > *, .cols3 > * { min-width: 0; }
+.ratio-diagram .wm { font-size: clamp(14px, 1.9vw, 34px); }
+.ratio-diagram .aff { font-size: calc(clamp(14px, 1.9vw, 34px) * .6); }
+.opener--split .opener-fig { min-height: 0; align-self: end; }
+.opener--split .opener-fig img { aspect-ratio: 4 / 5; height: auto; max-height: 78vh; }
+.space-demo .wm { font-size: clamp(12px, 1.35vw, 22px); }
+.opener--full .opener-no { color: var(--ink-deep); opacity: .9; }
+.opener--full .cap { color: #3F2A16; }
+.detail-gallery { grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+.detail-gallery > * { min-height: 0; min-width: 0; }
+.detail-gallery .more img { height: 100%; }
+@media (max-width: 900px) { .detail-gallery { grid-template-rows: auto; } .detail-gallery .more { aspect-ratio: 4 / 3; } }
+
+/* text on brick: a warmer, lighter plaster for crisper contrast */
+.btn, .open-book, .stock--brick, .phone .p-sticky .a, .phone .sheet .go, .tag-brick { color: #F7F5F1; }
+.btn--line, .btn--plaster { color: var(--slate); }
+.btn--plaster { color: var(--green); }
+.btn[disabled] { color: #4F5551; }
+.aff { font-size: max(12px, .6em); }
+.lock-inline .aff { font-size: max(12px, .62em); }
+.ratio-diagram .aff { font-size: max(12px, calc(clamp(14px, 1.9vw, 34px) * .6)); }
+.misuse .tile { font-size: 11px; }
+
+/* --- finish-review fixes --- */
+/* Contents spread: DOM order 01–12, two columns split by one hairline */
+.toc { grid-auto-flow: column; grid-template-rows: repeat(6, auto); background: linear-gradient(var(--rule), var(--rule)) 50% 0 / 1px 100% no-repeat; }
+.toc li { border-top: 0; }
+.toc a { padding: 12px 0 14px; }
+@media (max-width: 560px) { .toc { grid-auto-flow: row; grid-template-rows: none; background: none; } .toc li { border-top: 1px solid var(--rule); } }
+.spread-photo figcaption { left: 0; right: auto; bottom: 0; background: var(--green); color: var(--plaster); text-shadow: none; padding: 10px var(--gutter) 11px; max-width: calc(100% - 2 * var(--gutter)); }
+.spread-tab { position: absolute; z-index: 1; left: 0; top: 0; margin: 0; background: var(--green); color: var(--plaster); padding: 18px var(--gutter) 16px; display: grid; gap: 6px; }
+.spread-tab .wm { font-size: clamp(12px, 1.05vw, 17px); }
+.spread-tab .aff { margin: 0; font-size: max(12px, .6em); color: var(--lichen); }
+/* Band openers: a panoramic photograph strip under the title */
+.opener-strip { grid-column: 1 / -1; margin: 0 calc(var(--gutter) * -1) 0; display: grid; gap: 10px; }
+.opener-strip img { display: block; width: 100%; aspect-ratio: 32 / 9; object-fit: cover; height: auto; }
+.opener-strip figcaption { padding-inline: var(--gutter); }
+@media (max-width: 900px) { .opener-strip img { aspect-ratio: 16 / 9; } }
+/* Paper stock: a real paper grain blended into every stock surface */
+body, .cover, .opener, .colophon, .stock--green, .stock--oak, .panel--green, .panel--oak, .spread-stamp, .spread-tab, .spread-photo figcaption { background-image: url('assets/img/grain.jpg'); background-size: 400px 400px; background-blend-mode: soft-light; }
+body { background-color: var(--plaster); }
+.cover { background-color: var(--green); }
+.opener { background-color: var(--green); }
+.opener--oak, .opener--full { background-color: var(--oak); }
+.colophon { background-color: var(--green); }
+/* dark stocks take the grain at half strength to stay at the comp's printed-board amplitude */
+.cover, .opener, .colophon, .stock--green, .stock--oak, .panel--green, .panel--oak, .spread-stamp, .spread-tab, .spread-photo figcaption { background-image: url('assets/img/grain-soft.jpg'); }
+.panel--oak :focus-visible, .opener--oak :focus-visible, .stage--oak :focus-visible, .stock--oak :focus-visible { outline-color: var(--ink-deep); }
+.panel--oak .input:focus { outline-color: var(--ink-deep); }
+</style>
+
+<div class="cover-frame" id="top">
+  <header class="masthead">
+    <p class="wordmark">The Oberdorfer Team<span class="wordmark-aff">at REWAP Brokerage LLC</span></p>
+    <p class="issue-line">Brand Book · No. 01 · Central Massachusetts · 2026</p>
+  </header>
+  <section class="cover" aria-labelledby="cover-title">
+    <h1 id="cover-title">Home is<br>personal.</h1>
+    <p class="standfirst">A brand book for a residential real-estate team in Worcester County, Massachusetts.</p>
+    <a class="open-book" href="#contents">Open the book</a>
+    <figure class="cover-fig">
+      <picture>
+        <source srcset="assets/plates/cover-photo.webp" type="image/webp">
+        <img src="assets/plates/cover-photo.png" width="1400" height="1761" alt="Corner of a white clapboard house with black louvered shutters, a dormer and a dark slate-gray roof.">
+      </picture>
+      <figcaption>Fig. 01 — Clapboard, slate and black shutters. Sample photograph, Jessica Langbein / Unsplash.</figcaption>
+    </figure>
+    <hr class="index-rule">
+    <nav class="contents-index" aria-label="Chapters">
+      <ol>
+        <li><a href="#purpose"><span class="n">01</span>Purpose</a></li>
+        <li><a href="#audience"><span class="n">02</span>Audience</a></li>
+        <li><a href="#voice"><span class="n">03</span>Voice</a></li>
+        <li><a href="#identity"><span class="n">04</span>Identity</a></li>
+        <li><a href="#typography"><span class="n">05</span>Typography</a></li>
+        <li><a href="#color"><span class="n">06</span>Color</a></li>
+        <li><a href="#photography"><span class="n">07</span>Photography</a></li>
+        <li><a href="#layout"><span class="n">08</span>Layout</a></li>
+        <li><a href="#interface"><span class="n">09</span>Interface</a></li>
+        <li><a href="#motion"><span class="n">10</span>Motion</a></li>
+        <li><a href="#access"><span class="n">11</span>Access</a></li>
+        <li><a href="#affiliation"><span class="n">12</span>Affiliation</a></li>
+      </ol>
+    </nav>
+  </section>
+</div>
+
+
+<div class="folio" id="folio">
+  <div class="folio-in wrap">
+    <a class="folio-title" href="#top"><b>The Oberdorfer Team</b><span class="long"> · Brand Book No. 01</span></a>
+    <p class="folio-now" style="margin:0" aria-live="polite"><a href="#contents">Contents</a><span aria-hidden="true">·</span><span class="n" data-folio-no>—</span><span data-folio-title>Opening</span></p>
+  </div>
+</div>
+
+<main>
+
+<!-- Contents spread (comp B) -->
+<section class="spread" id="contents" aria-labelledby="contents-title" data-chapter="" data-chapter-title="In this book">
+  <figure class="spread-photo">
+    <p class="spread-tab" aria-hidden="true"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
+    <img src="assets/img/AmF3jm4E_mg.jpg" width="1500" height="2000" loading="lazy" alt="A curved stair with a dark wood rail and white balusters rising past deep green walls toward a tall window.">
+    <figcaption>Fig. 02 — Stair hall, painted walls. Sample photograph, Magic Fan / Unsplash.</figcaption>
+  </figure>
+  <div class="spread-page">
+    <h2 id="contents-title">In this book</h2>
+    <ol class="toc">
+      <li><a href="#purpose"><span class="n">01</span><span class="t">Purpose</span><span class="d">Why the team exists and what it promises.</span></a></li>
+      <li><a href="#audience"><span class="n">02</span><span class="t">Audience</span><span class="d">Who we write for and what they need.</span></a></li>
+      <li><a href="#voice"><span class="n">03</span><span class="t">Voice</span><span class="d">How we sound, and the words we leave out.</span></a></li>
+      <li><a href="#identity"><span class="n">04</span><span class="t">Identity</span><span class="d">The wordmark, lockups and how not to use them.</span></a></li>
+      <li><a href="#typography"><span class="n">05</span><span class="t">Typography</span><span class="d">Inria Serif and Archivo, with a scale for data.</span></a></li>
+      <li><a href="#color"><span class="n">06</span><span class="t">Color</span><span class="d">Four stocks, five inks, tested contrast.</span></a></li>
+      <li><a href="#photography"><span class="n">07</span><span class="t">Photography</span><span class="d">Honest light, architectural crops, captions.</span></a></li>
+      <li><a href="#layout"><span class="n">08</span><span class="t">Layout</span><span class="d">The spread, the grid, the homepage in ten movements.</span></a></li>
+      <li><a href="#interface"><span class="n">09</span><span class="t">Interface</span><span class="d">Listings, search, towns, buying, selling, notes.</span></a></li>
+      <li><a href="#motion"><span class="n">10</span><span class="t">Motion</span><span class="d">Masked reveals and quiet transitions.</span></a></li>
+      <li><a href="#access"><span class="n">11</span><span class="t">Access</span><span class="d">WCAG 2.1 AA and fair-housing language.</span></a></li>
+      <li><a href="#affiliation"><span class="n">12</span><span class="t">Affiliation</span><span class="d">The team, the brokerage, and the shared platform.</span></a></li>
+    </ol>
+    <p class="spread-stamp"><span class="meta" style="display:block;margin-bottom:10px;color:var(--lichen)">Brand Book · No. 01 · Central Massachusetts</span><b>Prepared for Brandon and Kait Oberdorfer.</b><br>October 2026. Every photograph in this book is a labeled sample from Unsplash, and every listing is illustrative.</p>
+  </div>
+</section>
+
+<!-- 01 PURPOSE -->
+<section id="purpose" class="chapter" aria-labelledby="purpose-title" data-chapter="01" data-chapter-title="Purpose">
+  <header class="opener opener--split">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">01</p>
+        <h2 class="opener-title" id="purpose-title">Purpose</h2>
+        <p class="opener-deck">We help people move between homes in Central Massachusetts with the care that decision deserves.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/1CHyP92Oc04.jpg" width="2000" height="1328" loading="lazy" style="object-position: 22% 62%" alt="A white two-story colonial with black shutters and a front porch, behind a clipped hedge under a spring maple.">
+        <figcaption class="cap">Fig. 03 — Colonial behind a clipped hedge, New England. Sample photograph, I Do Nothing But Love / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <p class="statement pull">Home is personal. Our job is to make one of the largest decisions in a family's life feel <em>understood</em>, unhurried and well guided.</p>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Positioning</h3></div>
+      <div class="sub-body prose">
+        <p>For buyers and sellers in Worcester County who want a knowledgeable person beside them, The Oberdorfer Team is a residential real-estate team that leads with knowledge of place and personal guidance.</p>
+        <p>Portals show everything and explain nothing. High-volume agencies move quickly and move on. We explain the market, the town and the house before we ask for anything, and we stay with people through the parts nobody photographs.</p>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">The promise</h3></div>
+      <div class="sub-body">
+        <p class="lead">You will always know where things stand, what we think, and why.</p>
+        <p class="note" style="margin-top:14px">Every page, message and listing should be checked against this line. If a reader would finish it still guessing, it is not done.</p>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Three commitments</h3></div>
+      <div class="sub-body cols3">
+        <div class="pillar"><h4 class="h4">Knowledge of place</h4><p>Towns, streets, school calendars, commuter times, how a 1920s house behaves in February. Specific, local and written down.</p></div>
+        <div class="pillar"><h4 class="h4">Personal guidance</h4><p>Two team leads who answer their own phones, explain trade-offs plainly and give an opinion when asked.</p></div>
+        <div class="pillar"><h4 class="h4">Considered presentation</h4><p>Homes are photographed, described and priced as if they were being published, because they are.</p></div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">How people should feel</h3><p class="note">Emotional goals at each stage. They guide copy, pacing and when we ask for contact.</p></div>
+      <div class="sub-body table-scroll">
+        <table class="table">
+          <thead><tr><th scope="col">Stage</th><th scope="col">They should feel</th><th scope="col">Because we</th></tr></thead>
+          <tbody>
+            <tr><td>Before contact</td><td class="serif">Curious, under no pressure</td><td>Publish useful town and market writing with no gate in front of it.</td></tr>
+            <tr><td>First conversation</td><td class="serif">Oriented and heard</td><td>Ask about the life before the house, then explain the process in order.</td></tr>
+            <tr><td>Searching or listing</td><td class="serif">Calm, informed</td><td>Send fewer, better updates with our reasoning attached.</td></tr>
+            <tr><td>Offer and negotiation</td><td class="serif">Steady, protected</td><td>Lay out options and risks in writing, then recommend one.</td></tr>
+            <tr><td>After the move</td><td class="serif">Looked after</td><td>Stay useful: contractor names, tax dates, a note in a year.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">What the brand is and is not</h3></div>
+      <div class="sub-body">
+        <div class="pairs" role="table" aria-label="Brand character">
+          <div class="head" role="columnheader">It is</div><div class="head" role="columnheader">It is not</div>
+          <div role="cell">A local guide with an opinion</div><div role="cell" class="no">A listings portal</div>
+          <div role="cell">Warm and exact</div><div role="cell" class="no">Salesy or breathless</div>
+          <div role="cell">Crafted, like a good renovation</div><div role="cell" class="no">Luxury for its own sake</div>
+          <div role="cell">Calm, even when the market isn't</div><div role="cell" class="no">Urgent, flashy, countdown-driven</div>
+          <div role="cell">Two named people and their team</div><div role="cell" class="no">A faceless agency template</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 AUDIENCE -->
+<section id="audience" class="chapter" aria-labelledby="audience-title" data-chapter="02" data-chapter-title="Audience">
+  <header class="opener opener--band">
+    <div class="opener-in grid wrap">
+      <p class="opener-no" aria-hidden="true">02</p>
+      <div class="opener-text">
+        <h2 class="opener-title" id="audience-title">Audience</h2>
+        <p class="opener-deck">We write for one person at a time: someone deciding where to live next, often months before they say so.</p>
+      </div>
+      <figure class="opener-strip" data-reveal>
+        <img src="assets/img/PysSvRTfGyU.jpg" width="2000" height="1125" loading="lazy" style="object-position: 50% 60%" alt="A tree-lined town street with white clapboard houses, picket fences and a church cupola under summer sky.">
+        <figcaption class="cap">Fig. 03a — Town street with a steeple. Sample photograph, MV Vacation / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Who reads us</h3><p class="note">Four readers, weighted equally. The site should never make one of them feel like an afterthought.</p></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Buyers</dt><dd>First-time buyers comparing towns, families moving up, people relocating into Worcester County. <span class="note">Asking:</span> Which town fits us, what does our budget buy, and what happens next? <span class="note">Afraid of:</span> overpaying or missing something about the house.</dd></div>
+          <div class="row"><dt>Sellers</dt><dd>Long-time owners, people downsizing, families handling an estate. <span class="note">Asking:</span> What is it worth, and how will it be presented? <span class="note">Afraid of:</span> leaving money on the table and months of disruption.</dd></div>
+          <div class="row"><dt>Readers not yet searching</dt><dd>People reading town pages and Field Notes a season or a year ahead. <span class="note">Asking:</span> What is it actually like to live there? <span class="note">Owed:</span> real writing, with no contact form standing in the way.</dd></div>
+          <div class="row"><dt>People we work alongside</dt><dd>REWAP Brokerage, lenders, attorneys, inspectors and other agents. <span class="note">Asking:</span> Are these people organized and easy to work with? <span class="note">Owed:</span> clean listings, correct attribution, prompt answers.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Where each reader lands</h3></div>
+      <div class="sub-body table-scroll">
+        <table class="table">
+          <thead><tr><th scope="col">Reader</th><th scope="col">Likely first page</th><th scope="col">What should come next</th></tr></thead>
+          <tbody>
+            <tr><td>Buyer</td><td>A listing, or a town page from search</td><td>The town's housing character, then the buying guide</td></tr>
+            <tr><td>Seller</td><td>"What is my home worth?"</td><td>How we present and price, then a conversation</td></tr>
+            <tr><td>Not yet searching</td><td>A Field Notes article</td><td>Related towns, then a saved search when they are ready</td></tr>
+            <tr><td>Partner</td><td>Team page or a listing</td><td>Agent bios with brokerage attribution and direct contact</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 VOICE -->
+<section id="voice" class="chapter" aria-labelledby="voice-title" data-chapter="03" data-chapter-title="Voice">
+  <header class="opener opener--split">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">03</p>
+        <h2 class="opener-title" id="voice-title">Voice</h2>
+        <p class="opener-deck">We sound like a well-informed neighbor: specific, level and kind. We never shout, and we never sell past the facts.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/Xr6P_KRQVFU.jpg" width="1112" height="2000" loading="lazy" style="object-position: 50% 40%" alt="Rows of weathered mailboxes on a faded teal door, snow banked against the bottom.">
+        <figcaption class="cap">Fig. 04 — Shared mailboxes after a storm, Rockport, MA. Sample photograph, Hasnain Sikora / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Personality</h3></div>
+      <div class="sub-body">
+        <div class="pairs">
+          <div class="head">We are</div><div class="head">Without becoming</div>
+          <div>Knowledgeable</div><div class="no">Lecturing</div>
+          <div>Warm</div><div class="no">Familiar or cute</div>
+          <div>Precise</div><div class="no">Cold or legalistic</div>
+          <div>Calm</div><div class="no">Passive</div>
+          <div>Plainspoken</div><div class="no">Casual about serious things</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Four rules</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Say the specific thing</dt><dd>Years, materials, minutes to the Pike, the name of the street. A detail a competitor could not copy is worth three adjectives.</dd></div>
+          <div class="row"><dt>Explain before asking</dt><dd>Every call to action follows something useful. We earn the form.</dd></div>
+          <div class="row"><dt>Write to one person</dt><dd>"You" and "we." Short sentences. No industry shorthand without a plain explanation beside it.</dd></div>
+          <div class="row"><dt>Keep it level</dt><dd>No exclamation points in listings, no urgency we did not create honestly, no superlatives we cannot show.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Messaging hierarchy</h3><p class="note">Read top to bottom. Each level supports the one above it.</p></div>
+      <div class="sub-body">
+        <ol class="ladder">
+          <li><div><span class="lv">Brand line</span><span class="lx">Home is personal.</span></div></li>
+          <li><div><span class="lv">Positioning line</span><span class="lx">Real estate guidance for Central Massachusetts.</span></div></li>
+          <li><div><span class="lv">Proof themes</span><span class="lx">Knowledge of place · Considered presentation · Clear communication</span></div></li>
+          <li><div><span class="lv">Invitations</span><span class="lx">Talk with us · Request a showing · Ask what your home is worth · Save this search</span></div></li>
+          <li><div><span class="lv">Attribution</span><span class="lx">The Oberdorfer Team at REWAP Brokerage LLC</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Rewrites</h3><p class="note">Sample copy. The listing is illustrative.</p></div>
+      <div class="sub-body" style="display:grid;gap:var(--gap)">
+        <div class="rewrite">
+          <figure class="before"><figcaption class="meta">Before</figcaption><blockquote>Stunning turnkey colonial nestled in a sought-after neighborhood. Won't last!</blockquote></figure>
+          <figure class="after"><figcaption class="meta">After</figcaption><blockquote>A 1926 center-hall colonial on a quiet side street, with original oak floors, a kitchen renovated in 2019 and a level backyard. About twelve minutes to Union Station.</blockquote></figure>
+        </div>
+        <div class="rewrite">
+          <figure class="before"><figcaption class="meta">Before</figcaption><blockquote>Get your FREE instant home value now!</blockquote></figure>
+          <figure class="after"><figcaption class="meta">After</figcaption><blockquote>Ask what your home is worth. We will send a written range with the sales we used, within [turnaround to confirm].</blockquote></figure>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Words we leave out</h3><p class="note">Some are tired. Some describe people instead of homes, which fair-housing practice asks us to avoid.</p></div>
+      <div class="sub-body" style="display:grid;gap:22px">
+        <div><h4 class="h4">Tired</h4><ul class="words"><li><s>stunning</s></li><li><s>dream home</s></li><li><s>nestled</s></li><li><s>won't last</s></li><li><s>turnkey</s></li><li><s>must-see</s></li><li><s>luxury</s> (unless it is literally true)</li></ul></div>
+        <div><h4 class="h4">Describe the home, not the buyer</h4><ul class="words"><li><s>perfect for families</s></li><li><s>ideal for young professionals</s></li><li><s>safe neighborhood</s></li><li><s>exclusive community</s></li><li><s>great for empty nesters</s></li></ul></div>
+        <p class="note">Write instead: "four bedrooms on one floor," "a fenced yard," "a seven-minute walk to the park," "single-level living."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 IDENTITY -->
+<section id="identity" class="chapter" aria-labelledby="identity-title" data-chapter="04" data-chapter-title="Identity">
+  <header class="opener opener--band">
+    <div class="opener-in grid wrap">
+      <p class="opener-no" aria-hidden="true">04</p>
+      <div class="opener-text">
+        <h2 class="opener-title" id="identity-title">Identity</h2>
+        <p class="opener-deck">A wordmark, set the way an architect letters a title block: spaced capitals, no symbol, nothing to explain.</p>
+      </div>
+      <figure class="opener-strip" data-reveal>
+        <img src="assets/img/0js8XJXFdtk.jpg" width="2000" height="1334" loading="lazy" style="object-position: 50% 62%" alt="A cut-granite building with a pedimented blue door, black railings and a maple turning orange.">
+        <figcaption class="cap">Fig. 04a — Granite, a blue door and lettered plaques. Sample photograph, Austin / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-wide">
+        <div class="lockup-stage">
+          <div class="stage stage--plaster stage--wide"><p class="wm wm-lg" style="margin:0;color:var(--green)">The Oberdorfer Team</p><span class="cap">Primary wordmark · Inria Serif Regular, all capitals, tracked 0.38em · Shutter green on plaster</span></div>
+          <div class="stage stage--green"><p class="lock-stacked" style="margin:0"><span class="wm wm-md">The Oberdorfer</span><span class="wm wm-md">Team</span><span class="aff" style="font-size:15px">at REWAP Brokerage LLC</span></p><span class="cap">Stacked affiliation lockup · reversed on shutter green</span></div>
+          <div class="stage stage--oak"><p class="lock-inline" style="margin:0"><span class="wm wm-md">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></p><span class="cap">Inline affiliation lockup · ink on oak</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Why a wordmark</h3></div>
+      <div class="sub-body prose">
+        <p>Real-estate marks lean on roofs, keys and pins because the category needs a shortcut. This team does not: its name is a family name, and the people are the point. Wide-spaced capitals give the name presence at small sizes and read like the lettering on a measured drawing or a magazine masthead.</p>
+        <p>The spacing is the identity. Keep it at 0.38em in every application, and never letterspace the brokerage line to match it.</p>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Clear space and size</h3></div>
+      <div class="sub-body cols2">
+        <div class="space-demo"><p class="wm wm-md" style="margin:0;color:var(--green);text-align:center">The Oberdorfer Team</p></div>
+        <dl class="rows">
+          <div class="row"><dt>Clear space</dt><dd>One cap height (x) on every side. Nothing enters it, including photographs.</dd></div>
+          <div class="row"><dt>Minimum size</dt><dd>130px wide on screen, 1.3 in. in print. Below that, use the compact form.</dd></div>
+          <div class="row"><dt>Compact form</dt><dd>OBERDORFER alone, same spacing, for tight headers and social bios.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Where a square is required</h3></div>
+      <div class="sub-body" style="display:flex;gap:28px;align-items:center;flex-wrap:wrap">
+        <div class="avatar" aria-hidden="true">O</div>
+        <p class="prose" style="margin:0;max-width:46ch">A single serif O on shutter green, only for favicons and social avatars where the full name cannot fit. It never appears beside the wordmark or replaces it anywhere else.</p>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Misuse</h3></div>
+      <div class="sub-body misuse" aria-label="Examples of wordmark misuse">
+        <figure><div class="tile" aria-hidden="true"><span class="wm" style="font-size:12px;font-family:Georgia,serif;letter-spacing:0">The Oberdorfer Team</span></div><figcaption class="cap">Do not reset the name in another face or with default spacing.</figcaption></figure>
+        <figure><div class="tile" aria-hidden="true"><span style="text-align:center"><span class="wm" style="font-size:11px;display:block">The Oberdorfer Team</span><span style="font-family:var(--sans);font-size:20px;font-weight:700;display:block;margin-top:6px">REWAP BROKERAGE</span></span></div><figcaption class="cap">Do not set the brokerage line larger than the team name.</figcaption></figure>
+        <figure><div class="tile" aria-hidden="true" style="background:var(--brick)"><span class="wm" style="font-size:11px;color:var(--green)">The Oberdorfer Team</span></div><figcaption class="cap">Do not place green on brick or any unlisted color pair.</figcaption></figure>
+        <figure><div class="tile" aria-hidden="true"><span style="display:grid;justify-items:center;gap:6px"><svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true"><path d="M2 20 L17 4 L32 20" fill="none" stroke="var(--slate)" stroke-width="2"/></svg><span class="wm" style="font-size:11px">The Oberdorfer Team</span></span></div><figcaption class="cap">Do not add a roof, key, pin or house symbol.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 TYPOGRAPHY -->
+<section id="typography" class="chapter" aria-labelledby="typography-title" data-chapter="05" data-chapter-title="Typography">
+  <header class="opener opener--split">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">05</p>
+        <h2 class="opener-title" id="typography-title">Typography</h2>
+        <p class="opener-deck">One serif to read and to headline; one grotesk that narrows for labels and widens for prices.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/MIKb6CuEcvw.jpg" width="2000" height="1260" loading="lazy" style="object-position: 46% 50%; aspect-ratio: 16 / 10" alt="Black and white photograph of a brick mill building with a faded painted sign reading Merrill and Usher Co. across its facade.">
+        <figcaption class="cap">Fig. 05 — Painted lettering on a brick mill. Sample photograph, Cam Fattahi / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-wide specimen">
+        <div class="face face--serif">
+          <p class="big">Inria Serif</p>
+          <p class="meta" style="margin:0;color:var(--stone)">Display and reading</p>
+          <p class="glyphs">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz <i>Italic &amp; ampersand</i> 0123456789</p>
+          <p class="note" style="margin:0">Light, Regular and Bold with italics. Sharp, slightly wedged serifs and an open, contemporary build. Bold for headlines, Regular for reading at 17–21px, Light only for the giant chapter numerals. Open source (SIL Open Font License), served by Google Fonts.</p>
+        </div>
+        <div class="face face--sans">
+          <p class="big">Archivo</p>
+          <p class="meta" style="margin:0;color:var(--stone)">Interface and data</p>
+          <div class="widths" aria-label="Archivo width axis">
+            <span style="font-stretch:82%">Labels and captions<small>width 82</small></span>
+            <span style="font-stretch:100%">Buttons and navigation<small>width 100</small></span>
+            <span style="font-stretch:116%;font-weight:500;font-variant-numeric:tabular-nums">$689,000<small>width 116</small></span>
+          </div>
+          <p class="note" style="margin:0">A grotesk rooted in 19th-century American wood type, with a variable width axis from 62 to 125. One family carries everything that is not prose. Open source (SIL Open Font License), served by Google Fonts.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">The scale</h3><p class="note">Fluid sizes clamp between phone and desktop. Headings get more space above than below.</p></div>
+      <div class="sub-body scale">
+        <div class="scale-row"><p class="spec"><b>Display</b>Inria Serif Bold · 56–96px · line 0.94 · −0.012em</p><p class="ex t-display" style="margin:0">Field Notes</p></div>
+        <div class="scale-row"><p class="spec"><b>Heading 1</b>Inria Serif Bold · 36–60px · line 1.02</p><p class="ex t-h1" style="margin:0">Living on the West Side</p></div>
+        <div class="scale-row"><p class="spec"><b>Heading 2</b>Inria Serif Bold · 28–40px · line 1.1</p><p class="ex t-h2" style="margin:0">What your budget buys in Holden</p></div>
+        <div class="scale-row"><p class="spec"><b>Heading 3</b>Archivo Semibold · width 92 · 22px</p><p class="ex t-h3" style="margin:0">Taxes, utilities and the first winter</p></div>
+        <div class="scale-row"><p class="spec"><b>Body</b>Inria Serif Regular · 17–19px · line 1.6 · 64ch max</p><p class="ex t-body" style="margin:0">The house sits back from the road behind a fieldstone wall, with the original 1926 trim still in the front rooms and a kitchen that was opened up in 2019.</p></div>
+        <div class="scale-row"><p class="spec"><b>Meta</b>Archivo · width 82 · 13px · capitals · +0.06em</p><p class="ex t-meta" style="margin:0">Holden · Single family · Listed Oct 9</p></div>
+        <div class="scale-row"><p class="spec"><b>Caption</b>Archivo · width 82 · 13px · line 1.4</p><p class="ex t-cap" style="margin:0">Fig. 12 — Front parlor, south light at 3pm. Sample photograph.</p></div>
+        <div class="scale-row"><p class="spec"><b>Price</b>Archivo Medium · width 116 · 24–34px · tabular</p><p class="ex t-price" style="margin:0">$689,000</p></div>
+        <div class="scale-row"><p class="spec"><b>Property data</b>Archivo · width 100 · 15px · tabular</p><p class="ex t-data" style="margin:0">4 bd · 2.5 ba · 2,140 sq ft · 0.52 ac · Built 1780</p></div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Rules</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Numbers</dt><dd>Prices, square footage, dates and stats always use Archivo with tabular figures, so columns of listings line up.</dd></div>
+          <div class="row"><dt>Italics</dt><dd>Inria Serif Italic carries a property's architectural character line and the occasional emphasis. Never for whole paragraphs.</dd></div>
+          <div class="row"><dt>Capitals</dt><dd>Reserved for the wordmark and small meta labels. Headlines stay in sentence case.</dd></div>
+          <div class="row"><dt>Small screens</dt><dd>Body never drops below 17px. Display sizes scale with the viewport and stop at 96px, except the cover line.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 COLOR -->
+<section id="color" class="chapter" aria-labelledby="color-title" data-chapter="06" data-chapter-title="Color">
+  <header class="opener opener--split">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">06</p>
+        <h2 class="opener-title" id="color-title">Color</h2>
+        <p class="opener-deck">Color comes from materials around here: painted shutters, plaster, oak, brick and slate. We print on it rather than sprinkling it.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/S47fH1-Bk_s.jpg" width="1500" height="2000" loading="lazy" style="object-position: 50% 35%" alt="A white six-over-six window set into barn-red clapboard above a fieldstone foundation.">
+        <figcaption class="cap">Fig. 06 — Red clapboard and a six-over-six window. Sample photograph, Diane Helentjaris / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Stocks</h3><p class="note">Surfaces that own whole regions of a page.</p></div>
+      <div class="sub-body">
+        <div class="stocks">
+          <div class="stock stock--green"><div><h4>Shutter green</h4><p>Covers, chapter openers, footers, the valuation panel. The brand's signature surface.</p></div><p class="hex">#28382D <button class="copy" type="button" data-copy="#28382D">Copy</button></p></div>
+          <div class="stock stock--plaster"><div><h4>Plaster</h4><p>Every reading page. A cool off-white, never cream.</p></div><p class="hex">#E8E7E3 <button class="copy" type="button" data-copy="#E8E7E3">Copy</button></p></div>
+          <div class="stock stock--oak"><div><h4>Oak</h4><p>Second stock for selling, photography and affiliation.</p></div><p class="hex">#B98D5A <button class="copy" type="button" data-copy="#B98D5A">Copy</button></p></div>
+          <div class="stock stock--brick"><div><h4>Brick</h4><p>Spot ink: one primary action per view, figure numbers.</p></div><p class="hex">#9B3A29 <button class="copy" type="button" data-copy="#9B3A29">Copy</button></p></div>
+        </div>
+        <div class="inks">
+          <div class="ink" style="background:var(--slate);color:var(--plaster)"><b>Slate</b><span>#2A3136 · body ink on plaster</span></div>
+          <div class="ink" style="background:var(--clay);color:var(--ink-deep)"><b>Clay</b><span>#E0937A · brick's tint, for numerals on green</span></div>
+          <div class="ink" style="background:var(--lichen);color:var(--ink-deep)"><b>Lichen</b><span>#A9B5AC · secondary text on green</span></div>
+          <div class="ink" style="background:var(--stone);color:var(--plaster)"><b>Stone</b><span>#5E6660 · secondary text on plaster</span></div>
+        </div>
+        <div class="ratio" aria-label="Approximate share of surface per color">
+          <span style="flex:40;background:var(--green);color:var(--plaster)">Green 40%</span>
+          <span style="flex:44;background:var(--plaster);color:var(--slate);outline:1px solid var(--rule);outline-offset:-1px">Plaster 44%</span>
+          <span style="flex:8;background:var(--oak);color:var(--ink-deep)">Oak 8%</span>
+          <span style="flex:5;background:var(--slate);color:var(--plaster)">Ink</span>
+          <span style="flex:3;background:var(--brick);color:var(--plaster)" title="Brick 3%"></span>
+        </div>
+        <p class="cap" style="margin-top:8px">Approximate share of surface across a typical page. Brick stays near 3%.</p>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Tested pairs</h3><p class="note">WCAG 2.1 contrast. AA asks 4.5:1 for body text and 3:1 for large text and UI marks.</p></div>
+      <div class="sub-body table-scroll">
+        <table class="table">
+          <thead><tr><th scope="col">Text on surface</th><th scope="col">Ratio</th><th scope="col">Use</th></tr></thead>
+          <tbody>
+            <tr><td><span class="swatch-dot" style="background:var(--slate)"></span>Slate on plaster</td><td>10.67:1</td><td><span class="pass">Any text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--plaster)"></span>Plaster on green</td><td>10.02:1</td><td><span class="pass">Any text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--lichen)"></span>Lichen on green</td><td>5.84:1</td><td><span class="pass">Any text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--brick)"></span>Brick on plaster</td><td>5.60:1</td><td><span class="pass">Any text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--plaster)"></span>Plaster on brick</td><td>5.60:1</td><td><span class="pass">Buttons</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--ink-deep)"></span>Deep ink on oak</td><td>5.43:1</td><td><span class="pass">Any text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--clay)"></span>Clay on green</td><td>5.09:1</td><td><span class="pass">Numerals, links</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--stone)"></span>Stone on plaster</td><td>4.79:1</td><td><span class="pass">Secondary text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--plaster)"></span>Plaster on oak</td><td>2.42:1</td><td><span class="fail">Never for text</span></td></tr>
+            <tr><td><span class="swatch-dot" style="background:var(--brick)"></span>Brick on green</td><td>1.79:1</td><td><span class="fail">Never</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Tokens</h3><p class="note">These names carry into the WordPress theme.json palette.</p></div>
+      <div class="sub-body">
+<pre class="payload code" tabindex="0">:root {
+  <span class="k">--color-stock-green</span>:   <span class="s">#28382D</span>;
+  <span class="k">--color-stock-plaster</span>: <span class="s">#E8E7E3</span>;
+  <span class="k">--color-stock-oak</span>:     <span class="s">#B98D5A</span>;
+  <span class="k">--color-spot-brick</span>:    <span class="s">#9B3A29</span>;
+  <span class="k">--color-ink</span>:           <span class="s">#2A3136</span>;
+  <span class="k">--color-ink-deep</span>:      <span class="s">#1C2124</span>;
+  <span class="k">--color-ink-muted</span>:     <span class="s">#5E6660</span>;
+  <span class="k">--color-on-green-accent</span>: <span class="s">#E0937A</span>;
+  <span class="k">--color-on-green-muted</span>:  <span class="s">#A9B5AC</span>;
+  <span class="k">--color-paper</span>:         <span class="s">#F2F1EE</span>;
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PHOTOGRAPHY -->
+<section id="photography" class="chapter" aria-labelledby="photography-title" data-chapter="07" data-chapter-title="Photography">
+  <header class="opener opener--full">
+    <figure class="opener-fig" data-reveal style="margin:0">
+      <img src="assets/img/3Ns7li2szbU.jpg" width="2000" height="1816" loading="lazy" style="object-position: 50% 58%" alt="A shingled gambrel-roof house with a glassed-in front porch above a dry-laid stone wall and spring plantings.">
+    </figure>
+    <div class="opener-card">
+      <p class="opener-no" aria-hidden="true">07</p>
+      <h2 class="opener-title" id="photography-title">Photography</h2>
+      <p class="opener-deck">Real houses and real places, in the light they actually get. We crop like architects and caption like editors.</p>
+    </div>
+    <p class="cap opener-after">Fig. 07 — Gambrel house above a stone wall. Sample photograph, LXS Photography / Unsplash.</p>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Direction</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Light is the subject</dt><dd>Low autumn sun, flat winter light, the hour when a room is at its best. Shoot when the house looks like itself, not when the sky is bluest.</dd></div>
+          <div class="row"><dt>Crop like an architect</dt><dd>Corners, stair runs, window reveals, the line where clapboard meets stone. One tight detail beside one wide view.</dd></div>
+          <div class="row"><dt>Places, not props</dt><dd>No keys in hands, no sold signs, no staged handshakes, no generic stock models.</dd></div>
+          <div class="row"><dt>People only when real</dt><dd>Clients who have agreed to it, the team at work, neighbors in their own places.</dd></div>
+          <div class="row"><dt>Always captioned</dt><dd>Figure number, what it shows, where, and who made it. A caption turns a picture into information.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-wide gallery">
+        <figure class="g-a" data-reveal><img src="assets/img/j5TewHOqdpw.jpg" width="2000" height="1324" loading="lazy" alt="Weathered shingle and clapboard houses in a row along a sunny street, long shadows across the sidewalk."><figcaption class="cap"><b>Fig. 08</b> — Street of shingled houses, Portsmouth, NH. Wide view: a whole street, real shadow. Emi Mo / Unsplash.</figcaption></figure>
+        <figure class="g-b" data-reveal><img src="assets/img/9sbTB3kLXBc.jpg" width="1334" height="2000" loading="lazy" alt="A four-story red brick building with stacked bay windows on a downtown street corner."><figcaption class="cap"><b>Fig. 09</b> — Bay windows, Southbridge Street, Worcester. Vertical detail. Nana Nakazwe / Unsplash.</figcaption></figure>
+        <figure class="g-c" data-reveal><img src="assets/img/MQE7ld8vxLI.jpg" width="2000" height="1334" loading="lazy" alt="An empty old room with two deep-set windows, rough plaster walls and a plank ceiling."><figcaption class="cap"><b>Fig. 10</b> — A room mid-renovation. For Field Notes on old houses. Margo Evardson / Unsplash.</figcaption></figure>
+        <figure class="g-d" data-reveal><img src="assets/img/BFEqlDN-UME.jpg" width="2000" height="1334" loading="lazy" alt="Red brick commercial buildings with mansard roofs above a downtown intersection with traffic lights."><figcaption class="cap"><b>Fig. 11</b> — Downtown Worcester. Town pages open on places like this. Nana Nakazwe / Unsplash.</figcaption></figure>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Do and don't</h3></div>
+      <div class="sub-body dodont">
+        <div><h4 class="h4">Do</h4><ul><li>Shoot exteriors in the season the house will sell in.</li><li>Include one detail that shows how it was built.</li><li>Keep verticals straight; correct lens distortion.</li><li>Write alt text that describes the house, not the pitch.</li></ul></div>
+        <div><h4 class="h4">Don't</h4><ul><li>Replace skies or add fake twilight glow.</li><li>Use wide-angle stretch to make rooms look larger.</li><li>Use people holding keys or pointing at houses.</li><li>Publish a photo of a real home without permission.</li></ul></div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Replace before launch</h3><p class="note">Every photograph in this book is a free Unsplash sample, credited and marked. This is the shot list for a real shoot.</p></div>
+      <div class="sub-body table-scroll">
+        <table class="table">
+          <thead><tr><th scope="col">Fig.</th><th scope="col">Sample</th><th scope="col">Replace with</th></tr></thead>
+          <tbody>
+            <tr><td>01</td><td>Clapboard and shutters, Jessica Langbein</td><td>A Worcester County house the team has sold, corner view, low sun</td></tr>
+            <tr><td>02</td><td>Stair hall, Magic Fan</td><td>An interior detail from a real listing</td></tr>
+            <tr><td>03</td><td>Colonial, I Do Nothing But Love</td><td>Brandon and Kait's own street or neighborhood</td></tr>
+            <tr><td>04</td><td>Mailboxes, Rockport (Hasnain Sikora)</td><td>A winter detail from a Central Mass. town center</td></tr>
+            <tr><td>05</td><td>Painted sign (Cam Fattahi)</td><td>Painted lettering on a Worcester mill building</td></tr>
+            <tr><td>06</td><td>Red clapboard (Diane Helentjaris)</td><td>A material close-up from a listing</td></tr>
+            <tr><td>03a–11a</td><td>MV Vacation, Austin, Miguel Luis, Büsra Aksoy, Peyton Carroll</td><td>Chapter strips from the team's own towns and listings</td></tr>
+            <tr><td>07–11</td><td>LXS Photography, Emi Mo, Nana Nakazwe, Margo Evardson</td><td>Town-page openers for the first launch towns</td></tr>
+            <tr><td>12–15</td><td>Jessica Langbein, Rick Lobs, Brett Wharton, Stuart Jenkins</td><td>Real listing photography, used with seller permission</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 LAYOUT -->
+<section id="layout" class="chapter" aria-labelledby="layout-title" data-chapter="08" data-chapter-title="Layout">
+  <header class="opener opener--band">
+    <div class="opener-in grid wrap">
+      <p class="opener-no" aria-hidden="true">08</p>
+      <div class="opener-text">
+        <h2 class="opener-title" id="layout-title">Layout</h2>
+        <p class="opener-deck">Pages are built as spreads: a photograph and a page of text that answer each other. One strong move per screen.</p>
+      </div>
+      <figure class="opener-strip" data-reveal>
+        <img src="assets/img/r6uVcUq0I8E.jpg" width="2000" height="3168" loading="lazy" style="object-position: 50% 72%" alt="A long, bright corridor of tall windows throwing bars of sunlight across a wide-plank wood floor.">
+        <figcaption class="cap">Fig. 08a — Window bays and floorboards. Sample photograph, Miguel Luis / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">The grid</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Columns</dt><dd>Twelve, with 16–32px gutters. Side margins match the cover's inset, about 3.5% of the viewport.</dd></div>
+          <div class="row"><dt>Asymmetry</dt><dd>Prefer 7 + 5 and 8 + 4 splits. A centered layout is reserved for the colophon and forms.</dd></div>
+          <div class="row"><dt>Stock regions</dt><dd>Color fills whole bands edge to edge. It is never a rounded card floating on the page.</dd></div>
+          <div class="row"><dt>Corners and rules</dt><dd>Square corners everywhere. Hairline rules separate; a 2px slate rule starts a list or a table.</dd></div>
+          <div class="row"><dt>Rhythm</dt><dd>Follow a dense passage with a quiet one: a full photograph, a single statement, white space.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Templates</h3><p class="note">Proportional schematics. Hatching marks photography.</p></div>
+      <div class="sub-body schem">
+        <figure>
+          <div class="board" aria-hidden="true">
+            <i class="t" style="grid-column:1/13"></i>
+            <i class="g" style="grid-column:1/8;grid-row:2/6"></i><i class="ph" style="grid-column:8/13;grid-row:2/6"></i>
+            <i style="grid-column:1/5;grid-row:6/8"></i><i class="ph" style="grid-column:6/13;grid-row:6/9"></i>
+            <i class="ph" style="grid-column:1/5;grid-row:8/10"></i><i class="o" style="grid-column:5/13;grid-row:9/11"></i>
+            <i class="g" style="grid-column:1/13;grid-row:11/13"></i>
+          </div>
+          <figcaption class="cap"><b>Homepage.</b> Green cover, discovery, featured homes, towns, the valuation panel on oak.</figcaption>
+        </figure>
+        <figure>
+          <div class="board" aria-hidden="true">
+            <i class="t" style="grid-column:1/13"></i>
+            <i class="ph" style="grid-column:1/9;grid-row:2/6"></i><i class="ph" style="grid-column:9/13;grid-row:2/4"></i><i class="ph" style="grid-column:9/13;grid-row:4/6"></i>
+            <i style="grid-column:1/9;grid-row:6/8"></i><i class="b" style="grid-column:9/13;grid-row:6/7"></i>
+            <i style="grid-column:1/9;grid-row:8/10"></i><i style="grid-column:9/13;grid-row:7/10"></i>
+            <i style="grid-column:1/13;grid-row:10/12"></i><i class="g" style="grid-column:1/13;grid-row:12/13"></i>
+          </div>
+          <figcaption class="cap"><b>Property detail.</b> Gallery, facts, story, map, attribution; showing request stays in reach.</figcaption>
+        </figure>
+        <figure>
+          <div class="board" aria-hidden="true">
+            <i class="t" style="grid-column:1/13"></i>
+            <i class="ph" style="grid-column:1/13;grid-row:2/5"></i>
+            <i style="grid-column:1/6;grid-row:5/7"></i><i style="grid-column:6/13;grid-row:5/8"></i>
+            <i class="ph" style="grid-column:1/5;grid-row:8/10"></i><i class="ph" style="grid-column:5/9;grid-row:8/10"></i><i class="ph" style="grid-column:9/13;grid-row:8/10"></i>
+            <i style="grid-column:1/13;grid-row:10/12"></i><i class="g" style="grid-column:1/13;grid-row:12/13"></i>
+          </div>
+          <figcaption class="cap"><b>Town page.</b> Wide opener, narrative, housing character, homes, then market notes.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">The homepage, in ten movements</h3><p class="note">The order is the story. It replaces the usual hero, three icons and a grid.</p></div>
+      <div class="sub-body">
+        <ol class="movements">
+          <li><span class="n">01</span><div><b>Home is personal.</b><span>The cover line on green, one photograph, the team and brokerage named.</span></div></li>
+          <li><span class="n">02</span><div><b>Start looking</b><span>Search by town, price and type, with a map one tap away.</span></div></li>
+          <li><span class="n">03</span><div><b>Why the Oberdorfers</b><span>Two people, how they work, what clients can expect in writing.</span></div></li>
+          <li><span class="n">04</span><div><b>Homes we're showing</b><span>Three listings presented editorially, one large and two small.</span></div></li>
+          <li><span class="n">05</span><div><b>Towns we know</b><span>Openers for the launch towns, each linking to a full town page.</span></div></li>
+          <li><span class="n">06</span><div><b>Buying, in order</b><span>The six-step journey, with what we do at each step.</span></div></li>
+          <li><span class="n">07</span><div><b>Selling, with care</b><span>Presentation and pricing, then the valuation panel on oak.</span></div></li>
+          <li><span class="n">08</span><div><b>Our story</b><span>Brandon and Kait, the team and how it grows.</span></div></li>
+          <li><span class="n">09</span><div><b>Field Notes</b><span>Market commentary and local writing, most recent first.</span></div></li>
+          <li><span class="n">10</span><div><b>Talk with us</b><span>A short form, direct contacts, brokerage attribution.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 INTERFACE -->
+<section id="interface" class="chapter" aria-labelledby="interface-title" data-chapter="09" data-chapter-title="Interface">
+  <header class="opener opener--split">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">09</p>
+        <h2 class="opener-title" id="interface-title">Interface</h2>
+        <p class="opener-deck">Listings read like features in an architecture magazine: the photograph, the address, the price, and what makes the house itself.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/Et-cTdVHF5U.jpg" width="2000" height="1333" loading="lazy" style="object-position: 38% 50%" alt="A barn-red clapboard colonial with pedimented window heads and dormers, above a brick sidewalk.">
+        <figcaption class="cap">Fig. 12 — Red clapboard colonial with dormers. Sample photograph, Jessica Langbein / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Controls</h3><p class="note">Square, quiet, and always labeled with the action.</p></div>
+      <div class="sub-body" style="display:grid;gap:24px">
+        <div class="btn-row">
+          <a class="btn" href="#showing">Request a showing</a>
+          <a class="btn btn--line" href="#showing">Save this search</a>
+          <button class="btn" type="button" disabled>Sending…</button>
+          <a class="textlink" href="#buying">Read the buying guide</a>
+        </div>
+        <div class="panel panel--green btn-row">
+          <a class="btn btn--plaster" href="#valuation">Ask what your home is worth</a>
+          <a class="textlink" href="#selling">How we sell</a>
+        </div>
+        <p class="note">One brick button per view. Secondary actions are outlined or written as links. Disabled buttons drop to recessed plaster and say what is happening.</p>
+      </div>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Featured property</h3><p class="note">The editorial card. Sample listing; address, price and details are illustrative.</p></div>
+      <div class="sub-body"></div>
+      <article class="sub-wide prop-feature" aria-label="Sample featured listing">
+        <figure class="ph" data-reveal>
+          <img src="assets/img/ptRWMbqXNUo.jpg" width="2000" height="1500" loading="lazy" alt="Front of a blue center-chimney colonial with yellow shutters, a small entry porch and granite steps.">
+          <span class="tag"><b>Open house</b> · Sat Oct 18, 11–1</span>
+          <button class="save" type="button" aria-pressed="false" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save</span></button>
+        </figure>
+        <div class="info">
+          <span class="sample-tag" style="justify-self:start;color:var(--stone)">Sample listing</span>
+          <h4 class="addr">14 Orchard Lane</h4>
+          <p class="town" style="margin:-8px 0 0">Holden · Single family</p>
+          <p class="t-price" style="margin:0">$689,000</p>
+          <ul class="facts"><li>4 bd</li><li>2.5 ba</li><li>2,140 sq ft</li><li>0.52 ac</li></ul>
+          <p class="character">Circa 1780 center-chimney colonial: wide pine floors, six-over-six windows, a 2019 kitchen in the old ell.</p>
+          <div class="btn-row"><a class="btn" href="#showing">Request a showing</a><a class="textlink" href="#detail">See the house</a></div>
+          <p class="attr">Listed by The Oberdorfer Team at REWAP Brokerage LLC · MLS PIN # sample</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Compact cards</h3><p class="note">For grids of homes. Same order every time: photo, town, address, price, facts. Sample listings.</p></div>
+      <div class="sub-wide cards" style="margin-top:8px">
+        <article class="card">
+          <figure class="ph"><img src="assets/img/l_LRHud6NTA.jpg" width="2000" height="1334" loading="lazy" alt="A gray-shingled Queen Anne house with gables, a balcony and a cream picket fence."><button class="save" type="button" aria-pressed="true" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button></figure>
+          <h4 class="addr" style="margin:0">7 Linden Street</h4>
+          <p class="town" style="margin:0">Princeton · Sample</p>
+          <div class="price-row"><span class="t-price" style="font-size:24px">$825,000</span><span class="t-data" style="color:var(--stone)">1894</span></div>
+          <ul class="facts"><li>5 bd</li><li>3 ba</li><li>2,980 sq ft</li></ul>
+          <p class="character" style="font-size:15.5px">Shingle Style, wraparound balcony, original stair.</p>
+        </article>
+        <article class="card">
+          <figure class="ph"><img src="assets/img/1CHyP92Oc04.jpg" width="2000" height="1328" loading="lazy" style="object-position:20% 60%" alt="A white colonial with black shutters and an enclosed front porch behind a hedge."><button class="save" type="button" aria-pressed="false" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save</span></button></figure>
+          <h4 class="addr" style="margin:0">31 Maple Avenue</h4>
+          <p class="town" style="margin:0">Shrewsbury · Sample</p>
+          <div class="price-row"><span class="t-price" style="font-size:24px">$749,000</span><span class="t-data" style="color:var(--stone)">1932</span></div>
+          <ul class="facts"><li>4 bd</li><li>2.5 ba</li><li>2,410 sq ft</li></ul>
+          <p class="character" style="font-size:15.5px">Colonial Revival, fanlight gable, sunroom.</p>
+        </article>
+        <article class="card">
+          <figure class="ph"><img src="assets/img/3Ns7li2szbU.jpg" width="2000" height="1816" loading="lazy" style="object-position:50% 45%" alt="A shingled gambrel-roof house with a glassed-in porch above a stone wall."><button class="save" type="button" aria-pressed="false" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save</span></button></figure>
+          <h4 class="addr" style="margin:0">5 Stone Row</h4>
+          <p class="town" style="margin:0">Boylston · Sample</p>
+          <div class="price-row"><span class="t-price" style="font-size:24px">$559,000</span><span class="t-data" style="color:var(--stone)">1948</span></div>
+          <ul class="facts"><li>3 bd</li><li>2 ba</li><li>1,760 sq ft</li></ul>
+          <p class="character" style="font-size:15.5px">Gambrel, enclosed porch, dry-laid wall.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Search results</h3><p class="note">A list that scans like a table of contents. Prices align. Sample listings, including one from another brokerage.</p></div>
+      <div class="sub-body">
+        <div class="results">
+          <div class="result"><img src="assets/img/ptRWMbqXNUo.jpg" width="2000" height="1500" loading="lazy" alt="Blue colonial with yellow shutters."><div><p class="addr" style="margin:0">14 Orchard Lane</p><p class="town" style="margin:4px 0 0">Holden</p><ul class="facts" style="margin-top:6px"><li>4 bd</li><li>2.5 ba</li><li>2,140 sq ft</li></ul></div><div class="right"><span class="t-price" style="font-size:22px">$689,000</span><button class="save" type="button" aria-pressed="false" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save</span></button></div></div>
+          <div class="result"><img src="assets/img/l_LRHud6NTA.jpg" width="2000" height="1334" loading="lazy" alt="Gray-shingled Queen Anne house."><div><p class="addr" style="margin:0">7 Linden Street</p><p class="town" style="margin:4px 0 0">Princeton</p><ul class="facts" style="margin-top:6px"><li>5 bd</li><li>3 ba</li><li>2,980 sq ft</li></ul></div><div class="right"><span class="t-price" style="font-size:22px">$825,000</span><button class="save" type="button" aria-pressed="true" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Saved</span></button></div></div>
+          <div class="result"><img src="assets/img/j5TewHOqdpw.jpg" width="2000" height="1324" loading="lazy" style="object-position:20% 50%" alt="Shingled house on a sunny street."><div><p class="addr" style="margin:0">220 Pleasant Street, Unit 2</p><p class="town" style="margin:4px 0 0">Worcester · West Side</p><ul class="facts" style="margin-top:6px"><li>2 bd</li><li>1 ba</li><li>1,050 sq ft</li></ul><p class="attr" style="border:0;padding:6px 0 0">Listing courtesy of [Listing Brokerage] · MLS PIN</p></div><div class="right"><span class="t-price" style="font-size:22px">$365,000</span><button class="save" type="button" aria-pressed="false" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span>Save</span></button></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sub" id="detail">
+      <div class="sub-head"><h3 class="h3">Property detail</h3><p class="note">The page a buyer studies. Sample listing.</p></div>
+      <div class="sub-body"></div>
+      <div class="sub-wide detail">
+        <div class="detail-gallery">
+          <img class="main" src="assets/img/ptRWMbqXNUo.jpg" width="2000" height="1500" loading="lazy" alt="Front of the sample colonial in summer.">
+          <div class="more"><img src="assets/img/S47fH1-Bk_s.jpg" width="1500" height="2000" loading="lazy" style="object-position:50% 30%" alt="Detail of a six-over-six window in clapboard."></div>
+          <div class="more"><img src="assets/img/MQE7ld8vxLI.jpg" width="2000" height="1334" loading="lazy" alt="Interior room with two windows."><span>All 32 photos</span></div>
+        </div>
+        <div class="detail-main">
+          <h4 class="t-h1" style="margin:28px 0 0">14 Orchard Lane</h4>
+          <p class="town" style="margin:8px 0 0">Holden · Single family · Sample listing</p>
+          <p class="t-price" style="margin:14px 0 0">$689,000</p>
+          <dl class="fact-table">
+            <div><dt>Bedrooms</dt><dd>4</dd></div><div><dt>Baths</dt><dd>2.5</dd></div><div><dt>Living area</dt><dd>2,140 ft²</dd></div><div><dt>Lot</dt><dd>0.52 ac</dd></div>
+            <div><dt>Built</dt><dd>c. 1780</dd></div><div><dt>Style</dt><dd style="font-size:18px">Center chimney</dd></div><div><dt>Heat</dt><dd style="font-size:18px">Oil, radiators</dd></div><div><dt>Taxes</dt><dd>$8,912</dd></div>
+          </dl>
+          <div class="prose">
+            <p>The house was built around a single great chimney, with a parlor and a hall on either side and the kitchen behind. The wide pine boards in the front rooms are original; the 2019 renovation moved the kitchen into the old ell and left the frame exposed.</p>
+            <p class="note">Sample copy. On the real site, this story is written by the team, never generated from listing fields.</p>
+          </div>
+          <div class="map" style="margin-top:28px" role="img" aria-label="Illustrative map showing the sample listing's location on a residential street near a pond">
+            <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="800" height="450" fill="#D9D7CF"/>
+              <path d="M520 0 C 560 90, 640 120, 800 140 L 800 0 Z" fill="#B9C6BE"/>
+              <path d="M0 330 C 120 300, 200 360, 330 340 S 520 300, 600 450 L 0 450 Z" fill="#C3CCB8"/>
+              <g fill="none" stroke="#F2F1EE" stroke-linecap="round">
+                <path d="M-10 120 C 180 140, 330 90, 520 160 S 760 240, 820 230" stroke-width="14"/>
+                <path d="M300 -10 C 330 120, 380 250, 360 470" stroke-width="10"/>
+                <path d="M600 -10 L 560 470" stroke-width="8"/>
+                <path d="M-10 250 L 820 300" stroke-width="7"/>
+                <path d="M120 -10 L 170 470" stroke-width="6"/>
+              </g>
+              <rect x="410" y="190" width="14" height="14" fill="#2A3136"/>
+            </svg>
+            <span class="pinlabel">$689K</span>
+          </div>
+          <p class="cap" style="margin-top:8px">Map styling: plaster streets, sage parks, slate marker with the price. No red pins, no icon clutter. Illustrative.</p>
+        </div>
+        <aside class="detail-side" aria-label="Request a showing">
+          <div class="panel panel--paper" id="showing">
+            <p class="h4" style="margin:0">Request a showing</p>
+            <form class="form-grid" data-demo-form novalidate style="grid-template-columns:1fr">
+              <div class="field"><label for="sh-name">Your name</label><input class="input" id="sh-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="sh-email">Email or phone</label><input class="input" id="sh-email" name="contact" autocomplete="email" required><span class="err" hidden>Add an email or phone so we can confirm a time.</span></div>
+              <div class="field"><label for="sh-when">When works</label><select class="input" id="sh-when" name="when"><option>This weekend</option><option>Weekday evening</option><option>Open house, Sat Oct 18</option></select></div>
+              <button class="btn" type="submit">Request a showing</button>
+              <p class="disclose">Your request goes to The Oberdorfer Team at REWAP Brokerage LLC. We reply within [response time to confirm].</p>
+              <div class="confirm" role="status">Request noted in this preview. Nothing was sent: this is a sample form.</div>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">On a phone</h3><p class="note">Photography first, actions under the thumb, filters in a bottom sheet, and a map that trades places with the list.</p></div>
+      <div class="sub-wide phones" style="margin-top:12px">
+        <figure class="phone-fig">
+          <div class="phone" aria-hidden="true">
+            <div class="bar"><span class="wm">Oberdorfer</span><span>Menu</span></div>
+            <div class="p-img" style="background-image:url('assets/img/ptRWMbqXNUo.jpg')"></div>
+            <div class="p-body"><span class="p-addr">14 Orchard Lane</span><span class="town" style="font-size:11px">Holden · Sample</span><span class="p-price">$689,000</span><span class="p-facts">4 bd · 2.5 ba · 2,140 sq ft</span><span class="character" style="font-size:13px">Circa 1780 center-chimney colonial.</span></div>
+            <div class="p-sticky"><span class="b">Save</span><span class="a">Request a showing</span></div>
+          </div>
+          <figcaption class="cap">Sticky actions on a listing</figcaption>
+        </figure>
+        <figure class="phone-fig">
+          <div class="phone" aria-hidden="true">
+            <div class="bar"><span class="wm">Oberdorfer</span><span>Filters</span></div>
+            <div class="p-img" style="background-image:url('assets/img/l_LRHud6NTA.jpg');height:180px"></div>
+            <div class="scrim"></div>
+            <div class="sheet"><div class="grab"></div><h5>Filters</h5>
+              <div class="chips"><span class="on">Holden</span><span class="on">Princeton</span><span>Sterling</span><span>Boylston</span><span>+ Town</span></div>
+              <div><span class="town" style="font-size:11px">Price</span><div class="range"><i style="left:22%"></i><i style="left:70%"></i></div><span class="p-facts">$450K – $850K</span></div>
+              <div class="chips"><span>2+ bd</span><span class="on">3+ bd</span><span>4+ bd</span></div>
+              <span class="go">Show 38 homes</span></div>
+          </div>
+          <figcaption class="cap">Bottom-sheet filters</figcaption>
+        </figure>
+        <figure class="phone-fig">
+          <div class="phone" aria-hidden="true">
+            <div class="maplist">
+              <div class="m"><svg viewBox="0 0 276 260" preserveAspectRatio="xMidYMid slice"><rect width="276" height="260" fill="#D9D7CF"/><path d="M0 200 C 80 170, 140 220, 276 180 L 276 260 L 0 260 Z" fill="#C3CCB8"/><g stroke="#F2F1EE" fill="none"><path d="M-5 70 C 90 90, 170 40, 280 90" stroke-width="9"/><path d="M110 -5 L 140 265" stroke-width="7"/><path d="M-5 150 L 280 130" stroke-width="5"/></g><g font-family="Archivo, sans-serif" font-size="11" font-weight="600"><rect x="40" y="96" width="44" height="20" fill="#2A3136"/><text x="62" y="110" fill="#E8E7E3" text-anchor="middle">$689K</text><rect x="150" y="50" width="44" height="20" fill="#9B3A29"/><text x="172" y="64" fill="#E8E7E3" text-anchor="middle">$825K</text><rect x="176" y="150" width="44" height="20" fill="#2A3136"/><text x="198" y="164" fill="#E8E7E3" text-anchor="middle">$559K</text></g></svg><div class="toggle"><span class="on">Map</span><span>List</span></div></div>
+              <div>
+                <div class="mini"><i style="background-image:url('assets/img/l_LRHud6NTA.jpg')"></i><div><b>7 Linden Street</b><span class="pr">$825,000</span><br><span style="color:var(--stone)">Princeton · Saved</span></div></div>
+                <div class="mini"><i style="background-image:url('assets/img/ptRWMbqXNUo.jpg')"></i><div><b>14 Orchard Lane</b><span class="pr">$689,000</span><br><span style="color:var(--stone)">Holden</span></div></div>
+              </div>
+            </div>
+          </div>
+          <figcaption class="cap">Map and list, one toggle</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid sub" id="buying">
+      <div class="sub-head"><h3 class="h3">Buying, in order</h3><p class="note">Six steps, each with what the buyer decides and what we do.</p></div>
+      <div class="sub-wide">
+        <ol class="journey">
+          <li><span class="step">1</span><h4>Discover</h4><p>Which towns, what kind of house, what budget feels right.</p><span class="we">We: a first conversation, town notes, a lender introduction.</span></li>
+          <li><span class="step">2</span><h4>Understand</h4><p>What the market is doing in the towns you chose.</p><span class="we">We: recent sales explained, a saved search tuned to you.</span></li>
+          <li><span class="step">3</span><h4>Tour</h4><p>Seeing homes, and seeing past the staging.</p><span class="we">We: notes on each house, questions for the seller.</span></li>
+          <li><span class="step">4</span><h4>Offer</h4><p>Price, terms and contingencies.</p><span class="we">We: comparable sales, options in writing, a recommendation.</span></li>
+          <li><span class="step">5</span><h4>Close</h4><p>Inspection, appraisal, financing and paperwork.</p><span class="we">We: one timeline, every deadline, the attorney looped in.</span></li>
+          <li><span class="step">6</span><h4>Move</h4><p>Keys, utilities and the first season.</p><span class="we">We: contractor names, tax dates, a check-in a year later.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="grid sub" id="selling">
+      <div class="sub-head"><h3 class="h3">Selling, with care</h3><p class="note">Seven commitments, then one strong invitation.</p></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Presentation</dt><dd>Professional photography, a written story of the house, preparation advice room by room.</dd></div>
+          <div class="row"><dt>Strategy</dt><dd>Timing, buyer profile and the launch plan, agreed in writing before we list.</dd></div>
+          <div class="row"><dt>Local market</dt><dd>What has sold nearby, how long it took and why, from MLS records.</dd></div>
+          <div class="row"><dt>Pricing</dt><dd>A range with the reasoning shown, and a plan for what we do if the market answers differently.</dd></div>
+          <div class="row"><dt>Marketing</dt><dd>The listing page, Field Notes features, open houses and targeted local promotion.</dd></div>
+          <div class="row"><dt>Negotiation</dt><dd>Offers compared side by side, net proceeds calculated, a clear recommendation.</dd></div>
+          <div class="row"><dt>Communication</dt><dd>A weekly written update, whether or not anything changed.</dd></div>
+        </dl>
+      </div>
+      <div class="sub-wide panel panel--oak valuation" id="valuation" style="margin-top:clamp(28px,3vw,52px)">
+        <div>
+          <h4>What is your home worth?</h4>
+          <p class="lead" style="max-width:34ch">We'll send a written range with the sales we used and what would move it, within [turnaround to confirm]. No obligation, and no automated estimate.</p>
+        </div>
+        <form class="vform" data-demo-form novalidate>
+          <div class="field"><label for="v-addr">Home address</label><input class="input" id="v-addr" name="address" autocomplete="street-address" placeholder="Street, town" required></div>
+          <div class="field"><label for="v-email">Email</label><input class="input" id="v-email" name="email" type="email" autocomplete="email" required><span class="err" hidden>Add an email so we can send your range.</span></div>
+          <button class="btn" type="submit">Ask what it's worth</button>
+          <div class="confirm" role="status">Noted in this preview. Nothing was sent: this is a sample form.</div>
+        </form>
+      </div>
+      <p class="note sub-wide" style="margin-top:12px">Placement: once on the homepage, on every selling page and in the footer of town pages. Never as a pop-up.</p>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Town pages</h3><p class="note">Pages worth reading even when nobody is shopping. Structure shown with a downtown Worcester example; copy slots are written and fact-checked by the team.</p></div>
+      <div class="sub-wide community">
+        <figure class="c-hero" data-reveal><img src="assets/img/BFEqlDN-UME.jpg" width="2000" height="1334" loading="lazy" style="object-position:50% 40%" alt="Brick buildings with mansard roofs at a downtown Worcester intersection."><figcaption class="cap" style="margin-top:8px">Fig. 13 — Downtown Worcester. Sample photograph, Nana Nakazwe / Unsplash.</figcaption></figure>
+        <div class="c-title"><h4>Worcester, Downtown</h4><p class="town" style="margin:10px 0 0">Worcester County · City</p></div>
+        <div class="c-intro prose"><p><span class="sample-tag" style="color:var(--stone);margin-right:8px">Slot</span>Narrative introduction, 300 to 600 words in the team's voice: how the neighborhood feels on a weekday morning, what the housing stock is, how people get around, what has changed in the last five years.</p></div>
+        <div class="slots">
+          <div><b>Housing character</b><span>Triple-deckers, mill conversions, brick rowhouses; typical eras and condition.</span></div>
+          <div><b>Architecture</b><span>Photo essay of three or four buildings that define the place.</span></div>
+          <div><b>Homes here now</b><span>Live listings from the IDX feed, with attribution.</span></div>
+          <div><b>Map</b><span>Boundaries, parks, transit and schools, styled to the brand.</span></div>
+          <div><b>Parks and outdoors</b><span>Named places, with walking times.</span></div>
+          <div><b>Eating and errands</b><span>Local businesses the team actually uses.</span></div>
+          <div><b>Market notes</b><span>Median price, days on market, inventory, refreshed monthly from MLS data.</span></div>
+          <div><b>Related Field Notes</b><span>Articles tagged to this town.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Field Notes</h3><p class="note">The editorial program. Recommended name; alternatives were Home Notes, Around Here and The Journal.</p></div>
+      <div class="sub-body"><p class="prose" style="margin:0">"Field Notes" fits the brand: it suggests looking closely and writing down what you saw, which is the team's method. Four recurring kinds: market commentary, town guides, house stories, and practical guides for buying, selling and renovating.</p></div>
+      <div class="sub-wide notes" style="margin-top:clamp(24px,3vw,44px)">
+        <article class="note-card"><img src="assets/img/MQE7ld8vxLI.jpg" width="2000" height="1334" loading="lazy" alt="Old room with deep-set windows mid-renovation."><h5>What to check before you fall for an old house</h5><p class="meta" style="margin:0;color:var(--stone)">House stories · 7 min</p><p>Sills, chimneys, knob-and-tube and the questions that save a deal. Sample article.</p></article>
+        <article class="note-card"><img src="assets/img/BFEqlDN-UME.jpg" width="2000" height="1334" loading="lazy" alt="Downtown brick buildings at an intersection."><h5>Worcester County this fall, in plain numbers</h5><p class="meta" style="margin:0;color:var(--stone)">Market · October</p><p>Prices, days on market and what they mean for spring. Sample article.</p></article>
+        <article class="note-card"><img src="assets/img/j5TewHOqdpw.jpg" width="2000" height="1324" loading="lazy" alt="Row of shingled houses on a sunny street."><h5>Your first winter in a New England house</h5><p class="meta" style="margin:0;color:var(--stone)">Guides · 5 min</p><p>Heat, ice dams, and the maintenance calendar. Sample article.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 MOTION -->
+<section id="motion" class="chapter" aria-labelledby="motion-title" data-chapter="10" data-chapter-title="Motion">
+  <header class="opener opener--band">
+    <div class="opener-in grid wrap">
+      <p class="opener-no" aria-hidden="true">10</p>
+      <div class="opener-text">
+        <h2 class="opener-title" id="motion-title">Motion</h2>
+        <p class="opener-deck">Motion behaves like turning a page: a clean wipe, a settle, then stillness. Nothing bounces and nothing floats.</p>
+      </div>
+      <figure class="opener-strip" data-reveal>
+        <img src="assets/img/0oj8ajN1PCY.jpg" width="2000" height="3000" loading="lazy" style="object-position: 50% 42%" alt="Late sun falling through an old wooden interior shutter in a deep green window reveal.">
+        <figcaption class="cap">Fig. 10a — Light through an interior shutter. Sample photograph, Büsra Aksoy / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-wide motion-demo">
+        <figure data-reveal id="motion-fig"><img src="assets/img/BAzT94876hk.jpg" width="2000" height="2000" loading="lazy" style="object-position:50% 55%" alt="A curved bay of tall windows throwing afternoon sunlight across a wood floor."></figure>
+        <div style="display:grid;gap:18px">
+          <h3 class="h3" style="margin:0">The masked reveal</h3>
+          <p class="prose" style="margin:0">Opening photographs wipe in from the left over 900ms while the image settles from 105% to 100%. It runs once, only for photographs still below the fold. The page is complete without it.</p>
+          <div class="btn-row"><button class="btn btn--line" type="button" id="replay">Replay the reveal</button></div>
+          <p class="cap" style="margin:0">Fig. 14 — Bay window, afternoon light. Sample photograph, Stuart Jenkins / Unsplash.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Timing</h3></div>
+      <div class="sub-body cols2" style="align-items:start">
+        <div class="table-scroll"><table class="table">
+          <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Use</th></tr></thead>
+          <tbody>
+            <tr><td>--dur-quick</td><td>160ms</td><td>Hover, press, save</td></tr>
+            <tr><td>--dur-base</td><td>320ms</td><td>Folio swap, sheets, menus</td></tr>
+            <tr><td>--dur-reveal</td><td>900ms</td><td>Opening photographs</td></tr>
+            <tr><td>--ease-settle</td><td>cubic-bezier(.2,.7,.2,1)</td><td>Everything</td></tr>
+          </tbody>
+        </table></div>
+        <figure style="margin:0">
+          <svg class="curve" viewBox="0 0 220 160" role="img" aria-label="The settle easing curve: fast start, long gentle finish">
+            <rect x="20" y="10" width="180" height="130" fill="none" stroke="#2A3136" stroke-opacity=".25"/>
+            <path d="M20 140 C 56 49, 56 10, 200 10" fill="none" stroke="#9B3A29" stroke-width="2.5"/>
+            <text x="20" y="156" font-family="Archivo, sans-serif" font-size="10" fill="#5E6660">0ms</text>
+            <text x="200" y="156" font-family="Archivo, sans-serif" font-size="10" fill="#5E6660" text-anchor="end">900ms</text>
+          </svg>
+          <figcaption class="cap">The settle curve: quick to start, long and quiet to finish.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Where motion lives</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Running folio</dt><dd>The chapter or section name slides up into the folio as you read. On the site, the same bar carries the current town or listing.</dd></div>
+          <div class="row"><dt>Gallery</dt><dd>Photographs slide edge to edge at the settle curve; swiping follows the finger with no rubber-banding.</dd></div>
+          <div class="row"><dt>Hover</dt><dd>Underlines draw in, buttons darken. Images never zoom on hover.</dd></div>
+          <div class="row"><dt>Reduced motion</dt><dd>If the reader asks for less motion, every reveal, slide and swap becomes an instant change.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 ACCESS -->
+<section id="access" class="chapter" aria-labelledby="access-title" data-chapter="11" data-chapter-title="Access">
+  <header class="opener opener--band">
+    <div class="opener-in grid wrap">
+      <p class="opener-no" aria-hidden="true">11</p>
+      <div class="opener-text">
+        <h2 class="opener-title" id="access-title">Access</h2>
+        <p class="opener-deck">Everyone looking for a home should be able to use the site. WCAG 2.1 AA is the floor, not the goal.</p>
+      </div>
+      <figure class="opener-strip" data-reveal>
+        <img src="assets/img/-yueOU_LlLw.jpg" width="2000" height="1872" loading="lazy" style="object-position: 40% 70%" alt="A brick sidewalk under trees, passing a red clapboard house and gray shingled homes.">
+        <figcaption class="cap">Fig. 11a — A brick sidewalk between houses. Sample photograph, Peyton Carroll / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Commitments</h3></div>
+      <div class="sub-body">
+        <dl class="rows">
+          <div class="row"><dt>Contrast</dt><dd>Only the tested pairs in chapter 06. Text never sits directly on a photograph without a stock panel or a measured scrim.</dd></div>
+          <div class="row"><dt>Keyboard</dt><dd>Every control reachable in order, with a visible brick focus ring (2px, offset 3px; clay on green).</dd></div>
+          <div class="row"><dt>Touch</dt><dd>Targets at least 44 × 44px. Sticky actions stay clear of the phone's home indicator.</dd></div>
+          <div class="row"><dt>Images</dt><dd>Alt text describes the house or place plainly. Decorative numerals and textures are hidden from screen readers.</dd></div>
+          <div class="row"><dt>Forms</dt><dd>Visible labels, never placeholder-only. Errors say what went wrong and how to fix it, next to the field.</dd></div>
+          <div class="row"><dt>Maps</dt><dd>Every map has a list equivalent and a text address.</dd></div>
+          <div class="row"><dt>Motion</dt><dd>Respects the reader's reduced-motion setting everywhere.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">A field with an error</h3></div>
+      <div class="sub-body" style="max-width:520px">
+        <div class="field error"><label for="err-demo">Email</label><input class="input" id="err-demo" value="kait@" aria-describedby="err-demo-msg" aria-invalid="true"><span class="err" id="err-demo-msg">This email is missing its domain, like kait@example.com.</span></div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Fair housing</h3></div>
+      <div class="sub-body prose">
+        <p>We describe homes and places, never the people who should live in them. Town pages report facts (distances, housing types, public amenities) and avoid characterizing who lives somewhere. Every page carries the Equal Housing Opportunity statement in the footer.</p>
+        <p class="note">Massachusetts and federal fair-housing rules apply to all advertising. Have REWAP's principal broker confirm the final footer language and any required disclosures before launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 AFFILIATION -->
+<section id="affiliation" class="chapter" aria-labelledby="affiliation-title" data-chapter="12" data-chapter-title="Affiliation">
+  <header class="opener opener--split opener--oak">
+    <div class="opener-in grid wrap">
+      <div class="opener-text">
+        <p class="opener-no" aria-hidden="true">12</p>
+        <h2 class="opener-title" id="affiliation-title">Affiliation</h2>
+        <p class="opener-deck">The Oberdorfer Team is the name people know. REWAP Brokerage LLC is the brokerage behind every transaction. Both are always visible, and never confused.</p>
+      </div>
+      <figure class="opener-fig" data-reveal>
+        <img src="assets/img/wT4w_U2424Q.jpg" width="2000" height="1334" loading="lazy" style="object-position: 58% 45%" alt="Arched windows and carved stone on the facade of a civic building.">
+        <figcaption class="cap">Fig. 15 — Civic stone, Worcester. Sample photograph, Nana Nakazwe / Unsplash.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="page wrap">
+    <div class="grid sub">
+      <div class="sub-wide aff-rule">
+        <p class="statement">The team owns its <em>brand and its writing</em>. The brokerage remains the authority on every transaction.</p>
+        <div class="ratio-diagram">
+          <p class="lock-stacked" style="margin:0;text-align:left;color:var(--green)"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
+          <p class="dim" style="margin:0">Brokerage line: Archivo width 82, 60% of the wordmark size, never below 12px on screen or 7pt in print.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">Where it appears</h3><p class="note">Reusable patterns. Bracketed items are supplied by REWAP and confirmed by its principal broker.</p></div>
+      <div class="sub-wide patterns" style="margin-top:8px">
+        <div class="pattern">
+          <h4 class="h4">Navigation</h4>
+          <div class="demo nav-demo"><p class="lock-inline" style="margin:0;justify-content:flex-start;color:var(--green)"><span class="wm wm-sm">The Oberdorfer Team</span><span class="aff" style="font-size:12px">at REWAP Brokerage LLC</span></p><span class="links"><span>Homes</span><span>Towns</span><span>Buy</span><span>Sell</span><span>Field Notes</span><span>Talk with us</span></span></div>
+          <p class="note">The lockup sits in the header on every page. On phones the brokerage line moves under the name.</p>
+        </div>
+        <div class="pattern">
+          <h4 class="h4">Agent bio</h4>
+          <div class="demo bio-demo"><div class="headshot">Headshot to come</div><div><h5>Brandon Oberdorfer</h5><p>Team lead · Massachusetts real estate broker [license #]<br>The Oberdorfer Team at REWAP Brokerage LLC<br>[phone] · [email]</p></div></div>
+          <p class="note">Every bio names the brokerage. Kait's role and license details to be confirmed.</p>
+        </div>
+        <div class="pattern">
+          <h4 class="h4">Listing attribution</h4>
+          <div class="demo" style="display:grid;gap:10px">
+            <p class="attr" style="border:0;padding:0;color:var(--slate);font-size:14px"><b>Our listing:</b> Listed by The Oberdorfer Team at REWAP Brokerage LLC · MLS PIN #[number]</p>
+            <p class="attr" style="border-top:1px solid var(--rule);padding-top:10px;color:var(--slate);font-size:14px"><b>Another brokerage's listing (IDX):</b> Listing courtesy of [Listing Brokerage] · Data © MLS PIN, deemed reliable but not guaranteed</p>
+          </div>
+          <p class="note">IDX rules govern exact wording and placement. The adapter supplies it per listing.</p>
+        </div>
+        <div class="pattern">
+          <h4 class="h4">Contact forms</h4>
+          <div class="demo"><p class="disclose" style="color:var(--slate)">Your message goes to The Oberdorfer Team at REWAP Brokerage LLC. We use it only to reply to you. [Privacy policy]</p></div>
+          <p class="note">One line under every form, above the fold of the form itself.</p>
+        </div>
+        <div class="pattern" style="grid-column:1/-1">
+          <h4 class="h4">Footer and legal</h4>
+          <div class="demo foot-demo">
+            <p class="lock-inline" style="margin:0;justify-content:flex-start;color:var(--plaster)"><span class="wm wm-sm">The Oberdorfer Team</span><span class="aff" style="font-size:12px;color:var(--lichen)">at REWAP Brokerage LLC</span></p>
+            <p>The Oberdorfer Team is a team of real estate professionals affiliated with REWAP Brokerage LLC, Worcester, Massachusetts. Brokerage services are provided by REWAP Brokerage LLC. [Brokerage address] · [Phone] · [License information]</p>
+            <p>Equal Housing Opportunity. Listing information is deemed reliable but not guaranteed. [IDX disclaimer supplied by the MLS] · [Privacy policy] · [Accessibility statement]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid sub">
+      <div class="sub-head"><h3 class="h3">One platform, two brands</h3><p class="note">How the team site and a future REWAP site can share data without duplicating it.</p></div>
+      <div class="sub-wide model" style="margin-top:8px">
+        <svg viewBox="0 0 980 420" role="img" aria-label="Data model: REWAP Brokerage owns teams and agents. The Oberdorfer Team owns its articles and town pages. Properties come from the MLS through a vendor-neutral IDX adapter. Leads reference the property, team, agent and brokerage.">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2A3136"/></marker></defs>
+          <g font-family="Archivo, sans-serif" font-size="13" fill="#2A3136">
+            <rect x="20" y="24" width="210" height="74" fill="#2A3136"/><text x="36" y="54" fill="#E8E7E3" font-weight="600" font-size="15">Brokerage</text><text x="36" y="76" fill="#C9CCC8">REWAP Brokerage LLC · authority</text>
+            <rect x="20" y="164" width="210" height="74" fill="#28382D"/><text x="36" y="194" fill="#E8E7E3" font-weight="600" font-size="15">Team</text><text x="36" y="216" fill="#A9B5AC">The Oberdorfer Team · brand</text>
+            <rect x="20" y="304" width="210" height="74" fill="#F2F1EE" stroke="#2A3136"/><text x="36" y="334" font-weight="600" font-size="15">Agent</text><text x="36" y="356" fill="#5E6660">Brandon · Kait · future agents</text>
+            <rect x="380" y="164" width="210" height="74" fill="#F2F1EE" stroke="#2A3136"/><text x="396" y="194" font-weight="600" font-size="15">Article · Town page</text><text x="396" y="216" fill="#5E6660">owned by the team</text>
+            <rect x="380" y="24" width="210" height="74" fill="#F2F1EE" stroke="#2A3136"/><text x="396" y="54" font-weight="600" font-size="15">Property</text><text x="396" y="76" fill="#5E6660">one record per MLS listing</text>
+            <rect x="740" y="24" width="220" height="74" fill="#B98D5A"/><text x="756" y="54" fill="#1C2124" font-weight="600" font-size="15">IDX adapter</text><text x="756" y="76" fill="#1C2124">vendor-neutral · MLS PIN feed</text>
+            <rect x="740" y="234" width="220" height="144" fill="#F2F1EE" stroke="#9B3A29" stroke-width="1.5"/><text x="756" y="264" font-weight="600" font-size="15" fill="#9B3A29">Lead</text>
+            <text x="756" y="288" fill="#2A3136" font-size="12">source_site · source_page</text><text x="756" y="306" fill="#2A3136" font-size="12">property_id · mls_id</text><text x="756" y="324" fill="#2A3136" font-size="12">team · agent · brokerage</text><text x="756" y="342" fill="#2A3136" font-size="12">campaign · utm · lead_type</text><text x="756" y="364" fill="#5E6660" font-size="12">→ CRM when connected</text>
+          </g>
+          <g stroke="#2A3136" stroke-width="1.4" fill="none">
+            <path d="M125 98 V 164" marker-end="url(#ah)"/><path d="M125 238 V 304" marker-end="url(#ah)"/>
+            <path d="M230 201 H 380" marker-end="url(#ah)"/>
+            <path d="M740 61 H 590" marker-end="url(#ah)"/>
+            <path d="M590 82 C 670 120, 690 200, 740 270" marker-end="url(#ah)" stroke-dasharray="4 4"/>
+            <path d="M230 340 C 480 380, 600 330, 740 320" marker-end="url(#ah)" stroke-dasharray="4 4"/>
+            <path d="M230 214 C 420 290, 600 300, 740 300" marker-end="url(#ah)" stroke-dasharray="4 4"/>
+          </g>
+          <g font-family="Archivo, sans-serif" font-size="11" fill="#5E6660"><text x="134" y="136">has teams</text><text x="134" y="276">has agents</text><text x="262" y="192">publishes</text><text x="610" y="52">supplies</text></g>
+        </svg>
+      </div>
+      <div class="sub-head" style="margin-top:clamp(28px,3vw,52px)"><h3 class="h3" style="position:static">Every conversion carries</h3></div>
+      <div class="sub-body" style="margin-top:clamp(28px,3vw,52px)">
+<pre class="payload code" tabindex="0">{
+  <span class="k">"lead_type"</span>:   <span class="s">"showing_request"</span>,
+  <span class="k">"source_site"</span>: <span class="s">"oberdorfer-team"</span>,
+  <span class="k">"source_page"</span>: <span class="s">"/homes/holden/14-orchard-lane"</span>,
+  <span class="k">"property_id"</span>: <span class="s">"prop_8f2c41"</span>,
+  <span class="k">"mls_id"</span>:      <span class="s">"[MLS PIN number]"</span>,
+  <span class="k">"team"</span>:        <span class="s">"oberdorfer-team"</span>,
+  <span class="k">"agent"</span>:       <span class="s">"brandon-oberdorfer"</span>,
+  <span class="k">"brokerage"</span>:   <span class="s">"rewap-brokerage-llc"</span>,
+  <span class="k">"campaign"</span>:    <span class="s">"fall-open-houses"</span>,
+  <span class="k">"utm"</span>: { <span class="k">"source"</span>: <span class="s">"facebook"</span>, <span class="k">"medium"</span>: <span class="s">"paid_social"</span> }
+}</pre>
+        <p class="note" style="margin-top:12px">Illustrative payload. The IDX adapter normalizes any vendor's feed into one property shape, so the front end, saved searches and lead routing never depend on a single vendor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <p class="lock-stacked" style="margin:0;text-align:left"><span class="wm">The Oberdorfer Team</span><span class="aff" style="color:var(--lichen)">at REWAP Brokerage LLC</span></p>
+    <div class="cols">
+      <div><h4>Colophon</h4><p>Set in Inria Serif and Archivo. Printed, so to speak, on shutter green, plaster and oak.</p></div>
+      <div><h4>Photography</h4><p>All photographs are free samples from Unsplash under the Unsplash License, credited in each caption, to be replaced before launch. Listings are illustrative.</p></div>
+      <div><h4>Prepared by</h4><p>Jeremy Anderson, <a href="https://jeremyanderson.tech">jeremyanderson.tech</a>, for Brandon and Kait Oberdorfer. Brand Book No. 01, October 2026.</p></div>
+    </div>
+    <p class="legal">The Oberdorfer Team is a team of real estate professionals affiliated with REWAP Brokerage LLC. Equal Housing Opportunity.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const toastEl = document.getElementById('toast');
+  let toastTimer;
+  const toast = (msg) => {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 1800);
+  };
+
+  /* Running folio: the current chapter slides into the bar */
+  const folioNow = document.querySelector('.folio-now');
+  const fNo = document.querySelector('[data-folio-no]');
+  const fTitle = document.querySelector('[data-folio-title]');
+  const chapters = [...document.querySelectorAll('[data-chapter]')];
+  let current = null;
+  const setFolio = (el) => {
+    if (!el || el === current) return;
+    current = el;
+    const apply = () => { fNo.textContent = el.dataset.chapter; fTitle.textContent = el.dataset.chapterTitle; };
+    if (reduce) { apply(); return; }
+    folioNow.classList.add('swap');
+    setTimeout(() => { apply(); folioNow.classList.remove('swap'); }, 180);
+  };
+  if ('IntersectionObserver' in window && chapters.length) {
+    const io = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) setFolio(visible[0].target);
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    chapters.forEach(c => io.observe(c));
+  }
+
+  /* Masked reveals: visible at rest. Armed only after the reader scrolls, and only for photographs still below the fold. */
+  const reveals = [...document.querySelectorAll('[data-reveal]')];
+  const revealIO = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); } });
+  }, { threshold: 0.18 }) : null;
+  const arm = () => {
+    if (reduce || !revealIO) return;
+    const vh = window.innerHeight;
+    reveals.forEach(el => {
+      if (el.id === 'motion-fig') return;
+      if (el.getBoundingClientRect().top > vh * 1.05) { el.classList.add('armed'); revealIO.observe(el); }
+    });
+  };
+  window.addEventListener('scroll', arm, { once: true, passive: true });
+
+  const replay = document.getElementById('replay');
+  const motionFig = document.getElementById('motion-fig');
+  if (replay && motionFig) {
+    replay.addEventListener('click', () => {
+      if (reduce) { toast('Reduced motion is on, so the reveal is instant.'); return; }
+      motionFig.classList.remove('in');
+      motionFig.classList.add('armed');
+      void motionFig.offsetWidth;
+      requestAnimationFrame(() => motionFig.classList.add('in'));
+    });
+  }
+
+  /* Save toggles */
+  document.querySelectorAll('[data-save]').forEach(btn => {
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const on = btn.getAttribute('aria-pressed') !== 'true';
+      btn.setAttribute('aria-pressed', String(on));
+      const label = btn.querySelector('span');
+      if (label) label.textContent = on ? 'Saved' : 'Save';
+      toast(on ? 'Saved to your homes (sample)' : 'Removed from your homes');
+    });
+  });
+
+  /* Sample forms: validate, then confirm inline. Nothing is sent. */
+  document.querySelectorAll('[data-demo-form]').forEach(form => {
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      let ok = true;
+      form.querySelectorAll('[required]').forEach(input => {
+        const field = input.closest('.field');
+        const err = field && field.querySelector('.err');
+        const bad = !input.value.trim() || (input.type === 'email' && !/^\S+@\S+\.\S+$/.test(input.value.trim()));
+        if (field) field.classList.toggle('error', bad);
+        input.setAttribute('aria-invalid', String(bad));
+        if (err) { err.hidden = !bad; if (bad) { err.id = err.id || ('err-' + input.id); input.setAttribute('aria-describedby', err.id); } }
+        if (bad && ok) { input.focus(); ok = false; }
+      });
+      const confirm = form.querySelector('.confirm');
+      if (ok && confirm) confirm.classList.add('show');
+    });
+  });
+
+  /* Copy hex values */
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.copy;
+      const done = () => { const t = btn.textContent; btn.textContent = 'Copied'; toast(val + ' copied'); setTimeout(() => btn.textContent = t, 1400); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).then(done, () => toast('Select and copy: ' + val));
+      } else { toast('Select and copy: ' + val); }
+    });
+  });
+})();
+</script>

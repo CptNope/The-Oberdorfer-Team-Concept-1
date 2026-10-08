@@ -1,0 +1,126 @@
+{
+ "regions": [
+  {
+   "id": "wordmark",
+   "kind": "text",
+   "box": {
+    "x": 0.0344,
+    "y": 0.0259,
+    "w": 0.3699,
+    "h": 0.0366
+   },
+   "note": "THE OBERDORFER TEAM wordmark in widely spaced serif capitals, slate ink on plaster"
+  },
+  {
+   "id": "affiliation",
+   "kind": "text",
+   "box": {
+    "x": 0.0344,
+    "y": 0.0637,
+    "w": 0.1345,
+    "h": 0.0236
+   },
+   "note": "at REWAP Brokerage LLC, small grotesk under the wordmark"
+  },
+  {
+   "id": "issue-line",
+   "kind": "text",
+   "box": {
+    "x": 0.7009,
+    "y": 0.0413,
+    "w": 0.2666,
+    "h": 0.0259
+   },
+   "note": "Brand Book \u00b7 No. 01 \u00b7 Central Massachusetts \u00b7 2026, small grotesk, right-aligned"
+  },
+  {
+   "id": "cover-stock",
+   "kind": "chrome",
+   "container": true,
+   "box": {
+    "x": 0.0356,
+    "y": 0.1073,
+    "w": 0.9288,
+    "h": 0.8567
+   },
+   "note": "solid shutter-green cover stock panel holding the cover"
+  },
+  {
+   "id": "headline",
+   "kind": "text",
+   "box": {
+    "x": 0.0633,
+    "y": 0.283,
+    "w": 0.3896,
+    "h": 0.286
+   },
+   "note": "Home is personal. huge plaster-white serif on two lines"
+  },
+  {
+   "id": "standfirst",
+   "kind": "text",
+   "box": {
+    "x": 0.0633,
+    "y": 0.5867,
+    "w": 0.2809,
+    "h": 0.059
+   },
+   "note": "A brand book for a residential real-estate team in Worcester County, Massachusetts. small serif, two lines"
+  },
+  {
+   "id": "open-button",
+   "kind": "control",
+   "box": {
+    "x": 0.0633,
+    "y": 0.671,
+    "w": 0.1076,
+    "h": 0.0531
+   },
+   "note": "brick-red rectangular button Open the book"
+  },
+  {
+   "id": "cover-photo",
+   "kind": "image",
+   "box": {
+    "x": 0.5736,
+    "y": 0.1421,
+    "w": 0.3679,
+    "h": 0.6899
+   },
+   "note": "photograph of white clapboard house corner with black shutters and slate roof in low autumn sun"
+  },
+  {
+   "id": "fig-caption",
+   "kind": "text",
+   "box": {
+    "x": 0.5744,
+    "y": 0.8361,
+    "w": 0.2769,
+    "h": 0.0212
+   },
+   "note": "Fig. 01 caption, small grotesk plaster"
+  },
+  {
+   "id": "index-rule",
+   "kind": "chrome",
+   "box": {
+    "x": 0.0356,
+    "y": 0.8974,
+    "w": 0.9288,
+    "h": 0.0071
+   },
+   "note": "thin plaster hairline above the contents index"
+  },
+  {
+   "id": "contents-index",
+   "kind": "text",
+   "box": {
+    "x": 0.0633,
+    "y": 0.9198,
+    "w": 0.8762,
+    "h": 0.033
+   },
+   "note": "one-row contents index 01 Purpose to 12 Affiliation, brick numerals, plaster words"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Choose the brand world",
+  "question": "This roll ran degraded (no challengers or quality boards could load). Keep The House Record, take the pick, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The House Record",
+      "kicker": "THE ROLL",
+      "lineage": "Massachusetts historic building-inventory survey sheets",
+      "thesis": "Every home and town is recorded like a survey sheet — photograph, address, period, materials — then written about like it matters.",
+      "palette": ["#3E4C55", "#E4E2DC", "#8F3F2B", "#B48A57", "#1F2326"],
+      "materials": ["numbered survey fields", "photographs mounted in field boxes", "slate-blue card stock", "typed field data"],
+      "viewport": "A slate survey sheet: HOME IS PERSONAL. as field 01, a Worcester County house photo in its field box, the brand book's chapters as numbered fields.",
+      "risk": "Reads bureaucratic if the forms aren't warmed by photography and the serif voice.",
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "The Quarterly",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "independent architecture and shelter magazines",
+      "thesis": "The brand as an independent architecture quarterly: cover, contents, long reads, photo spreads.",
+      "palette": ["#F2EEE6", "#24221F", "#6B2A26", "#5F6B4E"],
+      "materials": ["uncoated paper", "full-bleed photo spreads", "folio lines", "drop caps"],
+      "viewport": "A magazine cover: a cropped interior photograph, HOME IS PERSONAL. as the cover line, issue-style contents down the side.",
+      "risk": "Also where most runs in this category land: warm off-white, serif display, hairlines.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What luxury brokerage sites ship, executed impeccably.",
+    "palette": ["#FFFFFF", "#13233A", "#B39257"],
+    "materials": ["drone photography", "clean listing grid", "Didone wordmark"],
+    "viewport": "Full-bleed aerial photo with a centered search bar, then a featured-listing grid.",
+    "risk": "Indistinguishable from every brokerage template — the brief rules this out.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}

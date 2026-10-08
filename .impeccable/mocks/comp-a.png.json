@@ -1,0 +1,10 @@
+{
+  "prompt": "Flat front-on website design comp of the first desktop viewport (1440px wide) of a digital brand book. Masthead row: THE OBERDORFER TEAM wordmark in widely spaced serif capitals over 'at REWAP Brokerage LLC'; right caption 'Brand Book \u00b7 No. 01 \u00b7 Central Massachusetts \u00b7 2026'. Left 55% solid shutter-green (#23382F) cover stock with enormous serif headline 'Home is personal.' in plaster white (#E7E5DF), standfirst, brick (#A3452E) button 'Open the book'. Right 45% tall photograph of a white clapboard house corner with black shutters and slate roof in low autumn sun, caption 'Fig. 01 \u2014 Clapboard and slate, Worcester County. Sample photograph.' Bottom strip contents index 01 Purpose \u2026 12 Affiliation with brick numerals. Square corners, no icons, no gradients, no shadows.",
+  "tool": "Higgsfield generate_image_batch",
+  "model": "nano_banana_pro (served as nano_banana_2)",
+  "aspect": "3:2",
+  "size": "2528x1696",
+  "surface": "brand book first viewport (desktop)",
+  "approved": true,
+  "approval_note": "User chose 'Combine A + B': comp A is the approved opener (first viewport); comp B's contents spread is the approved structure for the second screen."
+}

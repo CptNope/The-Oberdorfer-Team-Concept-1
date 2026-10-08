@@ -1,0 +1,746 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-07T20:18:53.453Z",
+  "comp": ".impeccable/mocks/comp-a.png",
+  "warnings": [
+    "region cover-stock: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 2528,
+    "height": 1696
+  },
+  "aspect": 1.4906,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#28382d",
+      "coverage": 0.5611
+    },
+    {
+      "hex": "#e8e8e7",
+      "coverage": 0.2551
+    },
+    {
+      "hex": "#a59a93",
+      "coverage": 0.1089
+    },
+    {
+      "hex": "#161210",
+      "coverage": 0.041
+    },
+    {
+      "hex": "#7c7978",
+      "coverage": 0.0339
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0581,
+      "strength": 0.2388
+    },
+    {
+      "y": 0.1047,
+      "strength": 1
+    },
+    {
+      "y": 0.1512,
+      "strength": 0.2584
+    },
+    {
+      "y": 0.3256,
+      "strength": 0.3157
+    },
+    {
+      "y": 0.407,
+      "strength": 0.37
+    },
+    {
+      "y": 0.4535,
+      "strength": 0.5038
+    },
+    {
+      "y": 0.5349,
+      "strength": 0.4158
+    },
+    {
+      "y": 0.8256,
+      "strength": 0.3332
+    },
+    {
+      "y": 0.9302,
+      "strength": 0.4326
+    },
+    {
+      "y": 0.9651,
+      "strength": 1
+    }
+  ],
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "THE OBERDORFER TEAM wordmark in widely spaced serif capitals, slate ink on plaster",
+      "grid": null,
+      "box": {
+        "x": 0.0344,
+        "y": 0.0259,
+        "w": 0.3699,
+        "h": 0.0366
+      },
+      "px": {
+        "x": 87,
+        "y": 44,
+        "w": 935,
+        "h": 62
+      },
+      "aspect": 15.0806,
+      "palette": [
+        {
+          "hex": "#e7e8e6",
+          "coverage": 0.857
+        },
+        {
+          "hex": "#28362b",
+          "coverage": 0.104
+        },
+        {
+          "hex": "#545c56",
+          "coverage": 0.0158
+        },
+        {
+          "hex": "#7b847b",
+          "coverage": 0.0121
+        },
+        {
+          "hex": "#aeb7ae",
+          "coverage": 0.011
+        }
+      ],
+      "detail": {
+        "energy": 68.9947
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 18,
+          "capHeightPx": 40.3,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.8183,
+          "advTall": 0.8183,
+          "advX": null,
+          "gap": 0.4464,
+          "xRatio": null,
+          "stemW": 0.1453,
+          "contrast": 2.4995,
+          "serif": 1.6266,
+          "densTall": 0.3703,
+          "densX": null,
+          "weight": 0.3703
+        },
+        "widthClass": "wide",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "affiliation",
+      "kind": "text",
+      "note": "at REWAP Brokerage LLC, small grotesk under the wordmark",
+      "grid": null,
+      "box": {
+        "x": 0.0344,
+        "y": 0.0637,
+        "w": 0.1345,
+        "h": 0.0236
+      },
+      "px": {
+        "x": 87,
+        "y": 108,
+        "w": 340,
+        "h": 40
+      },
+      "aspect": 8.5,
+      "palette": [
+        {
+          "hex": "#e7e8e6",
+          "coverage": 0.8142
+        },
+        {
+          "hex": "#293929",
+          "coverage": 0.0722
+        },
+        {
+          "hex": "#7b817b",
+          "coverage": 0.0473
+        },
+        {
+          "hex": "#292d2d",
+          "coverage": 0.0453
+        },
+        {
+          "hex": "#525852",
+          "coverage": 0.0211
+        }
+      ],
+      "detail": {
+        "energy": 71.8239
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 20,
+          "capHeightPx": 24.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5306,
+          "advTall": 0.551,
+          "advX": 0.4898,
+          "gap": 0.1224,
+          "xRatio": 0.7347,
+          "stemW": 0.1129,
+          "contrast": 1.0659,
+          "serif": null,
+          "densTall": 0.401,
+          "densX": 0.4648,
+          "weight": 0.401
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "issue-line",
+      "kind": "text",
+      "note": "Brand Book · No. 01 · Central Massachusetts · 2026, small grotesk, right-aligned",
+      "grid": null,
+      "box": {
+        "x": 0.7009,
+        "y": 0.0413,
+        "w": 0.2666,
+        "h": 0.0259
+      },
+      "px": {
+        "x": 1772,
+        "y": 70,
+        "w": 674,
+        "h": 44
+      },
+      "aspect": 15.3182,
+      "palette": [
+        {
+          "hex": "#e7e8e7",
+          "coverage": 0.8433
+        },
+        {
+          "hex": "#283727",
+          "coverage": 0.0472
+        },
+        {
+          "hex": "#2e3131",
+          "coverage": 0.0423
+        },
+        {
+          "hex": "#a8afa6",
+          "coverage": 0.042
+        },
+        {
+          "hex": "#586457",
+          "coverage": 0.0253
+        }
+      ],
+      "detail": {
+        "energy": 74.1556
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 40,
+          "capHeightPx": 23.9,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5231,
+          "advTall": 0.565,
+          "advX": 0.5231,
+          "gap": 0.1151,
+          "xRatio": 0.7286,
+          "stemW": 0.1227,
+          "contrast": 0.9938,
+          "serif": 0.9899,
+          "densTall": 0.438,
+          "densX": 0.5005,
+          "weight": 0.438
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "cover-stock",
+      "kind": "chrome",
+      "note": "solid shutter-green cover stock panel holding the cover",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0356,
+        "y": 0.1073,
+        "w": 0.9288,
+        "h": 0.8567
+      },
+      "px": {
+        "x": 90,
+        "y": 182,
+        "w": 2348,
+        "h": 1453
+      },
+      "aspect": 1.616,
+      "palette": [
+        {
+          "hex": "#28382d",
+          "coverage": 0.7221
+        },
+        {
+          "hex": "#a49a93",
+          "coverage": 0.1422
+        },
+        {
+          "hex": "#15120f",
+          "coverage": 0.0519
+        },
+        {
+          "hex": "#7c7978",
+          "coverage": 0.0431
+        },
+        {
+          "hex": "#e9eae7",
+          "coverage": 0.0407
+        }
+      ],
+      "detail": {
+        "energy": 28.5555
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "Home is personal. huge plaster-white serif on two lines",
+      "grid": null,
+      "box": {
+        "x": 0.0633,
+        "y": 0.283,
+        "w": 0.3896,
+        "h": 0.286
+      },
+      "px": {
+        "x": 160,
+        "y": 480,
+        "w": 985,
+        "h": 485
+      },
+      "aspect": 2.0309,
+      "palette": [
+        {
+          "hex": "#28382d",
+          "coverage": 0.764
+        },
+        {
+          "hex": "#e8e8e6",
+          "coverage": 0.2209
+        },
+        {
+          "hex": "#aeb6ae",
+          "coverage": 0.0053
+        },
+        {
+          "hex": "#586358",
+          "coverage": 0.0052
+        },
+        {
+          "hex": "#858c85",
+          "coverage": 0.0045
+        }
+      ],
+      "detail": {
+        "energy": 37.075
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 14,
+          "capHeightPx": 188.9,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5652,
+          "advTall": 0.296,
+          "advX": 0.5899,
+          "gap": 0.0556,
+          "xRatio": 0.6888,
+          "stemW": 0.1542,
+          "contrast": 2.1444,
+          "serif": 1.5698,
+          "densTall": 0.4991,
+          "densX": 0.4635,
+          "weight": 0.4991
+        },
+        "widthClass": "normal",
+        "weightClass": "medium",
+        "chosen": {
+          "family": "Inria Serif",
+          "weight": 700,
+          "fontSizePx": 270,
+          "source": "catalog",
+          "estimatedSize": true,
+          "stamp": "58ac860c64d3"
+        }
+      }
+    },
+    {
+      "id": "standfirst",
+      "kind": "text",
+      "note": "A brand book for a residential real-estate team in Worcester County, Massachusetts. small serif, two lines",
+      "grid": null,
+      "box": {
+        "x": 0.0633,
+        "y": 0.5867,
+        "w": 0.2809,
+        "h": 0.059
+      },
+      "px": {
+        "x": 160,
+        "y": 995,
+        "w": 710,
+        "h": 100
+      },
+      "aspect": 7.1,
+      "palette": [
+        {
+          "hex": "#28382d",
+          "coverage": 0.8346
+        },
+        {
+          "hex": "#e4e8e0",
+          "coverage": 0.0948
+        },
+        {
+          "hex": "#576158",
+          "coverage": 0.0293
+        },
+        {
+          "hex": "#b1b9af",
+          "coverage": 0.0218
+        },
+        {
+          "hex": "#858b84",
+          "coverage": 0.0196
+        }
+      ],
+      "detail": {
+        "energy": 63.4418
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 71,
+          "capHeightPx": 27.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5373,
+          "advTall": 0.4092,
+          "advX": 0.5476,
+          "gap": 0.0744,
+          "xRatio": 0.7003,
+          "stemW": 0.1315,
+          "contrast": 1.5464,
+          "serif": 1.1933,
+          "densTall": 0.395,
+          "densX": 0.4533,
+          "weight": 0.395
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "open-button",
+      "kind": "control",
+      "note": "brick-red rectangular button Open the book",
+      "grid": null,
+      "box": {
+        "x": 0.0633,
+        "y": 0.671,
+        "w": 0.1076,
+        "h": 0.0531
+      },
+      "px": {
+        "x": 160,
+        "y": 1138,
+        "w": 272,
+        "h": 90
+      },
+      "aspect": 3.0222,
+      "palette": [
+        {
+          "hex": "#973828",
+          "coverage": 0.7537
+        },
+        {
+          "hex": "#283829",
+          "coverage": 0.0918
+        },
+        {
+          "hex": "#7e4735",
+          "coverage": 0.0582
+        },
+        {
+          "hex": "#483526",
+          "coverage": 0.0514
+        },
+        {
+          "hex": "#f8e9de",
+          "coverage": 0.045
+        }
+      ],
+      "detail": {
+        "energy": 19.8322
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "cover-photo",
+      "kind": "image",
+      "note": "photograph of white clapboard house corner with black shutters and slate roof in low autumn sun",
+      "grid": null,
+      "box": {
+        "x": 0.5736,
+        "y": 0.1421,
+        "w": 0.3679,
+        "h": 0.6899
+      },
+      "px": {
+        "x": 1450,
+        "y": 241,
+        "w": 930,
+        "h": 1170
+      },
+      "aspect": 0.7949,
+      "palette": [
+        {
+          "hex": "#a59a93",
+          "coverage": 0.4806
+        },
+        {
+          "hex": "#14110e",
+          "coverage": 0.172
+        },
+        {
+          "hex": "#7b7977",
+          "coverage": 0.1556
+        },
+        {
+          "hex": "#6d5742",
+          "coverage": 0.0983
+        },
+        {
+          "hex": "#3d2c1e",
+          "coverage": 0.0935
+        }
+      ],
+      "detail": {
+        "energy": 36.895
+      },
+      "medium": "raster",
+      "plate": "assets/plates/cover-photo.png",
+      "text": null
+    },
+    {
+      "id": "fig-caption",
+      "kind": "text",
+      "note": "Fig. 01 caption, small grotesk plaster",
+      "grid": null,
+      "box": {
+        "x": 0.5744,
+        "y": 0.8361,
+        "w": 0.2769,
+        "h": 0.0212
+      },
+      "px": {
+        "x": 1452,
+        "y": 1418,
+        "w": 700,
+        "h": 36
+      },
+      "aspect": 19.4444,
+      "palette": [
+        {
+          "hex": "#29382d",
+          "coverage": 0.8211
+        },
+        {
+          "hex": "#e9efe8",
+          "coverage": 0.0855
+        },
+        {
+          "hex": "#606c61",
+          "coverage": 0.0492
+        },
+        {
+          "hex": "#b0bbb1",
+          "coverage": 0.0274
+        },
+        {
+          "hex": "#959996",
+          "coverage": 0.0167
+        }
+      ],
+      "detail": {
+        "energy": 60.0103
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 53,
+          "capHeightPx": 18.5,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5143,
+          "advTall": 0.5143,
+          "advX": 0.5143,
+          "gap": 0.1083,
+          "xRatio": 0.7218,
+          "stemW": 0.132,
+          "contrast": 1.0342,
+          "serif": 0.832,
+          "densTall": 0.4711,
+          "densX": 0.5241,
+          "weight": 0.4711
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "index-rule",
+      "kind": "chrome",
+      "note": "thin plaster hairline above the contents index",
+      "grid": null,
+      "box": {
+        "x": 0.0356,
+        "y": 0.8974,
+        "w": 0.9288,
+        "h": 0.0071
+      },
+      "px": {
+        "x": 90,
+        "y": 1522,
+        "w": 2348,
+        "h": 12
+      },
+      "aspect": 195.6667,
+      "palette": [
+        {
+          "hex": "#28382d",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 0.6202
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "contents-index",
+      "kind": "text",
+      "note": "one-row contents index 01 Purpose to 12 Affiliation, brick numerals, plaster words",
+      "grid": null,
+      "box": {
+        "x": 0.0633,
+        "y": 0.9198,
+        "w": 0.8762,
+        "h": 0.033
+      },
+      "px": {
+        "x": 160,
+        "y": 1560,
+        "w": 2215,
+        "h": 56
+      },
+      "aspect": 39.5536,
+      "palette": [
+        {
+          "hex": "#28382d",
+          "coverage": 0.893
+        },
+        {
+          "hex": "#e3e8e1",
+          "coverage": 0.0537
+        },
+        {
+          "hex": "#864935",
+          "coverage": 0.0209
+        },
+        {
+          "hex": "#473020",
+          "coverage": 0.0163
+        },
+        {
+          "hex": "#868d86",
+          "coverage": 0.0162
+        }
+      ],
+      "detail": {
+        "energy": 34.9615
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 93,
+          "capHeightPx": 23.8,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5252,
+          "advTall": 0.3782,
+          "advX": 0.5463,
+          "gap": 0.105,
+          "xRatio": 0.7255,
+          "stemW": 0.1273,
+          "contrast": 1.0355,
+          "serif": 0.9479,
+          "densTall": 0.4432,
+          "densX": 0.501,
+          "weight": 0.4432
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    }
+  ]
+}

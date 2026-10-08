@@ -1,0 +1,8 @@
+{
+  "prompt": "Flat front-on website design comp of a brand book's first desktop viewport: thin nav row on plaster ground with wordmark THE OBERDORFER TEAM at REWAP Brokerage LLC and chapter links; upper 58% panoramic photograph of a fieldstone wall and grey-shingled Cape house in early winter light; shutter-green card overlapping the photo's bottom-left with serif headline 'Home is personal.' and standfirst; numbered chapter index in three columns to the right; caption 'Fig. 01 \u2014 Fieldstone wall and Cape. Sample photograph.'",
+  "tool": "Higgsfield generate_image_batch",
+  "model": "nano_banana_pro (served as nano_banana_2)",
+  "aspect": "3:2",
+  "size": "2528x1696",
+  "surface": "brand book first viewport (desktop)"
+}

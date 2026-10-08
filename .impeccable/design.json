@@ -1,0 +1,838 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T21:36:45+00:00",
+  "title": "Design System: The Oberdorfer Team",
+  "extensions": {
+    "colorMeta": {
+      "stock-green": {
+        "role": "primary",
+        "displayName": "Shutter Green",
+        "canonical": "oklch(32.3% 0.029 154.5)",
+        "tonalRamp": [
+          "#070D09",
+          "#1D2820",
+          "#36473B",
+          "#55665A",
+          "#75887B",
+          "#98AB9D",
+          "#BFCDC3",
+          "#E8F1EA"
+        ]
+      },
+      "stock-plaster": {
+        "role": "neutral",
+        "displayName": "Plaster",
+        "canonical": "oklch(92.8% 0.005 95.1)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262523",
+          "#43423F",
+          "#62615E",
+          "#83827F",
+          "#A6A5A1",
+          "#CAC9C6",
+          "#EFEEEC"
+        ]
+      },
+      "stock-oak": {
+        "role": "tertiary",
+        "displayName": "Oak",
+        "canonical": "oklch(67.4% 0.086 69.6)",
+        "tonalRamp": [
+          "#160700",
+          "#381E00",
+          "#5F3800",
+          "#805824",
+          "#A47946",
+          "#C89C68",
+          "#E5C39D",
+          "#FFEAD2"
+        ]
+      },
+      "spot-brick": {
+        "role": "secondary",
+        "displayName": "Brick",
+        "canonical": "oklch(48.2% 0.133 32.1)",
+        "tonalRamp": [
+          "#1F0000",
+          "#4A0801",
+          "#791908",
+          "#9F3D2C",
+          "#C5604D",
+          "#EC836F",
+          "#FFB2A1",
+          "#FFE0D5"
+        ],
+        "purpose": "One primary action per view, numerals on plaster; never on green or oak."
+      },
+      "brick-pressed": {
+        "role": "secondary",
+        "displayName": "Pressed Brick",
+        "canonical": "oklch(43.3% 0.123 33.0)",
+        "tonalRamp": [
+          "#1E0100",
+          "#470D03",
+          "#761F0E",
+          "#9B4230",
+          "#C06451",
+          "#E78772",
+          "#FEB4A4",
+          "#FFE1D6"
+        ]
+      },
+      "ink-on-brick": {
+        "role": "secondary",
+        "displayName": "Ink on Brick",
+        "canonical": "oklch(97.1% 0.006 84.6)",
+        "tonalRamp": [
+          "#0C0B0A",
+          "#262523",
+          "#43423F",
+          "#63615E",
+          "#84827E",
+          "#A7A5A1",
+          "#CAC9C6",
+          "#EFEEEC"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "oklch(30.8% 0.013 239.0)",
+        "tonalRamp": [
+          "#090C0D",
+          "#212629",
+          "#3C4348",
+          "#5B6268",
+          "#7B848A",
+          "#9EA6AD",
+          "#C4CACF",
+          "#EBEFF2"
+        ]
+      },
+      "ink-deep": {
+        "role": "tertiary",
+        "displayName": "Deep Ink",
+        "canonical": "oklch(24.4% 0.009 234.1)",
+        "tonalRamp": [
+          "#090B0D",
+          "#222628",
+          "#3D4346",
+          "#5C6266",
+          "#7D8387",
+          "#A0A6AA",
+          "#C5CACD",
+          "#ECEFF1"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "oklch(50.1% 0.014 153.4)",
+        "tonalRamp": [
+          "#090C0A",
+          "#212723",
+          "#3D443F",
+          "#5C645E",
+          "#7C857F",
+          "#9FA8A1",
+          "#C4CBC6",
+          "#EBF0EC"
+        ]
+      },
+      "on-green-accent": {
+        "role": "primary",
+        "displayName": "Clay",
+        "canonical": "oklch(73.5% 0.100 38.7)",
+        "tonalRamp": [
+          "#1B0400",
+          "#411506",
+          "#6D2B14",
+          "#914B34",
+          "#B56C54",
+          "#DB8F76",
+          "#F4B9A6",
+          "#FFE5D8"
+        ]
+      },
+      "on-green-muted": {
+        "role": "primary",
+        "displayName": "Lichen",
+        "canonical": "oklch(76.1% 0.018 153.5)",
+        "tonalRamp": [
+          "#090C09",
+          "#202722",
+          "#3B453D",
+          "#5A645C",
+          "#7A867D",
+          "#9DA9A0",
+          "#C3CCC5",
+          "#EAF0EC"
+        ]
+      },
+      "on-green-body": {
+        "role": "primary",
+        "displayName": "Green Plaster Ink",
+        "canonical": "oklch(87.1% 0.009 134.9)",
+        "tonalRamp": [
+          "#0A0C0A",
+          "#242623",
+          "#40433E",
+          "#5F625D",
+          "#80847E",
+          "#A3A6A1",
+          "#C7CAC6",
+          "#EDEFEC"
+        ]
+      },
+      "on-oak-muted": {
+        "role": "tertiary",
+        "displayName": "Oak Shadow",
+        "canonical": "oklch(30.5% 0.045 63.4)",
+        "tonalRamp": [
+          "#110903",
+          "#302214",
+          "#533D28",
+          "#745C47",
+          "#967D67",
+          "#BAA089",
+          "#D9C5B4",
+          "#F9ECE0"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(95.8% 0.004 91.4)",
+        "tonalRamp": [
+          "#0C0B09",
+          "#262523",
+          "#43423F",
+          "#62615F",
+          "#83827F",
+          "#A6A5A2",
+          "#CAC9C6",
+          "#EFEEEB"
+        ]
+      },
+      "plaster-recessed": {
+        "role": "neutral",
+        "displayName": "Recessed Plaster",
+        "canonical": "oklch(88.8% 0.010 93.6)",
+        "tonalRamp": [
+          "#0C0B09",
+          "#262521",
+          "#44423C",
+          "#63615B",
+          "#84827C",
+          "#A7A59E",
+          "#CAC9C4",
+          "#EFEEEB"
+        ]
+      },
+      "field-on-oak": {
+        "role": "tertiary",
+        "displayName": "Oak Field"
+      },
+      "field-border-on-oak": {
+        "role": "tertiary",
+        "displayName": "Oak Field Edge"
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(42, 49, 54, 0.22)",
+        "tonalRamp": [
+          "#090C0D",
+          "#212629",
+          "#3C4348",
+          "#5B6268",
+          "#7B848A",
+          "#9EA6AD",
+          "#C4CACF",
+          "#EBEFF2"
+        ]
+      },
+      "rule-on-green": {
+        "role": "neutral",
+        "displayName": "Hairline on Green",
+        "canonical": "rgba(232, 231, 227, 0.38)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262523",
+          "#43423F",
+          "#62615E",
+          "#83827F",
+          "#A6A5A1",
+          "#CAC9C6",
+          "#EFEEEC"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "cover-display": {
+        "displayName": "Cover display",
+        "purpose": "The cover line only."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Chapter-opener titles and page heroes; caps at 96px."
+      },
+      "chapter-numeral": {
+        "displayName": "Chapter numeral",
+        "purpose": "Giant Light opener numbers; clay on green, deep ink on oak; aria-hidden."
+      },
+      "headline-1": {
+        "displayName": "Headline 1",
+        "purpose": "Page titles, property-detail address."
+      },
+      "headline-2": {
+        "displayName": "Headline 2",
+        "purpose": "Section titles on site pages."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "Pull statements, max 22ch; emphasis in brick italic."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section heads in the 4-column rail."
+      },
+      "address": {
+        "displayName": "Address",
+        "purpose": "Property addresses (22px compact, 20px results)."
+      },
+      "title-sans": {
+        "displayName": "Title sans",
+        "purpose": "Utility headings in long-form content."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opener decks and standfirsts."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, max 64ch, never below 17px."
+      },
+      "character": {
+        "displayName": "Character line",
+        "purpose": "Italic, one architectural sentence per property."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, row terms, card sub-heads."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "All buttons, sentence case."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Side notes, disclosures, bios."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Short uppercase labels only."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Fig.-numbered photo captions."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Every listing price; width 116, tabular lining."
+      },
+      "fact-figure": {
+        "displayName": "Fact figure",
+        "purpose": "Property fact-table values."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Beds/baths/area lines, inputs, table cells."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The team name, uppercase, tracked 0.38em."
+      },
+      "brokerage-line": {
+        "displayName": "Brokerage line",
+        "purpose": "REWAP Brokerage LLC under or beside the wordmark; 60%, min 12px."
+      }
+    },
+    "shadows": [],
+    "elevation": {
+      "model": "flat, tonal stocks",
+      "note": "No structural shadows. Depth comes from stock changes, inset paper panels and paper grain."
+    },
+    "texture": [
+      {
+        "name": "grain",
+        "value": "url('assets/img/grain.jpg') 0 0 / 400px 400px; background-blend-mode: soft-light",
+        "purpose": "Full-strength paper grain on plaster (body)."
+      },
+      {
+        "name": "grain-soft",
+        "value": "url('assets/img/grain-soft.jpg') 0 0 / 400px 400px; background-blend-mode: soft-light",
+        "purpose": "Half-strength grain on green and oak stocks: cover, openers, colophon, green/oak panels and stock swatches, contents tab, stamp and caption bar."
+      }
+    ],
+    "scrims": [
+      {
+        "name": "scrim-save",
+        "value": "rgba(28, 33, 36, 0.62)",
+        "purpose": "Save toggle on photographs (0.82 on hover)."
+      },
+      {
+        "name": "scrim-sheet",
+        "value": "rgba(28, 33, 36, 0.45)",
+        "purpose": "Behind phone bottom sheets."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.2, .7, .2, 1)",
+        "purpose": "The only easing; quick start, long quiet finish."
+      },
+      {
+        "name": "dur-quick",
+        "value": "160ms",
+        "purpose": "Hover, press, save, field border."
+      },
+      {
+        "name": "dur-base",
+        "value": "320ms",
+        "purpose": "Folio title swap, sheets, menus, toast."
+      },
+      {
+        "name": "dur-reveal",
+        "value": "900ms",
+        "purpose": "Masked wipe on opening photographs."
+      },
+      {
+        "name": "reveal-image-settle",
+        "value": "transform 1400ms ease-settle, scale(1.05) to none",
+        "purpose": "Image settle under the masked wipe."
+      },
+      {
+        "name": "reveal-mask",
+        "value": "clip-path: inset(0 100% 0 0) to inset(0 0 0 0)",
+        "purpose": "Left-to-right wipe. Visible at rest; armed after first scroll only for figures >1.05 viewport heights below; fires once at 18% visibility; instant under prefers-reduced-motion."
+      },
+      {
+        "name": "folio-swap",
+        "value": "opacity 0 + translateY(6px) for 180ms, then settle at dur-base",
+        "purpose": "Running folio chapter change."
+      },
+      {
+        "name": "toast",
+        "value": "translate(-50%, 20px) + opacity 0 to rest at dur-base; clears after 1800ms",
+        "purpose": "Save and copy confirmations."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid #9B3A29; outline-offset: 3px",
+        "purpose": "All controls on plaster and paper."
+      },
+      {
+        "name": "focus-ring-on-green",
+        "value": "outline-color: #E0937A",
+        "purpose": "Controls on green stock (5.09:1)."
+      },
+      {
+        "name": "focus-ring-on-oak",
+        "value": "outline-color: #1C2124",
+        "purpose": "Controls on oak (5.43:1). Rule for the theme; the concept still uses brick here."
+      },
+      {
+        "name": "input-focus",
+        "value": "outline: 2px solid #9B3A29; outline-offset: 1px; border-color: #2A3136",
+        "purpose": "Text inputs."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cover-frame",
+        "value": "1100px",
+        "purpose": "At and above: measured comp frame scaled by 100vw/2528. Below: stacked cover; journey to 3 columns."
+      },
+      {
+        "name": "stack",
+        "value": "900px",
+        "purpose": "All splits to one column; cards to 2."
+      },
+      {
+        "name": "rows",
+        "value": "640px",
+        "purpose": "Rows, forms, pairs and rewrites stack; result rows compact."
+      },
+      {
+        "name": "phone",
+        "value": "560px",
+        "purpose": "Cards to 1; masthead stacks; contents list one column."
+      },
+      {
+        "name": "swatches",
+        "value": "520px",
+        "purpose": "Stock swatches and schematics to 1 column."
+      }
+    ],
+    "contrastPairs": [
+      {
+        "fg": "ink",
+        "bg": "stock-plaster",
+        "ratio": 10.67,
+        "use": "Any text"
+      },
+      {
+        "fg": "ink",
+        "bg": "paper",
+        "ratio": 11.69,
+        "use": "Any text"
+      },
+      {
+        "fg": "stock-plaster",
+        "bg": "stock-green",
+        "ratio": 10.02,
+        "use": "Any text"
+      },
+      {
+        "fg": "on-green-body",
+        "bg": "stock-green",
+        "ratio": 8.42,
+        "use": "Any text"
+      },
+      {
+        "fg": "ink-on-brick",
+        "bg": "spot-brick",
+        "ratio": 6.36,
+        "use": "Buttons"
+      },
+      {
+        "fg": "ink-on-brick",
+        "bg": "brick-pressed",
+        "ratio": 7.8,
+        "use": "Buttons, hover"
+      },
+      {
+        "fg": "on-green-muted",
+        "bg": "stock-green",
+        "ratio": 5.84,
+        "use": "Any text"
+      },
+      {
+        "fg": "spot-brick",
+        "bg": "stock-plaster",
+        "ratio": 5.6,
+        "use": "Any text"
+      },
+      {
+        "fg": "spot-brick",
+        "bg": "paper",
+        "ratio": 6.13,
+        "use": "Any text"
+      },
+      {
+        "fg": "ink-deep",
+        "bg": "stock-oak",
+        "ratio": 5.43,
+        "use": "Any text"
+      },
+      {
+        "fg": "on-green-accent",
+        "bg": "stock-green",
+        "ratio": 5.09,
+        "use": "Numerals, links, focus"
+      },
+      {
+        "fg": "ink-muted",
+        "bg": "stock-plaster",
+        "ratio": 4.79,
+        "use": "Secondary text"
+      },
+      {
+        "fg": "ink-muted",
+        "bg": "paper",
+        "ratio": 5.24,
+        "use": "Secondary text"
+      },
+      {
+        "fg": "on-oak-muted",
+        "bg": "stock-oak",
+        "ratio": 4.52,
+        "use": "Captions on oak"
+      },
+      {
+        "fg": "stock-plaster",
+        "bg": "stock-oak",
+        "ratio": 2.42,
+        "use": "Never for text"
+      },
+      {
+        "fg": "spot-brick",
+        "bg": "stock-oak",
+        "ratio": 2.32,
+        "use": "Never"
+      },
+      {
+        "fg": "spot-brick",
+        "bg": "stock-green",
+        "ratio": 1.79,
+        "use": "Never"
+      }
+    ],
+    "themeJson": {
+      "palette": [
+        "stock-green",
+        "stock-plaster",
+        "stock-oak",
+        "spot-brick",
+        "ink",
+        "ink-deep",
+        "ink-muted",
+        "on-green-accent",
+        "on-green-muted",
+        "paper"
+      ],
+      "fontFamilies": {
+        "inria-serif": "Inria Serif 300/400/700 + italics",
+        "archivo": "Archivo variable, wdth 62-125, wght 100-900"
+      },
+      "fontSizes": [
+        "display",
+        "headline-1",
+        "headline-2",
+        "statement",
+        "title",
+        "lead",
+        "body",
+        "note",
+        "meta",
+        "price"
+      ],
+      "spacingSizes": [
+        "gutter",
+        "gap",
+        "page-block",
+        "section-block",
+        "opener-block",
+        "panel"
+      ],
+      "blockStyles": {
+        "is-style-label": "font-stretch 82%",
+        "is-style-price": "font-stretch 116%; tabular lining",
+        "is-style-data": "font-stretch 100%; tabular"
+      },
+      "patterns": [
+        "opener-split",
+        "opener-band",
+        "opener-full",
+        "property-featured",
+        "property-card",
+        "property-result",
+        "valuation-panel",
+        "town-page",
+        "field-notes-card",
+        "footer-affiliation"
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one brick action per view.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Request a showing</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font-family:var(--sans,Archivo,sans-serif);font-stretch:88%;font-size:16px;font-weight:500;line-height:1;text-decoration:none;border:1px solid transparent;border-radius:0;background:#9B3A29;color:#F7F5F1;cursor:pointer;transition:background-color 160ms cubic-bezier(.2,.7,.2,1)}.ds-btn:hover{background:#87301F}.ds-btn:focus-visible{outline:2px solid #9B3A29;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action, outlined in slate.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Save this search</a>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font-family:Archivo,sans-serif;font-stretch:88%;font-size:16px;font-weight:500;line-height:1;text-decoration:none;border:1px solid #2A3136;border-radius:0;background:transparent;color:#2A3136;transition:background-color 160ms cubic-bezier(.2,.7,.2,1),color 160ms cubic-bezier(.2,.7,.2,1)}.ds-btn-line:hover{background:#2A3136;color:#E8E7E3}.ds-btn-line:focus-visible{outline:2px solid #9B3A29;outline-offset:3px}"
+    },
+    {
+      "name": "Button on Green",
+      "kind": "button",
+      "refersTo": "button-on-green",
+      "description": "Primary action on a green panel or opener.",
+      "html": "<div class=\"ds-green-wrap\"><a class=\"ds-btn-plaster\" href=\"#\">Ask what your home is worth</a> <a class=\"ds-link-green\" href=\"#\">How we sell</a></div>",
+      "css": ".ds-green-wrap{background:#28382D;padding:28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.ds-btn-plaster{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;font-family:Archivo,sans-serif;font-stretch:88%;font-size:16px;font-weight:500;text-decoration:none;background:#E8E7E3;color:#28382D;border-radius:0;transition:background-color 160ms cubic-bezier(.2,.7,.2,1)}.ds-btn-plaster:hover{background:#fff}.ds-btn-plaster:focus-visible,.ds-link-green:focus-visible{outline:2px solid #E0937A;outline-offset:3px}.ds-link-green{color:#E0937A;text-underline-offset:.2em;font-family:\"Inria Serif\",Georgia,serif}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled square field with hint, focus and error states.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-e\">Email</label><input class=\"ds-input\" id=\"ds-e\" value=\"kait@\" aria-invalid=\"true\" aria-describedby=\"ds-e-m\"><span class=\"ds-err\" id=\"ds-e-m\">This email is missing its domain, like kait@example.com.</span></div>",
+      "css": ".ds-field{display:grid;gap:7px;max-width:420px}.ds-field label{font-family:Archivo,sans-serif;font-stretch:88%;font-weight:600;font-size:14px;color:#2A3136}.ds-input{font-family:Archivo,sans-serif;font-size:16px;color:#2A3136;background:#F2F1EE;border:1px solid #7A807C;border-radius:0;min-height:48px;padding:11px 13px;box-sizing:border-box;width:100%;transition:border-color 160ms cubic-bezier(.2,.7,.2,1)}.ds-input:hover{border-color:#2A3136}.ds-input:focus{outline:2px solid #9B3A29;outline-offset:1px;border-color:#2A3136}.ds-input[aria-invalid=\"true\"]{border-color:#9B3A29;box-shadow:inset 3px 0 0 #9B3A29}.ds-err{font-family:Archivo,sans-serif;font-stretch:88%;font-size:13px;font-weight:500;color:#9B3A29}"
+    },
+    {
+      "name": "Running Folio",
+      "kind": "nav",
+      "refersTo": "folio",
+      "description": "Sticky 44px bar naming the publication and the current chapter.",
+      "html": "<div class=\"ds-folio\"><a href=\"#\"><b>The Oberdorfer Team</b> · Brand Book No. 01</a><span><a href=\"#\">Contents</a> · <span class=\"ds-n\">08</span> Layout</span></div>",
+      "css": ".ds-folio{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:0 24px;background:#E8E7E3;border-bottom:1px solid rgba(42,49,54,.22);font-family:Archivo,sans-serif;font-stretch:82%;font-size:13px;letter-spacing:.03em;color:#2A3136}.ds-folio a{color:inherit;text-decoration:none}.ds-folio a:hover{text-decoration:underline}.ds-folio a:focus-visible{outline:2px solid #9B3A29;outline-offset:3px}.ds-folio b{font-family:\"Inria Serif\",Georgia,serif;font-weight:400;letter-spacing:.24em;text-transform:uppercase;font-size:12px}.ds-n{color:#9B3A29;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Affiliation Lockup",
+      "kind": "custom",
+      "refersTo": "wordmark",
+      "description": "Wordmark with the brokerage line, inline for navigation.",
+      "html": "<div class=\"ds-nav\"><p class=\"ds-lock\"><span class=\"ds-wm\">The Oberdorfer Team</span><span class=\"ds-aff\">at REWAP Brokerage LLC</span></p><span class=\"ds-links\"><a href=\"#\">Homes</a><a href=\"#\">Towns</a><a href=\"#\">Buy</a><a href=\"#\">Sell</a><a href=\"#\">Field Notes</a></span></div>",
+      "css": ".ds-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:#F2F1EE;padding:18px 20px}.ds-lock{margin:0;display:flex;align-items:baseline;gap:.9em;flex-wrap:wrap;color:#28382D}.ds-wm{font-family:\"Inria Serif\",Georgia,serif;font-size:15px;text-transform:uppercase;letter-spacing:.38em;white-space:nowrap}.ds-aff{font-family:Archivo,sans-serif;font-stretch:82%;font-size:12px;letter-spacing:.01em}.ds-links{display:flex;gap:18px;font-family:Archivo,sans-serif;font-stretch:88%;font-size:14px}.ds-links a{color:#2A3136;text-decoration:none}.ds-links a:hover{text-decoration:underline;text-underline-offset:.18em}.ds-links a:focus-visible{outline:2px solid #9B3A29;outline-offset:3px}"
+    },
+    {
+      "name": "Compact Property Card",
+      "kind": "card",
+      "refersTo": "save-toggle",
+      "description": "Photo, town, address, price, facts, character line; save toggle on the photo.",
+      "html": "<article class=\"ds-card\"><figure class=\"ds-ph\"><div class=\"ds-img\"></div><button class=\"ds-save\" type=\"button\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 3.5h12v17l-6-4-6 4z\"/></svg><span>Save</span></button></figure><h4 class=\"ds-addr\">7 Linden Street</h4><p class=\"ds-town\">Princeton · Sample</p><div class=\"ds-pr\"><span class=\"ds-price\">$825,000</span><span class=\"ds-data\">1894</span></div><ul class=\"ds-facts\"><li>5 bd</li><li>3 ba</li><li>2,980 sq ft</li></ul><p class=\"ds-char\">Shingle Style, wraparound balcony, original stair.</p></article>",
+      "css": ".ds-card{display:grid;gap:10px;max-width:340px;color:#2A3136;background:#E8E7E3;padding:16px}.ds-ph{position:relative;margin:0 0 4px}.ds-img{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#C9C6BD 0 2px,#D5D3CB 2px 9px)}.ds-save{position:absolute;right:12px;top:12px;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 12px 0 10px;background:rgba(28,33,36,.62);color:#E8E7E3;border:0;border-radius:0;font-family:Archivo,sans-serif;font-stretch:88%;font-size:14px;cursor:pointer;transition:background-color 160ms cubic-bezier(.2,.7,.2,1)}.ds-save:hover{background:rgba(28,33,36,.82)}.ds-save:focus-visible{outline:2px solid #9B3A29;outline-offset:3px}.ds-save[aria-pressed=\"true\"]{background:#E8E7E3;color:#9B3A29}.ds-save svg{width:18px;height:18px}.ds-save path{fill:transparent;stroke:currentColor;stroke-width:1.6}.ds-save[aria-pressed=\"true\"] path{fill:currentColor}.ds-addr{margin:0;font-family:\"Inria Serif\",Georgia,serif;font-weight:700;font-size:22px;line-height:1.04}.ds-town{margin:0;font-family:Archivo,sans-serif;font-stretch:82%;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:#5E6660}.ds-pr{display:flex;justify-content:space-between;align-items:baseline}.ds-price{font-family:Archivo,sans-serif;font-stretch:116%;font-weight:500;font-size:24px;letter-spacing:-.01em;font-variant-numeric:tabular-nums lining-nums}.ds-data{font-family:Archivo,sans-serif;font-size:15px;color:#5E6660;font-variant-numeric:tabular-nums}.ds-facts{display:flex;margin:0;padding:0;list-style:none;font-family:Archivo,sans-serif;font-size:15px;font-variant-numeric:tabular-nums}.ds-facts li+li::before{content:\"\";display:inline-block;width:1px;height:.9em;background:#8D938F;margin:0 .7em;vertical-align:-1px}.ds-char{margin:0;font-family:\"Inria Serif\",Georgia,serif;font-style:italic;font-size:15.5px;line-height:1.45}"
+    },
+    {
+      "name": "Chapter Opener (Band)",
+      "kind": "custom",
+      "refersTo": "opener-green",
+      "description": "Green stock band: Light clay numeral, Bold display title, lead deck.",
+      "html": "<header class=\"ds-opener\"><p class=\"ds-no\" aria-hidden=\"true\">08</p><div><h2 class=\"ds-ot\">Layout</h2><p class=\"ds-deck\">Pages are built as spreads: a photograph and a page of text that answer each other.</p></div></header>",
+      "css": ".ds-opener{background:#28382D;color:#E8E7E3;display:grid;grid-template-columns:5fr 7fr;align-items:end;gap:24px;padding:56px 32px}.ds-no{margin:0;font-family:\"Inria Serif\",Georgia,serif;font-weight:300;font-size:128px;line-height:.78;letter-spacing:-.04em;color:#E0937A;font-variant-numeric:lining-nums}.ds-ot{margin:0 0 18px;font-family:\"Inria Serif\",Georgia,serif;font-weight:700;font-size:64px;line-height:.94;letter-spacing:-.012em}.ds-deck{margin:0;font-family:\"Inria Serif\",Georgia,serif;font-size:21px;line-height:1.42;max-width:34ch}"
+    },
+    {
+      "name": "Valuation Panel",
+      "kind": "card",
+      "refersTo": "panel-valuation",
+      "description": "Oak panel: the selling chapter's one strong invitation.",
+      "html": "<section class=\"ds-val\"><div><h4>What is your home worth?</h4><p>A written range with the sales we used. No automated estimate.</p></div><form class=\"ds-vf\" onsubmit=\"return false\"><label for=\"ds-va\">Home address</label><input id=\"ds-va\" class=\"ds-vi\"><button class=\"ds-vb\">Ask what it's worth</button></form></section>",
+      "css": ".ds-val{background:#B98D5A;color:#1C2124;padding:32px;display:grid;grid-template-columns:6fr 5fr;gap:24px;align-items:end}.ds-val h4{margin:0 0 12px;font-family:\"Inria Serif\",Georgia,serif;font-weight:700;font-size:38px;line-height:1}.ds-val p{margin:0;font-family:\"Inria Serif\",Georgia,serif;font-size:20px;line-height:1.42}.ds-vf{display:grid;gap:8px}.ds-vf label{font-family:Archivo,sans-serif;font-stretch:88%;font-weight:600;font-size:14px}.ds-vi{min-height:48px;padding:11px 13px;background:#F4EFE7;border:1px solid #6B5233;border-radius:0;font-family:Archivo,sans-serif;font-size:16px;color:#2A3136}.ds-vi:focus{outline:2px solid #1C2124;outline-offset:1px}.ds-vb{min-height:48px;margin-top:6px;background:#9B3A29;color:#F7F5F1;border:0;border-radius:0;font-family:Archivo,sans-serif;font-stretch:88%;font-size:16px;font-weight:500;cursor:pointer;transition:background-color 160ms cubic-bezier(.2,.7,.2,1)}.ds-vb:hover{background:#87301F}.ds-vb:focus-visible{outline:2px solid #1C2124;outline-offset:3px}"
+    },
+    {
+      "name": "Footer and Legal",
+      "kind": "custom",
+      "refersTo": "colophon",
+      "description": "Green footer with stacked lockup, affiliation statement and Equal Housing Opportunity.",
+      "html": "<footer class=\"ds-foot\"><p class=\"ds-fl\"><span class=\"ds-fwm\">The Oberdorfer Team</span><span class=\"ds-faff\">at REWAP Brokerage LLC</span></p><p class=\"ds-ft\">The Oberdorfer Team is a team of real estate professionals affiliated with REWAP Brokerage LLC, Worcester, Massachusetts. Brokerage services are provided by REWAP Brokerage LLC.</p><p class=\"ds-legal\">Equal Housing Opportunity. <a href=\"#\">Privacy policy</a> · <a href=\"#\">Accessibility statement</a></p></footer>",
+      "css": ".ds-foot{background:#28382D;color:#E8E7E3;padding:40px 32px 28px;display:grid;gap:14px}.ds-fl{margin:0}.ds-fwm{display:block;font-family:\"Inria Serif\",Georgia,serif;font-size:22px;text-transform:uppercase;letter-spacing:.38em}.ds-faff{display:block;margin-top:.6em;font-family:Archivo,sans-serif;font-stretch:82%;font-size:13px;letter-spacing:.01em;color:#A9B5AC}.ds-ft{margin:0;padding-top:18px;border-top:1px solid rgba(232,231,227,.38);font-family:Archivo,sans-serif;font-stretch:88%;font-size:14px;line-height:1.6;color:#D2D6D0;max-width:70ch}.ds-legal{margin:0;font-family:Archivo,sans-serif;font-stretch:88%;font-size:12.5px;color:#A9B5AC}.ds-legal a{color:#E8E7E3}.ds-legal a:focus-visible{outline:2px solid #E0937A;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quarterly on New England Stock",
+    "overview": "The Oberdorfer Team is presented the way an independent architecture quarterly presents a building: colored paper stocks own whole spreads, a serif carries the reading and the headlines, a grotesk on its width axis carries every label and number, and photographs are cropped like measured drawings and captioned like plates. Color is material, not decoration. Shutter green is the cover and every chapter opener; cool plaster is every reading page; oak is a second stock reserved for selling, photography and affiliation; brick is a spot ink printed sparingly on top.\n\nDensity is editorial, not portal-like. A dense passage (a fact table, a list of rows) is followed by a quiet one (a full-bleed photograph, a single statement, white space). Structure comes from a 12-column grid, square corners and hairline rules, never from shadows, cards or rounded containers. A sticky running folio tracks where the reader is, like the running head of a printed issue.\n\nThe system rejects the brokerage default (aerial hero, search bar, listing grid), cream-and-serif softness, roof/key/pin iconography, and canned REALTOR template patterns. Every photograph is a labeled, credited sample until the team supplies real work.",
+    "keyCharacteristics": [
+      "Full-bleed color stocks (green, plaster, oak) instead of floating cards",
+      "Inria Serif for display and reading; Archivo on its width axis (82 / 100 / 116) for labels, data and prices",
+      "Square corners everywhere; 1px hairlines separate, a 2px ink rule starts a list or table",
+      "Brick as spot ink: one primary action per view, figure and chapter numbers on plaster",
+      "A real paper grain blended into every stock",
+      "Fig.-numbered captions, folio line, chapter numerals: the vocabulary of a printed issue",
+      "Motion is a page turn: a masked wipe, a settle, then stillness"
+    ],
+    "rules": [
+      {
+        "name": "The Stock Rule",
+        "body": "Color fills whole bands edge to edge. Green, oak and plaster are surfaces a region is printed on, never a rounded card floating on a page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spot Ink Rule",
+        "body": "Brick is printed on plaster or paper only, at about 3% of a page: one brick button per view, numerals, error marks. On green, brick becomes clay. On oak, nothing is brick.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tested Pairs Rule",
+        "body": "Text uses only the pairs in the table above. A pair that is not listed is not allowed, however good it looks.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Archivo's width encodes role: 82 for labels, captions, meta and the brokerage line; 88–92 for controls, notes and sans headings; 100 for data and inputs; 108–116 for fact figures and prices. Never introduce a third family.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Prices, square footage, dates, counts and every numeral column use Archivo with tabular figures, so lists of homes align like a ledger.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Capitals belong to the wordmark and short meta labels. Headlines, buttons and navigation stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Folio Rule",
+        "body": "Every long page carries a running folio that names where the reader is (chapter, town or listing). It is a navigation aid, not a second header: one line, 13px, no logo.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Strong Move Rule",
+        "body": "Each screen has one dominant move: a stock band, a photograph or a statement. Never two competing heroes.",
+        "section": "layout"
+      },
+      {
+        "name": "The Printed Stock Rule",
+        "body": "Surfaces are paper, not glass. No drop shadows, no blur, no gradients; a region gets depth by being printed on a different stock.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Grain Strength Rule",
+        "body": "Grain is always present on stocks, full on plaster and half on green and oak. It never sits on photographs or inside inputs.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Corner Rule",
+        "body": "Nothing in the interface is rounded. A rounded corner is a sign the component came from somewhere else.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Rules Not Boxes Rule",
+        "body": "A list, table or set begins with a 2px slate rule and divides with 1px hairlines. Rules replace boxes.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Affiliation Rule",
+        "body": "The Oberdorfer Team is the consumer brand; REWAP Brokerage LLC is the brokerage of record. The brokerage appears typographically only, in the lockup's Archivo line, in the header of every page, every agent bio, every listing attribution (\"Listed by The Oberdorfer Team at REWAP Brokerage LLC · MLS PIN #\" for own listings; \"Listing courtesy of [Listing Brokerage]\" for IDX), under every contact form, and in the footer with Equal Housing Opportunity. It is never larger than the team name, never letterspaced to match it, and the team is never presented as the brokerage.",
+        "section": "components"
+      },
+      {
+        "name": "The Labeled Sample Rule",
+        "body": "Until real material exists, every photograph carries a credited \"Sample photograph\" caption and every listing, article or slot carries a visible sample tag. Nothing is presented as real that is not.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do print regions on stock: shutter green for covers, openers and footers; plaster for reading; oak for selling, photography and affiliation.",
+      "Do keep brick to one primary button per view plus numerals, on plaster or paper only; switch to clay on green.",
+      "Do use only the tested contrast pairs; body text never drops below 17px.",
+      "Do set every price and numeral in Archivo with tabular figures, prices at width 116.",
+      "Do caption every photograph with a figure number, what it shows, where, and who made it.",
+      "Do keep a visible focus ring on every control: 2px brick at 3px offset on plaster, clay on every green surface (cover, panels, colophon), deep ink on oak.",
+      "Do keep touch targets at least 44 × 44px and controls 48px tall.",
+      "Do show the team-and-brokerage lockup in every header and the affiliation statement in every footer.",
+      "Do give every map a list equivalent and a text address.",
+      "Do write alt text that describes the house or place; hide decorative numerals and textures from screen readers."
+    ],
+    "donts": [
+      "Don't round corners, add drop shadows, or float a colored card on a page.",
+      "Don't set text in plaster on oak (2.42:1), brick on oak (2.32:1) or brick on green (1.79:1).",
+      "Don't use rule-strong (#8D938F, 2.77:1 on paper) as the only boundary of an interactive control; a field or chip outline must reach 3:1 against its surroundings.",
+      "Don't place text directly on a photograph without a stock panel or a measured scrim.",
+      "Don't add roof, key, pin or house symbols, generic monograms, red barns, colonial clip art or faux handwritten type.",
+      "Don't use Inter, Poppins or Montserrat, or a third type family.",
+      "Don't set headlines, buttons or navigation in capitals; capitals are for the wordmark and short meta labels.",
+      "Don't zoom images on hover, bounce, or float anything; motion is a wipe, a settle, then stillness.",
+      "Don't make the brokerage line larger than the team name, letterspace it to match, or present the team as the brokerage.",
+      "Don't present a sample photograph, listing, statistic or testimonial as real.",
+      "Don't describe who should live somewhere; describe homes and places."
+    ]
+  }
+}
