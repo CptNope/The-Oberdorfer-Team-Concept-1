@@ -14,8 +14,10 @@ Brand book concept for **The Oberdorfer Team**, a residential real-estate team i
 ## Layout of the repo
 
 ```
-index.html            GitHub Pages build (full HTML document) — generated, do not edit by hand
-artifact.html         Same page as a fragment, for publishing as a Claude artifact — generated
+index.html            GitHub Pages entry: markup only, links the CSS and JS below — generated
+assets/css/brand-book.css   All page CSS (head tokens + cover + book system) — generated
+assets/js/brand-book.js     Page script — generated
+artifact.html         Single-file version (inline CSS/JS) for publishing as a Claude artifact — generated
 src/                  Source parts, edited directly:
   00-head.html          <title>, fonts, root tokens, cover (comp A) CSS
   10-book.css           book system CSS (openers, pages, components, grain)
@@ -23,18 +25,25 @@ src/                  Source parts, edited directly:
   30-book.html          contents spread + chapters 01–12 + colophon
   40-book.js            folio, masked reveals, save toggles, sample forms, copy buttons
 assets/img/           Unsplash sample photos + paper grain textures (provenance embedded in each file)
-assets/plates/        Cover photo plate (PNG for the comp gate, WebP served first)
-tools/build.sh        Rebuilds index.html and artifact.html from src/
+assets/plates/        Cover photo served to the page: WebP first, JPEG fallback
+tools/build.py        Rebuilds index.html, artifact.html and assets/css + assets/js from src/
+tools/build.sh        Wrapper for build.py
 tools/stitch.py       Stitches chunked viewport captures into full-page review images
+tools/split_capture.py  Splits a tall PNG into parts / joins parts back (lossless)
 .impeccable/          Impeccable design-workflow state:
   config.json           buildPath: comp
   mocks/                comps A, B, C (A approved; B = contents spread structure) + prompt sidecars
-  build/                comp spec, regions, measured layout scaffold, build-phase state
-  review/               desktop/mobile captures, comp diffs, readable tiles, detector output
+  build/                comp spec, regions, measured layout scaffold, build-phase state;
+                        plates/cover-photo.png is the PNG plate the comp gate reads
+  review/               comp diffs, readable tiles, detector output
+  review/full/desktop/  full-page desktop capture split into part-NN.png (3000px each)
+  review/full/mobile/   full-page mobile capture split into part-NN.png (6000px each)
   surfaces/             surface brief with the direction contract
 ```
 
-After editing anything in `src/`, run `sh tools/build.sh` and commit both generated files.
+After editing anything in `src/`, run `python3 tools/build.py` (or `sh tools/build.sh`) and commit all four generated files. Never edit the generated files by hand.
+
+Keep individual files small: no single file over ~10 MB. Tall review captures go through `python3 tools/split_capture.py split <png> <out_dir> <height>`; rejoin with `python3 tools/split_capture.py join <dir> <out.png>`.
 
 ## Rules that must hold
 
@@ -53,5 +62,5 @@ Design work in this repo uses the **Impeccable** skill (`/impeccable`). PRODUCT.
 
 - Cover photo is the closest stock match to approved comp A, not a match; the final finish review scored it partial. Decide: accept, shoot a real Worcester County house, or use a labeled generated image.
 - Paper grain on green/oak was halved after the last review round and has not been re-reviewed.
-- Polish: cover headline ~10% under comp scale; standfirst tracking; `.ladder` labels; 4.8 MB PNG fallback behind the WebP cover.
+- Polish: cover headline ~10% under comp scale; standfirst tracking; `.ladder` labels.
 - Kait Oberdorfer's role and license details, brokerage address/license block, IDX vendor and MLS disclaimer text all still need to come from the team and REWAP's principal broker.

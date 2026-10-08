@@ -570,7 +570,7 @@
         "energy": 36.895
       },
       "medium": "raster",
-      "plate": "assets/plates/cover-photo.png",
+      "plate": ".impeccable/build/plates/cover-photo.png",
       "text": null
     },
     {
