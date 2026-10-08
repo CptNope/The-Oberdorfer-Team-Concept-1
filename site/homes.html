@@ -13,14 +13,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body>
+<body data-root="../" data-fub-source="[team website domain]" data-fub-system="OberdorferTeamSite">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="site-head-in wrap">
     <a class="lockup" href="../site/index.html"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></a>
     <nav class="site-nav" aria-label="Main"><ul><li><a href="../site/homes.html" aria-current="page">Homes</a></li><li><a href="../site/shrewsbury.html">Towns</a></li><li><a href="../site/buying.html">Buying</a></li><li><a href="../site/selling.html">Selling</a></li><li><a href="../site/field-notes.html">Field Notes</a></li><li><a href="../site/team.html">Team</a></li></ul></nav>
     <div class="head-actions">
-      <a class="saved-link" href="../site/homes.html?saved=1" data-saved-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
+      <a class="saved-link" href="../site/saved.html" data-saved-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
       <a class="btn btn--line btn--sm" href="../site/team.html#talk">Talk with us</a>
       <button class="btn btn--line btn--sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-sheet" data-menu>Menu</button>
     </div>
@@ -67,7 +67,22 @@
           <label class="save--line save" style="cursor:pointer;position:static"><input type="checkbox" data-saved-only style="width:18px;height:18px;margin:0;accent-color:var(--brick)"> Saved only</label>
           <div class="field"><label for="f-sort">Sort</label><select class="input" id="f-sort" data-sort><option value="price-asc">Price, low to high</option><option value="price-desc">Price, high to low</option><option value="year-asc">Oldest first</option><option value="beds-desc">Most bedrooms</option></select></div>
           <div class="view-toggle" role="group" aria-label="View"><button type="button" aria-pressed="true" data-view-btn="list">List</button><button type="button" aria-pressed="false" data-view-btn="map">Map</button></div>
+          <button class="btn btn--line btn--sm" type="button" data-save-search-open aria-expanded="false" aria-controls="save-search">Save this search</button>
         </div>
+      </div>
+      <div class="panel panel--paper save-search" id="save-search" data-save-search-panel hidden>
+        <h2 class="title" style="margin:0 0 6px">Save this search</h2>
+        <p class="note" style="margin:0 0 16px">We'll email new matches for <b data-search-label>All towns</b>, and only those. The search is also kept on this device under Saved homes.</p>
+        <form class="form-grid" data-lead-form data-fub-type="Saved Property Search" data-form-name="Save this search" data-search-form data-tags="Saved search,Buyer" novalidate>
+          <div class="field"><label for="ss-first">First name</label><input class="input" id="ss-first" name="first_name" autocomplete="given-name" required><span class="err" hidden>Add your first name so we know who to reply to.</span></div>
+        <div class="field"><label for="ss-last">Last name</label><input class="input" id="ss-last" name="last_name" autocomplete="family-name"></div>
+        <div class="field"><label for="ss-email">Email</label><input class="input" id="ss-email" name="email" type="email" autocomplete="email" data-contact><span class="err" hidden>Add an email or a phone number so we can reply.</span></div>
+        <div class="field"><label for="ss-phone">Phone <span class="hint">(optional)</span></label><input class="input" id="ss-phone" name="phone" type="tel" autocomplete="tel" data-contact><span class="err" hidden>Use a ten-digit phone number, or leave it blank and add an email.</span></div>
+        <label class="consent full"><input type="checkbox" name="consent_contact" value="yes"><span>You can call or text me about this request. Message and data rates may apply; reply STOP to opt out. <span class="ph-text">[Wording to confirm with REWAP's principal broker]</span></span></label>
+          <div class="full btn-row"><button class="btn" type="submit">Save and email me new matches</button></div>
+          <p class="disclose full">Your search goes to The Oberdorfer Team at REWAP Brokerage LLC. Unsubscribe from any email. <a class="textlink" href="#privacy">Privacy policy</a></p>
+          <div class="routing full" role="status" aria-live="polite"></div>
+        </form>
       </div>
       <h2 class="sr-only">Results</h2>
       <ol class="results" data-results>
@@ -172,7 +187,7 @@
   <div class="wrap">
     <p class="lock-stacked" style="margin:0"><span class="wm">The Oberdorfer</span><span class="wm">Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
     <div class="cols">
-      <div><h2>Homes and towns</h2><ul><li><a href="../site/homes.html">Homes for sale</a></li><li><a href="../site/shrewsbury.html">Shrewsbury</a></li><li><a href="../site/homes.html?town=Holden">Holden</a></li><li><a href="../site/homes.html?town=Worcester">Worcester</a></li></ul></div>
+      <div><h2>Homes and towns</h2><ul><li><a href="../site/homes.html">Homes for sale</a></li><li><a href="../site/open-houses.html">Open houses</a></li><li><a href="../site/saved.html">Saved homes</a></li><li><a href="../site/shrewsbury.html">Shrewsbury</a></li><li><a href="../site/homes.html?town=Holden">Holden</a></li><li><a href="../site/homes.html?town=Worcester">Worcester</a></li></ul></div>
       <div><h2>Guidance</h2><ul><li><a href="../site/buying.html">Buying, in order</a></li><li><a href="../site/selling.html">Selling, with care</a></li><li><a href="../site/selling.html#valuation">What is my home worth?</a></li><li><a href="../site/field-notes.html">Field Notes</a></li></ul></div>
       <div><h2>The team</h2><ul><li><a href="../site/team.html">Brandon and Kait</a></li><li><a href="../site/team.html#talk">Talk with us</a></li><li><a href="../site/team.html#join">Join the team</a></li></ul></div>
       <div><h2>Contact</h2><p>The Oberdorfer Team<br>at REWAP Brokerage LLC<br>[Phone] · [Email]<br>[Brokerage address], Worcester, MA</p></div>

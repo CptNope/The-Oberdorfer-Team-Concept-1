@@ -125,34 +125,34 @@
           <li><img src="assets/img/BFEqlDN-UME.jpg" width="1800" height="1201" loading="lazy" alt=""><span class="code">S7</span><div><h3><a href="site/field-notes.html">Field Notes</a></h3><p>The editorial program: market, town guides, house stories, guides.</p></div><span class="mode">Editorial index</span></li>
           <li><img src="assets/img/MQE7ld8vxLI.jpg" width="1800" height="1201" loading="lazy" alt=""><span class="code">S8</span><div><h3><a href="site/field-notes/old-house-checklist.html">Article · old-house checklist</a></h3><p>A full sample Field Note, set as a long read.</p></div><span class="mode">Article</span></li>
           <li><img src="assets/img/S47fH1-Bk_s.jpg" width="1350" height="1800" loading="lazy" alt="" style="object-position:50% 35%"><span class="code">S9</span><div><h3><a href="site/team.html">Team and contact</a></h3><p>Brandon and Kait, how they work, the brokerage, and the contact form.</p></div><span class="mode">About and contact</span></li>
+          <li><img src="assets/img/BAzT94876hk.jpg" width="1800" height="1800" loading="lazy" alt="" style="object-position:50% 55%"><span class="code">S10</span><div><h3><a href="site/open-houses.html">Open houses and sign-in</a></h3><p>This weekend's open houses and the sign-in a visitor sees at the door.</p></div><span class="mode">Schedule</span></li>
+          <li><img src="assets/img/3Ns7li2szbU.jpg" width="1800" height="1634" loading="lazy" alt="" style="object-position:50% 45%"><span class="code">S11</span><div><h3><a href="site/saved.html">Saved homes</a></h3><p>Homes and searches saved on this device, and "Keep me posted".</p></div><span class="mode">Account</span></li>
+          <li><img src="assets/img/MIKb6CuEcvw.jpg" width="1550" height="1134" loading="lazy" alt="" style="object-position:50% 50%"><span class="code">P1</span><div><h3><a href="follow-up-boss.html">Lead handoff to Follow Up Boss</a></h3><p>The event map, field map and setup checklist the WordPress build follows.</p></div><span class="mode">Spec</span></li>
         </ol>
-        <p class="note" style="margin:0">Plus a generated page for each of the eleven sample listings. A floating "Concept pages" navigator on every page moves between all of them.</p>
+        <p class="note" style="margin:0">Plus a generated page for each of the eleven sample listings, and a platform page for the Follow Up Boss handoff. A floating "Concept pages" navigator on every page moves between all of them.</p>
       </div>
     </div>
   </section>
 
   <section class="grid sub" aria-labelledby="platform-title">
-    <div class="sub-head"><h2 class="title" id="platform-title">One platform, two brands</h2><p class="note">From chapter 12. Every form on the website shows this payload instead of sending it.</p></div>
+    <div class="sub-head"><h2 class="title" id="platform-title">One platform, two brands</h2><p class="note">From chapter 12. Every form on the website shows the Follow Up Boss event it would send, and sends nothing.</p></div>
     <div class="sub-body" style="display:grid;gap:20px">
-      <p class="prose" style="margin:0">The team site and a future REWAP site share data without duplicating it. A vendor-neutral IDX adapter turns the MLS PIN feed into one property record per listing; every lead carries the page, property, team, agent, brokerage and campaign it came from, ready for a CRM.</p>
+      <p class="prose" style="margin:0">The team site and a future REWAP site share data without duplicating it. A vendor-neutral IDX adapter turns the MLS PIN feed into one property record per listing. Every lead reaches Follow Up Boss as an event carrying the person, the house or search, the page and the campaign it came from, with the brokerage attached.</p>
 <pre class="model"><code>Brokerage (REWAP Brokerage LLC, authority)
   └── Team (The Oberdorfer Team, brand) ── publishes ──> Article / Town page
         └── Agent (Brandon, Kait, future agents)
 IDX adapter (vendor-neutral, MLS PIN feed) ── supplies ──> Property
 Lead ── references ──> Property, Team, Agent, Brokerage ── forwards to CRM</code></pre>
-<pre class="payload"><code>{
-  <span class="k">"lead_type"</span>:   <span class="s">"showing_request"</span>,
-  <span class="k">"source_site"</span>: <span class="s">"oberdorfer-team"</span>,
-  <span class="k">"source_page"</span>: <span class="s">"/homes/holden-14-orchard-lane"</span>,
-  <span class="k">"property_id"</span>: <span class="s">"holden-14-orchard-lane"</span>,
-  <span class="k">"mls_id"</span>:      <span class="s">"[MLS PIN number]"</span>,
-  <span class="k">"team"</span>:        <span class="s">"oberdorfer-team"</span>,
-  <span class="k">"agent"</span>:       <span class="s">"brandon-oberdorfer"</span>,
-  <span class="k">"brokerage"</span>:   <span class="s">"rewap-brokerage-llc"</span>,
-  <span class="k">"campaign"</span>:    <span class="s">"fall-open-houses"</span>,
-  <span class="k">"utm"</span>: { <span class="k">"source"</span>: <span class="s">"facebook"</span>, <span class="k">"medium"</span>: <span class="s">"paid_social"</span> }
+<pre class="payload"><code>POST https://api.followupboss.com/v1/events
+{
+  <span class="k">"source"</span>:  <span class="s">"[team website domain]"</span>,
+  <span class="k">"system"</span>:  <span class="s">"OberdorferTeamSite"</span>,
+  <span class="k">"type"</span>:    <span class="s">"Property Inquiry"</span>,
+  <span class="k">"person"</span>:  { <span class="k">"firstName"</span>: <span class="s">"Sam"</span>, <span class="k">"emails"</span>: [{ <span class="k">"value"</span>: <span class="s">"sam@example.com"</span> }], <span class="k">"tags"</span>: [<span class="s">"Website"</span>, <span class="s">"Holden"</span>] },
+  <span class="k">"property"</span>: { <span class="k">"street"</span>: <span class="s">"14 Orchard Lane"</span>, <span class="k">"city"</span>: <span class="s">"Holden"</span>, <span class="k">"state"</span>: <span class="s">"MA"</span>, <span class="k">"mlsNumber"</span>: <span class="s">"[MLS PIN number]"</span> },
+  <span class="k">"campaign"</span>: { <span class="k">"source"</span>: <span class="s">"facebook"</span>, <span class="k">"medium"</span>: <span class="s">"paid_social"</span> }
 }</code></pre>
-      <p style="margin:0"><a class="textlink" href="site/homes/holden-14-orchard-lane.html#showing">Try it on a listing</a></p>
+      <p style="margin:0"><a class="textlink" href="follow-up-boss.html">The full Follow Up Boss handoff</a> · <a class="textlink" href="site/homes/holden-14-orchard-lane.html#showing">Try it on a listing</a></p>
     </div>
   </section>
 
@@ -175,6 +175,7 @@ Lead ── references ──> Property, Team, Agent, Brokerage ── forwards 
       <dl class="rows">
         <div class="row"><dt>People</dt><dd>Portraits, bios, Kait's role and license details, direct phone numbers and a reply time the team can keep.</dd></div>
         <div class="row"><dt>Brokerage</dt><dd>REWAP's address and license block, required disclosures, and the principal broker's sign-off on footer language.</dd></div>
+        <div class="row"><dt>Follow Up Boss</dt><dd>Register the site as a system, create the API key, name the source, set the lead flow and action plans, and create the Brokerage custom field. <a class="textlink" href="follow-up-boss.html">The checklist</a></dd></div>
         <div class="row"><dt>Data</dt><dd>The IDX vendor, the MLS PIN disclaimer text, and the monthly market figures for the town pages.</dd></div>
         <div class="row"><dt>Photography</dt><dd>A real shoot to replace every sample. The shot list is in chapter 07 of the brand book.</dd></div>
         <div class="row"><dt>Service commitments</dt><dd>The copy carries the brand book's proposed commitments: answering their own phones, plans in writing, a weekly written update. The team confirms each one, or it comes out.</dd></div>

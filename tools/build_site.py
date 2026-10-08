@@ -60,6 +60,38 @@ def save_btn(l, cls='save'):
             f'<span data-save-label>Save</span><span class="sr-only"> {E(l["street"])}</span></button>')
 
 
+
+def fub_property(l):
+    """The listing as a Follow Up Boss `property` object (POST /v1/events)."""
+    p = {
+        'street': l['street'], 'city': l['town'], 'state': 'MA', 'code': D.ZIP[l['town']],
+        'mlsNumber': '[MLS PIN number]', 'price': l['price'], 'forRent': False,
+        'url': f'https://{D.FUB_SOURCE}/homes/{l["id"]}', 'type': l['kind'],
+        'bedrooms': l['beds'], 'bathrooms': float(l['baths']), 'area': l['sqft'],
+    }
+    if l['lot'] not in ('—', ''):
+        p['lot'] = float(l['lot'].split()[0])
+    return p
+
+
+def fub_attr(obj):
+    return E(json.dumps(obj, ensure_ascii=False), quote=True)
+
+
+CONSENT_TEXT = ('You can call or text me about this request. Message and data rates may apply; '
+                'reply STOP to opt out.')
+
+
+def person_fields(pfx, cols=2, phone_note=''):
+    """First and last name, email, phone and the call/text consent line, named the way the
+    Follow Up Boss handoff expects them (first_name, last_name, email, phone, consent_contact)."""
+    full = ' full' if cols == 2 else ''
+    return f'''<div class="field"><label for="{pfx}-first">First name</label><input class="input" id="{pfx}-first" name="first_name" autocomplete="given-name" required><span class="err" hidden>Add your first name so we know who to reply to.</span></div>
+        <div class="field"><label for="{pfx}-last">Last name</label><input class="input" id="{pfx}-last" name="last_name" autocomplete="family-name"></div>
+        <div class="field"><label for="{pfx}-email">Email</label><input class="input" id="{pfx}-email" name="email" type="email" autocomplete="email" data-contact><span class="err" hidden>Add an email or a phone number so we can reply.</span></div>
+        <div class="field"><label for="{pfx}-phone">Phone <span class="hint">(optional{phone_note})</span></label><input class="input" id="{pfx}-phone" name="phone" type="tel" autocomplete="tel" data-contact><span class="err" hidden>Use a ten-digit phone number, or leave it blank and add an email.</span></div>
+        <label class="consent{full}"><input type="checkbox" name="consent_contact" value="yes"><span>{CONSENT_TEXT} <span class="ph-text">[Wording to confirm with REWAP's principal broker]</span></span></label>'''
+
 class Ctx:
     def __init__(self, root):
         self.root = root
@@ -132,15 +164,49 @@ class Ctx:
         return (f'<a class="marker" href="{self.href(l)}" data-marker="{l["id"]}" style="left:{x}%;top:{y}%">'
                 f'{short_money(l["price"])}<span class="sr-only">, {E(l["street"])}, {E(l["town"])}</span></a>')
 
+    def open_houses(self):
+        ls = [l for l in D.LISTINGS if l.get('open_house')]
+        order = {'Sat': 0, 'Sun': 1}
+        ls.sort(key=lambda l: (l['open_house'].split()[2].rstrip(','), order.get(l['open_house'][:3], 9), l['open_house']))
+        rows = []
+        for l in ls:
+            day, rest = l['open_house'].split(', ', 1)
+            dow, mon, dnum = day.split()
+            rows.append(f'''<li class="oh-row">
+  <p class="oh-date"><span class="dow">{E(dow)}</span><span class="dnum">{E(dnum)}</span><span class="mon">{E(mon)}</span></p>
+  {self.img(l['photo'], l['alt'], style=l['pos'])}
+  <div><p class="town">{E(town_line(l))} · Sample</p><h3 class="addr"><a href="{self.href(l)}">{E(l['street'])}</a></h3><p class="oh-time">{E(rest)}</p>{self.facts(l)}</div>
+  <div class="right"><span class="price">{money(l['price'])}</span>{save_btn(l, 'save save--line')}</div>
+</li>''')
+        return '<ol class="oh-list">' + ''.join(rows) + '</ol>'
+
+    def signin(self, l):
+        prop = fub_property(l)
+        return f'''<div class="signin panel panel--paper" id="sign-in">
+  <div class="signin-head"><p class="town">Open house · {E(l['open_house'])}</p><h3 class="addr">{E(l['street'])}, {E(l['town'])}</h3><p class="note">What the tablet by the front door shows. Visitors sign in once; the team follows up the next day.</p></div>
+  <form class="form-grid" data-lead-form data-fub-type="Visited Open House" data-form-name="Open house sign-in" data-fub-property="{fub_attr(prop)}" data-tags="Open house,{E(l['town'])}" novalidate>
+        {person_fields('oh')}
+        <fieldset class="field full" style="border:0;padding:0;margin:0"><legend class="legend" style="margin-bottom:7px">Are you working with an agent?</legend>
+          <div class="choice"><label><input type="radio" name="has_agent" value="no" checked><span>Not yet</span></label><label><input type="radio" name="has_agent" value="yes"><span>Yes</span></label></div>
+        </fieldset>
+        <label class="consent full"><input type="checkbox" name="also_selling" value="yes"><span>I'm also thinking about selling my current home.</span></label>
+        <div class="full btn-row"><button class="btn" type="submit">Sign in</button></div>
+        <p class="disclose full">Your details go to The Oberdorfer Team at REWAP Brokerage LLC. We use them only to follow up about this house and homes like it. <a class="textlink" href="#privacy">Privacy policy</a></p>
+        <div class="routing full" role="status" aria-live="polite"></div>
+  </form>
+</div>'''
+
     def valuation(self):
         return f'''<section class="panel panel--oak valuation" id="valuation" aria-labelledby="valuation-title">
   <div>
     <h2 id="valuation-title">What is your home worth?</h2>
     <p class="lead">We'll send a written range with the sales we used and what would move it, within <span class="ph-text">[turnaround to confirm]</span>. No obligation, and no automated estimate.</p>
   </div>
-  <form data-lead-form data-lead-type="valuation_request" novalidate>
+  <form data-lead-form data-fub-type="Seller Inquiry" data-form-name="What is your home worth?" novalidate>
     <div class="field"><label for="v-addr">Home address</label><input class="input" id="v-addr" name="address" autocomplete="street-address" placeholder="Street, town" required><span class="err" hidden>Add the street and town so we can find the right sales.</span></div>
-    <div class="field"><label for="v-email">Email</label><input class="input" id="v-email" name="email" type="email" autocomplete="email" required><span class="err" hidden>Add an email so we can send your range.</span></div>
+    <div class="vgrid">
+        {person_fields('v')}
+    </div>
     <button class="btn" type="submit">Ask what it's worth</button>
     <p class="disclose">Your request goes to The Oberdorfer Team at REWAP Brokerage LLC. We use it only to reply to you. <a class="textlink" href="#privacy">Privacy policy</a></p>
     <div class="routing" role="status" aria-live="polite"></div>
@@ -181,7 +247,7 @@ def head(meta, root):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
 <link rel="stylesheet" href="{root}assets/css/site.css">
 </head>
-<body{' class="has-sticky"' if meta.get('sticky') else ''}>
+<body{' class="has-sticky"' if meta.get('sticky') else ''} data-root="{root}" data-fub-source="{E(D.FUB_SOURCE)}" data-fub-system="{E(D.FUB_SYSTEM)}">
 <a class="skip" href="#main">Skip to content</a>
 '''
 
@@ -198,7 +264,7 @@ def header(meta, root):
     <a class="lockup" href="{root}site/index.html"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></a>
     <nav class="site-nav" aria-label="Main"><ul>{links}</ul></nav>
     <div class="head-actions">
-      <a class="saved-link" href="{root}site/homes.html?saved=1" data-saved-link>{SAVE_SVG}<span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
+      <a class="saved-link" href="{root}site/saved.html" data-saved-link>{SAVE_SVG}<span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
       <a class="btn btn--line btn--sm" href="{root}site/team.html#talk">Talk with us</a>
       <button class="btn btn--line btn--sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-sheet" data-menu>Menu</button>
     </div>
@@ -227,7 +293,7 @@ def footer(root):
   <div class="wrap">
     <p class="lock-stacked" style="margin:0"><span class="wm">The Oberdorfer</span><span class="wm">Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
     <div class="cols">
-      <div><h2>Homes and towns</h2><ul><li><a href="{root}site/homes.html">Homes for sale</a></li><li><a href="{root}site/shrewsbury.html">Shrewsbury</a></li><li><a href="{root}site/homes.html?town=Holden">Holden</a></li><li><a href="{root}site/homes.html?town=Worcester">Worcester</a></li></ul></div>
+      <div><h2>Homes and towns</h2><ul><li><a href="{root}site/homes.html">Homes for sale</a></li><li><a href="{root}site/open-houses.html">Open houses</a></li><li><a href="{root}site/saved.html">Saved homes</a></li><li><a href="{root}site/shrewsbury.html">Shrewsbury</a></li><li><a href="{root}site/homes.html?town=Holden">Holden</a></li><li><a href="{root}site/homes.html?town=Worcester">Worcester</a></li></ul></div>
       <div><h2>Guidance</h2><ul><li><a href="{root}site/buying.html">Buying, in order</a></li><li><a href="{root}site/selling.html">Selling, with care</a></li><li><a href="{root}site/selling.html#valuation">What is my home worth?</a></li><li><a href="{root}site/field-notes.html">Field Notes</a></li></ul></div>
       <div><h2>The team</h2><ul><li><a href="{root}site/team.html">Brandon and Kait</a></li><li><a href="{root}site/team.html#talk">Talk with us</a></li><li><a href="{root}site/team.html#join">Join the team</a></li></ul></div>
       <div><h2>Contact</h2><p>The Oberdorfer Team<br>at REWAP Brokerage LLC<br>[Phone] · [Email]<br>[Brokerage address], Worcester, MA</p></div>
@@ -288,6 +354,25 @@ def render(body, meta, root):
             return ''.join(f'<option>{t}</option>' for t in D.TOWNS)
         if name == 'count':
             return str(len(D.LISTINGS))
+        if name == 'personfields':
+            p = arg.split('|')
+            return person_fields(p[0], cols=int(p[1]) if len(p) > 1 else 2)
+        if name == 'openhouses':
+            return ctx.open_houses()
+        if name == 'savedcards':
+            return '<div class="cards" data-saved-cards>' + ''.join(
+                ctx.card(l).replace('<article class="card">', f'<article class="card" data-saved-card="{l["id"]}" hidden>', 1)
+                for l in D.LISTINGS) + '</div>'
+        if name == 'signin':
+            return ctx.signin(BY_ID[arg])
+        if name == 'fubproperties':
+            return ('<script type="application/json" id="fub-properties">'
+                    + json.dumps({l['id']: fub_property(l) for l in D.LISTINGS}, ensure_ascii=False).replace('</', '<\\/')
+                    + '</script>')
+        if name == 'fubsystem':
+            return E(D.FUB_SYSTEM)
+        if name == 'fubsource':
+            return E(D.FUB_SOURCE)
         raise KeyError(m.group(0))
 
     out = TOKEN.sub(sub, body)
@@ -315,8 +400,8 @@ def detail_page(l):
     others = [x for x in D.LISTINGS if x['id'] != l['id'] and (x['town'] == l['town'] or abs(x['price'] - l['price']) < 120000)][:3]
     if len(others) < 3:
         others += [x for x in D.LISTINGS if x['id'] != l['id'] and x not in others][:3 - len(others)]
-    lead_attrs = (f'data-lead-form data-lead-type="showing_request" data-property-id="{l["id"]}" '
-                  f'data-mls-id="[MLS PIN number]" data-agent="{"brandon-oberdorfer" if l["own"] else "team-intake"}"')
+    lead_attrs = (f'data-lead-form data-fub-type="Property Inquiry" data-form-name="Request a showing" '
+                  f'data-fub-property="{fub_attr(fub_property(l))}" data-tags="{E(l["town"])}"')
     meta = dict(page='S3' if l['id'] == D.FEATURED else 'S3x', nav='homes', sticky=True,
                 title=f'{l["street"]}, {l["town"]}: sample listing · The Oberdorfer Team',
                 description=f'Sample listing: {l["character"]}',
@@ -371,9 +456,8 @@ def detail_page(l):
       <div class="panel panel--paper" id="showing">
         <h2 class="title" style="margin:0">Request a showing</h2>
         <form class="form-grid" style="grid-template-columns:1fr" {lead_attrs} novalidate>
-          <div class="field"><label for="sh-name">Your name</label><input class="input" id="sh-name" name="name" autocomplete="name" required><span class="err" hidden>Add your name so we know who we're meeting.</span></div>
-          <div class="field"><label for="sh-contact">Email or phone</label><input class="input" id="sh-contact" name="contact" autocomplete="email" required><span class="err" hidden>Add an email or phone so we can confirm a time.</span></div>
-          <div class="field"><label for="sh-when">When works</label><select class="input" id="sh-when" name="when"><option>This weekend</option><option>A weekday evening</option>{'<option>The open house, ' + E(l['open_house']) + '</option>' if l.get('open_house') else ''}<option>Call me to arrange</option></select></div>
+          {person_fields('sh', cols=1)}
+          <div class="field"><label for="sh-when">When works</label><select class="input" id="sh-when" name="timing"><option>This weekend</option><option>A weekday evening</option>{'<option>The open house, ' + E(l['open_house']) + '</option>' if l.get('open_house') else ''}<option>Call me to arrange</option></select></div>
           <button class="btn" type="submit">Request a showing</button>
           <p class="disclose">Your request goes to The Oberdorfer Team at REWAP Brokerage LLC. We reply within <span class="ph-text">[response time to confirm]</span>.</p>
           <div class="routing" role="status" aria-live="polite"></div>

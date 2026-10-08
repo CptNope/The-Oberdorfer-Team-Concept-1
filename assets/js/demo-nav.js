@@ -29,7 +29,12 @@
       { id: 'S6', code: 'S6', title: 'Selling, with care', path: 'site/selling.html' },
       { id: 'S7', code: 'S7', title: 'Field Notes', path: 'site/field-notes.html' },
       { id: 'S8', code: 'S8', title: 'Article · old-house checklist', path: 'site/field-notes/old-house-checklist.html' },
-      { id: 'S9', code: 'S9', title: 'Team and contact', path: 'site/team.html' }
+      { id: 'S9', code: 'S9', title: 'Team and contact', path: 'site/team.html' },
+      { id: 'S10', code: 'S10', title: 'Open houses and sign-in', path: 'site/open-houses.html' },
+      { id: 'S11', code: 'S11', title: 'Saved homes', path: 'site/saved.html' }
+    ] },
+    { name: 'Platform', items: [
+      { id: 'P1', code: 'P1', title: 'Lead handoff to Follow Up Boss', path: 'follow-up-boss.html' }
     ] }
   ];
   var FLAT = [];

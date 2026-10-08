@@ -1,0 +1,47 @@
+<!--meta {"page": "S11", "nav": "homes", "title": "Your saved homes · The Oberdorfer Team (concept)", "description": "Homes and searches saved on this device, and how to have the team keep you posted.", "folio_k": "Saved ·", "folio": "Your saved homes"} -->
+<section class="opener opener--band stock-green" aria-labelledby="saved-title">
+  <div class="opener-in grid wrap" style="padding-block:clamp(40px,4.4vw,80px)">
+    <div class="opener-text">
+      <h1 class="opener-title" id="saved-title">Your saved homes</h1>
+      <p class="opener-deck">Homes you've saved on this device. Nothing is sent anywhere until you ask us to keep you posted.</p>
+    </div>
+    <p class="opener-aside cap">Saved homes stay in this browser. Follow Up Boss only hears about them once you register below, because it needs a name and an email or phone to attach them to.</p>
+  </div>
+</section>
+
+{{folio}}
+
+<div class="page wrap">
+  <section class="grid sub" aria-labelledby="homes-title" data-folio-section="Saved homes">
+    <div class="sub-head"><h2 class="title" id="homes-title">Saved homes</h2><p class="note"><span data-saved-n>0</span> <span data-saved-word>homes</span> saved. Tap Saved on a card to remove it.</p></div>
+    <div class="sub-wide" style="margin-top:12px">
+      <div class="empty show" data-saved-empty>
+        <p>You haven't saved any homes yet. Tap <b>Save</b> on any listing and it will wait for you here.</p>
+        <a class="btn btn--line" href="{{root}}site/homes.html">Look at homes for sale</a>
+      </div>
+      {{savedcards}}
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="searches-title" data-folio-section="Saved searches">
+    <div class="sub-head"><h2 class="title" id="searches-title">Saved searches</h2><p class="note">Searches saved from Homes for sale with "Save this search".</p></div>
+    <div class="sub-body">
+      <ul class="searches" data-saved-searches></ul>
+      <p class="prose" data-searches-empty style="margin:0">No saved searches yet. Set the filters on <a href="{{root}}site/homes.html">Homes for sale</a>, then choose "Save this search".</p>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="keep-title" data-folio-section="Keep me posted">
+    <div class="sub-head"><h2 class="title" id="keep-title">Keep me posted</h2><p class="note">Sends a <b>Registration</b> event, then one <b>Saved Property</b> event for each saved home, so the team sees exactly which houses you liked.</p></div>
+    <div class="sub-body">
+      <form class="form-grid" data-lead-form data-fub-type="Registration" data-saved-events data-form-name="Keep me posted (saved homes)" data-tags="Buyer" novalidate>
+        {{personfields:kp}}
+        <div class="field full"><label for="kp-msg">Anything we should know</label><textarea class="input" id="kp-msg" name="message" placeholder="What you liked about these, and what you'd change"></textarea></div>
+        <div class="full btn-row"><button class="btn" type="submit">Keep me posted</button></div>
+        <p class="disclose full">Your details go to The Oberdorfer Team at REWAP Brokerage LLC. We use them only to send you updates on these homes and ones like them. <a class="textlink" href="#privacy">Privacy policy</a></p>
+        <div class="routing full" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</div>
+{{fubproperties}}

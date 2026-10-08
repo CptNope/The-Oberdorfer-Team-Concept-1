@@ -27,6 +27,7 @@ Brand book concept for **The Oberdorfer Team**, a residential real-estate team i
 - [11 Access](#11-access)
 - [12 Affiliation](#12-affiliation)
 - [The website concept](#the-website-concept)
+- [Lead handoff to Follow Up Boss](#lead-handoff-to-follow-up-boss)
 - [Open items](#open-items)
 - [Working on this repo](#working-on-this-repo)
 - [Credits](#credits)
@@ -52,6 +53,9 @@ The GitHub Pages site opens on a concept overview. Every page carries a floating
 | S7 | [Field Notes](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/field-notes.html) | The editorial program |
 | S8 | [Article · old-house checklist](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/field-notes/old-house-checklist.html) | One full sample Field Note |
 | S9 | [Team and contact](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/team.html) | Brandon and Kait, how they work, the brokerage, the contact form |
+| S10 | [Open houses and sign-in](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/open-houses.html) | This weekend and next, and the sign-in a visitor sees at the door |
+| S11 | [Saved homes](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/site/saved.html) | Homes and searches saved on this device, and "Keep me posted" |
+| P1 | [Lead handoff to Follow Up Boss](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/follow-up-boss.html) | The event map, field map, an example request and the setup checklist |
 
 ---
 
@@ -452,7 +456,8 @@ The website is the Quarterly's next issue. It uses the brand book's system uncha
 - **Saved homes.** The bookmark toggle on any card, row or listing saves it in your browser. The header shows the count, saved homes print in brick on the search map, and "Saved only" filters the list. Nothing leaves the browser.
 - **Search.** Town, price, bedrooms and type filters, four sort orders, an empty state, and filters carried in the URL (`homes.html?town=Holden`). Hovering a result lights its map marker. On a phone the map and list trade places with one toggle.
 - **Listing gallery.** "All 6 photos" opens a full-screen gallery that slides edge to edge, with arrow keys and swipe. Interior photographs are labeled as samples that are not of the house.
-- **Forms that show their routing.** The showing request, valuation panel and contact forms validate inline, then send nothing. Instead they show the lead payload the team's CRM would receive, with the source page, property, MLS number, team, agent, brokerage, campaign and UTM fields filled in (try `?utm_source=facebook&utm_medium=paid_social&utm_campaign=fall-open-houses`).
+- **Forms built for Follow Up Boss.** Every form (showing request, valuation, contact, open-house sign-in, save this search, keep me posted) asks for first and last name, email and phone (one of the two is required) and an optional call/text consent. They validate inline, send nothing, and show the exact Follow Up Boss event they would send: the request headers and the JSON body, with the property or search, page and campaign filled in (try `?utm_source=facebook&utm_medium=paid_social&utm_campaign=fall-open-houses`).
+- **Saved homes and searches.** Saved homes and saved searches collect on the Saved homes page; "Keep me posted" turns them into a Registration event plus one Saved Property event per home.
 - **Phone patterns.** Sticky Save and Request-a-showing actions on listings, a full-width menu sheet, single-column cards and stacked forms.
 
 **The pages**
@@ -475,12 +480,38 @@ The website is the Quarterly's next issue. It uses the brand book's system uncha
 
 ---
 
+## Lead handoff to Follow Up Boss
+
+The site is built to hand every lead to Follow Up Boss through its Events API. The full spec, with an example request, is on the [handoff page](https://cptnope.github.io/The-Oberdorfer-Team-Concept-1/follow-up-boss.html).
+
+**Path.** The browser posts the form to the team's own server (a WordPress REST endpoint), never to Follow Up Boss directly. The server sends `POST https://api.followupboss.com/v1/events` with HTTP Basic auth (API key as the username, blank password) and the `X-System` / `X-System-Key` headers issued when the site is registered as a system. Follow Up Boss matches people by email or phone, creates or updates the contact, and runs the lead flow for the source. It answers `201` (new person), `200` (existing person) or `204` (source archived).
+
+| Site action | Event `type` | Carries |
+|---|---|---|
+| Request a showing (every listing) | Property Inquiry | `property` |
+| Ask what it's worth (home, selling, town pages) | Seller Inquiry | `property` parsed from the address |
+| Talk with us: selling | Seller Inquiry | message, tags |
+| Talk with us: buying, both, just reading, joining the team | General Inquiry | message, tags |
+| Open-house sign-in | Visited Open House | `property`, agent status, "also selling" |
+| Keep me posted (saved homes) | Registration, then Saved Property per home | `property` per home |
+| Save this search | Saved Property Search | `propertySearch` |
+| Listing views and searches by a known visitor (live site) | Viewed Property, Property Search | `property`, `propertySearch` |
+
+**Fields.** `person.firstName`, `lastName`, `emails[]`, `phones[]`, `tags`, and a `customBrokerage` custom field; `property.street`, `city`, `state`, `code`, `mlsNumber`, `price`, `forRent`, `url`, `type`, `bedrooms`, `bathrooms`, `area`, `lot`; `propertySearch.city`, `state`, `type`, `maxPrice`, `minBedrooms`; `campaign.*` from UTM parameters (only when `utm_source` is present, since `campaign.source` is required); `message`, `description` (form, page, timing, agent status, and the consent line with its timestamp and exact wording), `pageUrl`, `pageTitle`, `pageReferrer`, `occurredAt`. `source` is the site's domain without "www" (to be chosen) and `system` is `OberdorferTeamSite`.
+
+**To set up in Follow Up Boss before launch:** register the site as a system, create the API key (server-side only), name the source and its lead flow, write action plans for Property Inquiry, Seller Inquiry and Visited Open House, create the Brokerage custom field, confirm the consent wording with REWAP's principal broker, finish A2P 10DLC registration before relying on texts, give any old lead sources their own names, and test end to end.
+
+Sources: Follow Up Boss developer documentation, [Events POST](https://docs.followupboss.com/reference/events-post), [Lead provider integration guide](https://docs.followupboss.com/docs/lead-provider-integration-guide), [IDX integration](https://docs.followupboss.com/reference/idx-integration), [Identification](https://docs.followupboss.com/reference/identification), [Authentication](https://docs.followupboss.com/reference/authentication).
+
+---
+
 ## Open items
 
 - **Cover photo:** kept as the current stock photograph (decision, October 2026). Replace with a real Worcester County house when the shoot happens.
 - **14 Orchard Lane photo:** the flagship sample listing uses a saturated blue colonial in noon light, in both the book and the site. Keep it, or swap it for a lower-sun exterior closer to the cover's light.
 - **Service commitments:** answering their own phones, plans in writing and weekly written updates are proposals. The team confirms each, or the line comes out.
 - **To supply:** Kait Oberdorfer's role and license, the brokerage address and license block, the IDX vendor and MLS disclaimer text, response times for forms, portraits and bios, and real photography.
+- **Follow Up Boss:** system registration, API key, source name and lead flow, action plans, the Brokerage custom field, consent wording, A2P 10DLC.
 - **Writing:** town pages for the launch towns beyond Shrewsbury; the first month of Field Notes.
 - **Polish:** cover headline slightly under comp scale; standfirst tracking; paper grain on green/oak was halved after the last review and not re-reviewed.
 
@@ -491,8 +522,9 @@ The website is the Quarterly's next issue. It uses the brand book's system uncha
 | Path | What it is |
 |---|---|
 | `index.html` | Concept overview, the GitHub Pages landing page (hand-written) |
+| `follow-up-boss.html` | The Follow Up Boss lead-handoff spec (hand-written) |
 | `brand-book.html` | The brand book page (generated) |
-| `site/` | The website concept (generated): `index.html`, `homes.html`, `shrewsbury.html`, `buying.html`, `selling.html`, `field-notes.html`, `team.html`, `field-notes/old-house-checklist.html`, and one page per sample listing in `homes/` |
+| `site/` | The website concept (generated): `index.html`, `homes.html`, `shrewsbury.html`, `buying.html`, `selling.html`, `field-notes.html`, `team.html`, `open-houses.html`, `saved.html`, `field-notes/old-house-checklist.html`, and one page per sample listing in `homes/` |
 | `assets/css/brand-book.css`, `assets/js/brand-book.js` | Brand book CSS and JS (generated) |
 | `assets/css/site.css`, `assets/js/site.js` | Website CSS and JS (edit directly) |
 | `assets/js/demo-nav.js` | The floating "Concept pages" navigator on every page |

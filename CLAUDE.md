@@ -15,6 +15,7 @@ Brand book concept for **The Oberdorfer Team**, a residential real-estate team i
 
 ```
 index.html            Concept overview: the GitHub Pages landing page — hand-written
+follow-up-boss.html   Lead handoff spec for Follow Up Boss (event map, field map, setup) — hand-written
 brand-book.html       The brand book page; links the CSS and JS below — generated
 assets/css/brand-book.css   Brand book CSS (head tokens + cover + book system) — generated
 assets/js/brand-book.js     Brand book script — generated
@@ -24,8 +25,9 @@ site/                 Website concept — generated:
   shrewsbury.html       town page                   buying.html, selling.html
   field-notes.html      editorial index             field-notes/old-house-checklist.html
   team.html             team + contact              homes/<listing-id>.html  one page per sample listing
+  open-houses.html      open houses + sign-in       saved.html      saved homes + searches
 assets/css/site.css   Website CSS (edit directly; same tokens as DESIGN.md)
-assets/js/site.js     Website behavior: saved homes, menu, folio, reveals, lead forms, search, gallery
+assets/js/site.js     Website behavior: saved homes/searches, menu, folio, reveals, Follow Up Boss event builder, search, gallery
 assets/js/demo-nav.js Floating "Concept pages" navigator on every page (reviewing aid; page list lives here)
 src/                  Brand book source parts, edited directly:
   00-head.html          <title>, fonts, root tokens, cover (comp A) CSS
@@ -67,6 +69,8 @@ Keep individual files small: no single file over ~10 MB. Tall review captures go
 - **Banned:** house-roof icons, keys, location pins as logos, generic monograms, Inter/Poppins/Montserrat, purple gradients, glassmorphism, rounded card grids, eyebrow labels above headings, fake stats.
 - **Type:** Inria Serif (display + reading) and Archivo on its width axis (82 labels, 100 data, 116 prices; tabular figures). **Color:** shutter green #28382D, plaster #E8E7E3, oak #B98D5A, brick #9B3A29 spot ink; only the tested pairs in DESIGN.md. Brick is never used on green; on oak only the valuation panel's submit is brick.
 - **Accessibility:** WCAG 2.1 AA; fair-housing language (describe homes and places, never who should live there).
+
+- **Leads go to Follow Up Boss as events.** Every form collects first/last name, email and phone (one required) and an optional call/text consent, and maps to a Follow Up Boss event type (see `follow-up-boss.html`). The API key and `X-System-Key` live server-side only; browser code never calls Follow Up Boss.
 
 ## Workflow
 

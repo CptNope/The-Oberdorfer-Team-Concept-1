@@ -589,3 +589,52 @@ textarea.input { min-height: 112px; resize: vertical; }
 .opener--full .full-card .town { color: var(--oak-shadow); }
 .opener--full .full-after { padding: 12px var(--gutter) 0; }
 @media (max-width: 900px) { .opener--full .full-card { margin: -64px var(--gutter) 0; width: auto; } }
+
+/* ---------- CRM-ready forms (Follow Up Boss handoff) ---------- */
+.consent { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-family: var(--sans); font-stretch: 88%; font-size: 14px; line-height: 1.45; color: var(--slate); cursor: pointer; }
+.consent input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--green); }
+.panel--oak .consent { color: var(--ink-deep); }
+.panel--oak .consent input { accent-color: var(--ink-deep); }
+.panel--oak .hint { color: var(--oak-shadow); }
+.valuation .vgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+.valuation .vgrid .consent { grid-column: 1 / -1; }
+@media (max-width: 480px) { .valuation .vgrid { grid-template-columns: 1fr; } }
+.routing pre.req { background: var(--slate); color: var(--plaster); }
+.panel--oak .routing .textlink { color: var(--ink-deep); }
+
+/* Save this search */
+.save-search { margin: 0 0 18px; border-top: 3px solid var(--green); }
+.save-search[hidden] { display: none; }
+
+/* Saved homes page */
+.searches { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--slate); }
+.searches:empty { display: none; }
+.searches li { border-bottom: 1px solid var(--rule); }
+.searches a { display: flex; align-items: center; min-height: 48px; font-family: var(--sans); font-stretch: 92%; font-size: 16px; color: var(--slate); text-decoration: none; }
+.searches a:hover { text-decoration: underline; }
+[data-saved-empty][hidden] { display: none; }
+[data-saved-cards][hidden], .card[hidden] { display: none; }
+.is-empty form { opacity: .55; }
+
+/* Open houses */
+.oh-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--slate); }
+.oh-row { position: relative; display: grid; grid-template-columns: 76px 180px minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.oh-row img { width: 180px; aspect-ratio: 3 / 2; object-fit: cover; }
+.oh-row .addr { font-size: 22px; margin: 2px 0 0; }
+.oh-row .addr a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.oh-row .right { display: grid; gap: 8px; justify-items: end; position: relative; z-index: 2; }
+.oh-row .price { font-size: 22px; }
+.oh-time { margin: 2px 0 6px; font-family: var(--sans); font-stretch: 100%; font-weight: 600; font-size: 16px; color: var(--brick); font-variant-numeric: tabular-nums; }
+.oh-date { margin: 0; display: grid; justify-items: center; align-content: center; height: 76px; border: 1px solid var(--slate); font-family: var(--sans); line-height: 1; }
+.oh-date .dow { font-stretch: 82%; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); }
+.oh-date .dnum { font-stretch: 108%; font-weight: 500; font-size: 30px; font-variant-numeric: tabular-nums; margin: 4px 0 3px; }
+.oh-date .mon { font-stretch: 82%; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 760px) {
+  .oh-row { grid-template-columns: 64px minmax(0, 1fr); }
+  .oh-row img { grid-column: 1 / -1; width: 100%; grid-row: 1; }
+  .oh-date { height: 64px; }
+  .oh-row .right { grid-column: 1 / -1; grid-auto-flow: column; justify-content: space-between; align-items: center; }
+}
+.signin { display: grid; gap: 20px; border-top: 3px solid var(--slate); }
+.signin-head { display: grid; gap: 6px; }
+.signin-head .addr { font-size: clamp(24px, 2vw, 32px); }

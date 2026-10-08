@@ -48,6 +48,15 @@ INTERIORS = [
     ('r6uVcUq0I8E', 'A bright corridor of tall windows over a wide-plank floor.', 'Hall'),
 ]
 
+# ZIP codes for the sample addresses (the town's main ZIP; Worcester's West Side is 01602).
+ZIP = {'Auburn': '01501', 'Boylston': '01505', 'Grafton': '01519', 'Holden': '01520', 'Northborough': '01532',
+       'Princeton': '01541', 'Shrewsbury': '01545', 'Westborough': '01581', 'Worcester': '01602'}
+
+# The CRM handoff: how the site names itself to Follow Up Boss. Both values are placeholders until the
+# team registers the site as a system in Follow Up Boss and picks its domain.
+FUB_SOURCE = '[team website domain]'
+FUB_SYSTEM = 'OberdorferTeamSite'
+
 TOWNS = ['Auburn', 'Boylston', 'Grafton', 'Holden', 'Northborough', 'Princeton', 'Shrewsbury', 'Westborough', 'Worcester']
 
 # Illustrative map positions (percent of the map box), roughly east-west / north-south, not to scale.
@@ -130,7 +139,7 @@ LISTINGS = [
          pins=(81, 38), gallery=[3, 0, 2, 1, 5]),
     dict(id='westborough-3-brook-lane', street='3 Brook Lane', town='Westborough', kind='Single family',
          price=645000, beds=4, baths='2', sqft=2050, lot='0.46 ac', year='1948', style='Cape',
-         heat='Gas, forced air', taxes='$8,020', own=True,
+         heat='Gas, forced air', taxes='$8,020', own=True, open_house='Sun Oct 18, 1–3',
          photo='eAXKQPELln4', pos='40% 62%',
          alt='A white Cape with three dormers and an attached garage, behind clipped shrubs under a large tree.',
          character='A 1948 Cape with three dormers, an attached garage and a 1990s family room behind the kitchen.',
@@ -157,7 +166,7 @@ LISTINGS = [
          pins=(45, 59), gallery=[4, 1, 5, 2, 0]),
     dict(id='grafton-9-common-way', street='9 Common Way', town='Grafton', kind='Single family',
          price=869000, beds=4, baths='3', sqft=2720, lot='0.48 ac', year='c. 1790', style='Federal',
-         heat='Oil, hot water', taxes='$10,310', own=True,
+         heat='Oil, hot water', taxes='$10,310', own=True, open_house='Sat Oct 17, 11–1',
          photo='Et-cTdVHF5U', pos='38% 50%',
          alt='A barn-red clapboard colonial with pedimented window heads and dormers, above a brick sidewalk.',
          character='A Federal house of about 1790: pedimented window heads, three dormers and a brick walk to the street.',

@@ -42,3 +42,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 - Listing pages open photography-first on plaster (DESIGN.md Property detail: full-width gallery), and the article opens on its headline (Read surface).
 - 14 Orchard Lane keeps the brand book's flagship sample photograph so the book and the site show the same listing; it is on the replace-before-launch list.
 - Service commitments in the copy (answering their own phones, plans in writing, weekly written updates) are the brand book's proposals; the site footer and overview say they need the team's confirmation.
+
+## Added October 8: Follow Up Boss handoff
+- Every form now collects first/last name, email, phone and an optional call/text consent, and previews the Follow Up Boss event (POST /v1/events) it would send. New pages: site/open-houses.html (Visited Open House sign-in), site/saved.html (Registration + Saved Property), and the root spec page follow-up-boss.html. Homes for sale gained "Save this search" (Saved Property Search).

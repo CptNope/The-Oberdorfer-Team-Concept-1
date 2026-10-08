@@ -78,9 +78,8 @@
   <section class="grid sub" id="talk" aria-labelledby="talk-title" data-folio-section="Talk with us">
     <div class="sub-head"><h2 class="title" id="talk-title">Talk with us</h2><p class="note">This sample form sends nothing. It shows exactly what the team's CRM would receive.</p></div>
     <div class="sub-body contact-grid">
-      <form class="form-grid" style="grid-template-columns:1fr" data-lead-form data-lead-type="general_inquiry" data-agent="team-intake" novalidate>
-        <div class="field"><label for="c-name">Your name</label><input class="input" id="c-name" name="name" autocomplete="name" required><span class="err" hidden>Add your name so we know who to reply to.</span></div>
-        <div class="field"><label for="c-contact">Email or phone</label><input class="input" id="c-contact" name="contact" autocomplete="email" required><span class="err" hidden>Add an email or phone so we can reply.</span></div>
+      <form class="form-grid" style="grid-template-columns:1fr" data-lead-form data-fub-type="General Inquiry" data-form-name="Talk with us" novalidate>
+        {{personfields:c|1}}
         <fieldset class="field" style="border:0;padding:0;margin:0"><legend class="legend" style="margin-bottom:7px">I'm thinking about</legend>
           <div class="choice"><label><input type="radio" name="interest" value="buying" checked><span>Buying</span></label><label><input type="radio" name="interest" value="selling"><span>Selling</span></label><label><input type="radio" name="interest" value="both"><span>Both</span></label><label><input type="radio" name="interest" value="joining_team"><span>Joining the team</span></label></div>
         </fieldset>

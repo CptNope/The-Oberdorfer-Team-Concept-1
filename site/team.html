@@ -13,14 +13,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body>
+<body data-root="../" data-fub-source="[team website domain]" data-fub-system="OberdorferTeamSite">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="site-head-in wrap">
     <a class="lockup" href="../site/index.html"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></a>
     <nav class="site-nav" aria-label="Main"><ul><li><a href="../site/homes.html">Homes</a></li><li><a href="../site/shrewsbury.html">Towns</a></li><li><a href="../site/buying.html">Buying</a></li><li><a href="../site/selling.html">Selling</a></li><li><a href="../site/field-notes.html">Field Notes</a></li><li><a href="../site/team.html" aria-current="page">Team</a></li></ul></nav>
     <div class="head-actions">
-      <a class="saved-link" href="../site/homes.html?saved=1" data-saved-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
+      <a class="saved-link" href="../site/saved.html" data-saved-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span class="word">Saved</span> <span class="count" data-saved-count>0</span><span class="sr-only"> homes</span></a>
       <a class="btn btn--line btn--sm" href="../site/team.html#talk">Talk with us</a>
       <button class="btn btn--line btn--sm menu-btn" type="button" aria-expanded="false" aria-controls="menu-sheet" data-menu>Menu</button>
     </div>
@@ -115,9 +115,12 @@
   <section class="grid sub" id="talk" aria-labelledby="talk-title" data-folio-section="Talk with us">
     <div class="sub-head"><h2 class="title" id="talk-title">Talk with us</h2><p class="note">This sample form sends nothing. It shows exactly what the team's CRM would receive.</p></div>
     <div class="sub-body contact-grid">
-      <form class="form-grid" style="grid-template-columns:1fr" data-lead-form data-lead-type="general_inquiry" data-agent="team-intake" novalidate>
-        <div class="field"><label for="c-name">Your name</label><input class="input" id="c-name" name="name" autocomplete="name" required><span class="err" hidden>Add your name so we know who to reply to.</span></div>
-        <div class="field"><label for="c-contact">Email or phone</label><input class="input" id="c-contact" name="contact" autocomplete="email" required><span class="err" hidden>Add an email or phone so we can reply.</span></div>
+      <form class="form-grid" style="grid-template-columns:1fr" data-lead-form data-fub-type="General Inquiry" data-form-name="Talk with us" novalidate>
+        <div class="field"><label for="c-first">First name</label><input class="input" id="c-first" name="first_name" autocomplete="given-name" required><span class="err" hidden>Add your first name so we know who to reply to.</span></div>
+        <div class="field"><label for="c-last">Last name</label><input class="input" id="c-last" name="last_name" autocomplete="family-name"></div>
+        <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" autocomplete="email" data-contact><span class="err" hidden>Add an email or a phone number so we can reply.</span></div>
+        <div class="field"><label for="c-phone">Phone <span class="hint">(optional)</span></label><input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" data-contact><span class="err" hidden>Use a ten-digit phone number, or leave it blank and add an email.</span></div>
+        <label class="consent"><input type="checkbox" name="consent_contact" value="yes"><span>You can call or text me about this request. Message and data rates may apply; reply STOP to opt out. <span class="ph-text">[Wording to confirm with REWAP's principal broker]</span></span></label>
         <fieldset class="field" style="border:0;padding:0;margin:0"><legend class="legend" style="margin-bottom:7px">I'm thinking about</legend>
           <div class="choice"><label><input type="radio" name="interest" value="buying" checked><span>Buying</span></label><label><input type="radio" name="interest" value="selling"><span>Selling</span></label><label><input type="radio" name="interest" value="both"><span>Both</span></label><label><input type="radio" name="interest" value="joining_team"><span>Joining the team</span></label></div>
         </fieldset>
@@ -142,7 +145,7 @@
   <div class="wrap">
     <p class="lock-stacked" style="margin:0"><span class="wm">The Oberdorfer</span><span class="wm">Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
     <div class="cols">
-      <div><h2>Homes and towns</h2><ul><li><a href="../site/homes.html">Homes for sale</a></li><li><a href="../site/shrewsbury.html">Shrewsbury</a></li><li><a href="../site/homes.html?town=Holden">Holden</a></li><li><a href="../site/homes.html?town=Worcester">Worcester</a></li></ul></div>
+      <div><h2>Homes and towns</h2><ul><li><a href="../site/homes.html">Homes for sale</a></li><li><a href="../site/open-houses.html">Open houses</a></li><li><a href="../site/saved.html">Saved homes</a></li><li><a href="../site/shrewsbury.html">Shrewsbury</a></li><li><a href="../site/homes.html?town=Holden">Holden</a></li><li><a href="../site/homes.html?town=Worcester">Worcester</a></li></ul></div>
       <div><h2>Guidance</h2><ul><li><a href="../site/buying.html">Buying, in order</a></li><li><a href="../site/selling.html">Selling, with care</a></li><li><a href="../site/selling.html#valuation">What is my home worth?</a></li><li><a href="../site/field-notes.html">Field Notes</a></li></ul></div>
       <div><h2>The team</h2><ul><li><a href="../site/team.html">Brandon and Kait</a></li><li><a href="../site/team.html#talk">Talk with us</a></li><li><a href="../site/team.html#join">Join the team</a></li></ul></div>
       <div><h2>Contact</h2><p>The Oberdorfer Team<br>at REWAP Brokerage LLC<br>[Phone] · [Email]<br>[Brokerage address], Worcester, MA</p></div>

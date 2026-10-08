@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" data-page="P1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lead handoff to Follow Up Boss · The Oberdorfer Team concept</title>
+<meta name="description" content="How every form and save on The Oberdorfer Team website becomes a Follow Up Boss event: the event map, the field map, the request, and what to set up in Follow Up Boss.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#28382D">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .ov-mast .site-head-in { justify-content: space-between; }
+  .ov-mast .issue { font-family: var(--sans); font-stretch: 82%; font-size: 13px; color: var(--stone); text-align: right; line-height: 1.35; margin: 0; }
+  .payload { background: var(--ink-deep); color: #E3E6E2; padding: 20px 22px; overflow-x: auto; margin: 0; font-size: 13.5px; line-height: 1.6; }
+  .payload.req { background: var(--slate); color: var(--plaster); }
+  .payload .k { color: var(--clay); } .payload .s { color: #BFD0C2; }
+  .flow { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--slate); counter-reset: f; }
+  .flow li { display: grid; grid-template-columns: 3em minmax(0, 1fr); gap: 4px 12px; padding: 14px 0 16px; border-bottom: 1px solid var(--rule); }
+  .flow li::before { counter-increment: f; content: counter(f); font-family: var(--sans); font-size: 20px; color: var(--brick); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .flow b { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 16px; display: block; margin-bottom: 2px; }
+  .flow span { font-size: 17px; line-height: 1.5; }
+  .tbl-scroll { overflow-x: auto; }
+  .tbl { width: 100%; border-collapse: collapse; font-family: var(--sans); font-stretch: 92%; font-size: 15px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+  .tbl th { text-align: left; font-weight: 600; font-stretch: 82%; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); padding: 0 16px 10px 0; border-bottom: 2px solid var(--slate); vertical-align: bottom; }
+  .tbl td { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .tbl td:first-child { font-weight: 600; }
+  .tbl code { font-size: 13.5px; color: var(--ink-deep); background: var(--paper); padding: 1px 4px; }
+  .yes { color: #2D5A3A; font-weight: 600; } .no { color: var(--stone); }
+  .checks { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--slate); }
+  .checks li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; padding: 14px 0 16px; border-bottom: 1px solid var(--rule); font-size: 17px; line-height: 1.5; }
+  .checks li::before { content: ''; width: 18px; height: 18px; border: 1.5px solid var(--slate); margin-top: 4px; }
+  .checks b { font-family: var(--sans); font-stretch: 88%; font-weight: 600; font-size: 16px; }
+  .sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-family: var(--sans); font-stretch: 92%; font-size: 15px; }
+</style>
+</head>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head ov-mast">
+  <div class="site-head-in wrap">
+    <a class="lockup" href="index.html" style="margin-right:0"><span class="wm">The Oberdorfer Team</span><span class="aff">at REWAP Brokerage LLC</span></a>
+    <p class="issue">Platform · Lead handoff<br>Follow Up Boss · October 2026</p>
+  </div>
+</header>
+<main id="main">
+<section class="opener opener--band stock-green" aria-labelledby="fub-title">
+  <div class="opener-in grid wrap">
+    <div class="opener-text">
+      <h1 class="opener-title" id="fub-title">Lead handoff to Follow Up Boss</h1>
+      <p class="opener-deck" style="max-width:44ch">Every form and save on the website becomes a Follow Up Boss event, with the person, the house and the campaign attached. This page is the spec the WordPress build follows.</p>
+      <div class="btn-row"><a class="btn btn--plaster" href="site/homes/holden-14-orchard-lane.html#showing">Try it on a listing</a><a class="textlink" href="site/open-houses.html#sign-in">Open-house sign-in</a></div>
+    </div>
+    <p class="opener-aside cap">Every site form shows the exact event it would send, and sends nothing. Field names follow Follow Up Boss's Events API as documented in October 2026.</p>
+  </div>
+</section>
+
+<div class="page wrap">
+  <section class="grid sub" aria-labelledby="path-title">
+    <div class="sub-head"><h2 class="title" id="path-title">How a lead travels</h2><p class="note">The API key never reaches the browser.</p></div>
+    <div class="sub-body">
+      <ol class="flow">
+        <li><div><b>The visitor submits a form</b><span>The site checks it first: a first name, and an email or a phone number. Follow Up Boss matches people by email or phone, so one of them is required.</span></div></li>
+        <li><div><b>The browser posts to the team's own server</b><span>A WordPress REST endpoint on the team's hosting (for example <code>/wp-json/oberdorfer/v1/lead</code>) receives the form, never the Follow Up Boss key.</span></div></li>
+        <li><div><b>The server sends the event</b><span><code>POST https://api.followupboss.com/v1/events</code> with HTTP Basic auth (the API key as the username, blank password) and the <code>X-System</code> and <code>X-System-Key</code> headers the site receives when it is registered as a system.</span></div></li>
+        <li><div><b>Follow Up Boss files it</b><span>It finds the person by email or phone or creates them, attaches the event, and runs the lead flow for the source: assignment, notifications and action plans.</span></div></li>
+        <li><div><b>The server records the answer</b><span><code>201</code> means a new person, <code>200</code> an existing one updated, <code>204</code> that the source's lead flow is archived and ignored. Failed requests are queued and retried; the visitor sees their confirmation either way.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="events-title">
+    <div class="sub-head"><h2 class="title" id="events-title">Event map</h2><p class="note">Follow Up Boss starts action plans only for new leads of Registration, Seller Inquiry, Property Inquiry, General Inquiry and Visited Open House; automations only for Registration, Property Inquiry, Seller Inquiry and General Inquiry.</p></div>
+    <div class="sub-body tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th scope="col">Site action</th><th scope="col">Where</th><th scope="col">Event <code>type</code></th><th scope="col">Action plan</th><th scope="col">Carries</th></tr></thead>
+        <tbody>
+          <tr><td>Request a showing</td><td>Every listing</td><td>Property Inquiry</td><td class="yes">Yes</td><td><code>property</code></td></tr>
+          <tr><td>Ask what it's worth</td><td>Home, Selling, town pages</td><td>Seller Inquiry</td><td class="yes">Yes</td><td><code>property</code> from the address</td></tr>
+          <tr><td>Talk with us: selling</td><td>Home, Team</td><td>Seller Inquiry</td><td class="yes">Yes</td><td>message, tags</td></tr>
+          <tr><td>Talk with us: buying, both, reading, joining</td><td>Home, Team</td><td>General Inquiry</td><td class="yes">Yes</td><td>message, tags</td></tr>
+          <tr><td>Open-house sign-in</td><td>Open houses</td><td>Visited Open House</td><td class="yes">Yes</td><td><code>property</code>, agent status</td></tr>
+          <tr><td>Keep me posted</td><td>Saved homes</td><td>Registration, then Saved Property for each home</td><td class="yes">Registration only</td><td><code>property</code> per home</td></tr>
+          <tr><td>Save this search</td><td>Homes for sale</td><td>Saved Property Search</td><td class="no">No</td><td><code>propertySearch</code></td></tr>
+          <tr><td>Views a listing, once known</td><td>Live site only</td><td>Viewed Property</td><td class="no">No</td><td><code>property</code></td></tr>
+          <tr><td>Runs a search, once known</td><td>Live site only</td><td>Property Search</td><td class="no">No</td><td><code>propertySearch</code></td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">Saving a home on the site stays in the visitor's browser until they register: Follow Up Boss needs a person to attach a Saved Property event to. If the IDX vendor already sends Viewed Property and Property Search events to Follow Up Boss, the site doesn't send them a second time.</p>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="fields-title">
+    <div class="sub-head"><h2 class="title" id="fields-title">Field map</h2><p class="note">What each form field becomes in the event body.</p></div>
+    <div class="sub-body tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th scope="col">On the site</th><th scope="col">In Follow Up Boss</th></tr></thead>
+        <tbody>
+          <tr><td>First name, last name</td><td><code>person.firstName</code>, <code>person.lastName</code></td></tr>
+          <tr><td>Email</td><td><code>person.emails[0].value</code>, type <code>home</code></td></tr>
+          <tr><td>Phone</td><td><code>person.phones[0].value</code>, type <code>mobile</code></td></tr>
+          <tr><td>Call/text consent box</td><td>Tag <code>Call/text consent</code>, plus a timestamped line in <code>description</code> quoting the exact wording shown</td></tr>
+          <tr><td>Message</td><td><code>message</code></td></tr>
+          <tr><td>Timing, agent status, also selling</td><td>Lines in <code>description</code>, with the form name and page</td></tr>
+          <tr><td>The listing</td><td><code>property.street</code>, <code>city</code>, <code>state</code>, <code>code</code>, <code>mlsNumber</code>, <code>price</code>, <code>forRent</code>, <code>url</code>, <code>type</code>, <code>bedrooms</code>, <code>bathrooms</code>, <code>area</code>, <code>lot</code></td></tr>
+          <tr><td>Search filters</td><td><code>propertySearch.city</code>, <code>state</code>, <code>type</code>, <code>maxPrice</code>, <code>minBedrooms</code></td></tr>
+          <tr><td>UTM parameters</td><td><code>campaign.source</code>, <code>medium</code>, <code>term</code>, <code>content</code>, <code>campaign</code>, sent only when <code>utm_source</code> is present, because Follow Up Boss requires <code>campaign.source</code> whenever <code>campaign</code> is sent</td></tr>
+          <tr><td>The page</td><td><code>pageUrl</code>, <code>pageTitle</code>, <code>pageReferrer</code></td></tr>
+          <tr><td>When</td><td><code>occurredAt</code>. Events more than a day old count as history and start no workflows.</td></tr>
+          <tr><td>Brokerage of record</td><td><code>person.customBrokerage</code> (a custom field created in Follow Up Boss first)</td></tr>
+          <tr><td>Interest and context</td><td>Tags: <code>Website</code>, <code>Buyer</code>, <code>Seller</code>, the town, <code>Open house</code>, <code>Saved search</code>, <code>Saved homes</code>, <code>Nurture</code>, <code>Agent recruit</code></td></tr>
+          <tr><td>The site itself</td><td><code>source</code> = the site's domain without "www" (<code>[team website domain]</code> until it's chosen); <code>system</code> = <code>OberdorferTeamSite</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="req-title">
+    <div class="sub-head"><h2 class="title" id="req-title">One request, in full</h2><p class="note">A showing request for the sample listing at 14 Orchard Lane, arriving from a Facebook ad. The person is fictional; 555-01xx numbers are reserved for examples.</p></div>
+    <div class="sub-body" style="display:grid;gap:12px">
+<pre class="payload req"><code>POST https://api.followupboss.com/v1/events
+Authorization: Basic [API key, server-side only]
+X-System: OberdorferTeamSite
+X-System-Key: [issued when the site is registered]
+Content-Type: application/json</code></pre>
+<pre class="payload"><code>{
+  <span class="k">"source"</span>: <span class="s">"[team website domain]"</span>,
+  <span class="k">"system"</span>: <span class="s">"OberdorferTeamSite"</span>,
+  <span class="k">"type"</span>: <span class="s">"Property Inquiry"</span>,
+  <span class="k">"message"</span>: <span class="s">"Can we see the attic and the basement at the open house?"</span>,
+  <span class="k">"description"</span>: <span class="s">"Form: Request a showing on /homes/holden-14-orchard-lane\nTiming: The open house, Sun Oct 18, 11–1\nCall/text consent: yes, 2026-10-08T14:22:05Z. Text shown: \&quot;You can call or text me about this request. Message and data rates may apply; reply STOP to opt out.\&quot;\nBrokerage of record: REWAP Brokerage LLC. Team: The Oberdorfer Team."</span>,
+  <span class="k">"person"</span>: {
+    <span class="k">"firstName"</span>: <span class="s">"Sam"</span>,
+    <span class="k">"lastName"</span>: <span class="s">"Rivera"</span>,
+    <span class="k">"emails"</span>: [
+      {
+        <span class="k">"value"</span>: <span class="s">"sam@example.com"</span>,
+        <span class="k">"type"</span>: <span class="s">"home"</span>
+      }
+    ],
+    <span class="k">"phones"</span>: [
+      {
+        <span class="k">"value"</span>: <span class="s">"508-555-0142"</span>,
+        <span class="k">"type"</span>: <span class="s">"mobile"</span>
+      }
+    ],
+    <span class="k">"tags"</span>: [
+      &quot;Website&quot;,
+      &quot;Holden&quot;,
+      &quot;Call/text consent&quot;
+    ],
+    <span class="k">"customBrokerage"</span>: <span class="s">"REWAP Brokerage LLC"</span>
+  },
+  <span class="k">"campaign"</span>: {
+    <span class="k">"source"</span>: <span class="s">"facebook"</span>,
+    <span class="k">"medium"</span>: <span class="s">"paid_social"</span>,
+    <span class="k">"campaign"</span>: <span class="s">"fall-open-houses"</span>
+  },
+  <span class="k">"pageTitle"</span>: <span class="s">"14 Orchard Lane, Holden: sample listing · The Oberdorfer Team"</span>,
+  <span class="k">"pageUrl"</span>: <span class="s">"https://[team website domain]/homes/holden-14-orchard-lane"</span>,
+  <span class="k">"occurredAt"</span>: <span class="s">"2026-10-08T14:22:05Z"</span>,
+  <span class="k">"property"</span>: {
+    <span class="k">"street"</span>: <span class="s">"14 Orchard Lane"</span>,
+    <span class="k">"city"</span>: <span class="s">"Holden"</span>,
+    <span class="k">"state"</span>: <span class="s">"MA"</span>,
+    <span class="k">"code"</span>: <span class="s">"01520"</span>,
+    <span class="k">"mlsNumber"</span>: <span class="s">"[MLS PIN number]"</span>,
+    <span class="k">"price"</span>: 689000,
+    <span class="k">"forRent"</span>: false,
+    <span class="k">"url"</span>: <span class="s">"https://[team website domain]/homes/holden-14-orchard-lane"</span>,
+    <span class="k">"type"</span>: <span class="s">"Single family"</span>,
+    <span class="k">"bedrooms"</span>: 4,
+    <span class="k">"bathrooms"</span>: 2.5,
+    <span class="k">"area"</span>: 2140,
+    <span class="k">"lot"</span>: 0.52
+  }
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="setup-title">
+    <div class="sub-head"><h2 class="title" id="setup-title">Set up in Follow Up Boss</h2><p class="note">What the team, REWAP and the developer each settle before launch.</p></div>
+    <div class="sub-body">
+      <ul class="checks">
+        <li><div><b>Register the site as a system.</b> Follow Up Boss asks anyone sending data for a customer to register; registration issues the <code>X-System-Key</code> that goes with <code>X-System: OberdorferTeamSite</code>.</div></li>
+        <li><div><b>Create the API key.</b> From Admin → API in the account that should own website leads. It has that user's full privileges, so it lives only in the server's environment settings.</div></li>
+        <li><div><b>Choose the source name.</b> The site's domain without "www". A lead flow rule for that source decides assignment (Brandon, Kait, or a rotation) and which action plan starts.</div></li>
+        <li><div><b>Write the action plans.</b> At least one each for Property Inquiry, Seller Inquiry and Visited Open House, in the brand book's voice.</div></li>
+        <li><div><b>Create the custom field</b> "Brokerage" (<code>customBrokerage</code>), and agree the tag list above so smart lists and reports can use it.</div></li>
+        <li><div><b>Confirm the consent wording</b> with REWAP's principal broker, and finish A2P 10DLC registration before relying on text follow-up; US business texting goes through it.</div></li>
+        <li><div><b>Retire the old routing.</b> If the BoldTrail/kvCORE site or a lead service also sends to Follow Up Boss, give each its own source so nothing arrives twice under one name.</div></li>
+        <li><div><b>Test end to end</b> with a test contact: expect <code>201</code> the first time and <code>200</code> the second, then check that the lead flow, tags and action plan ran.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid sub" aria-labelledby="src-title">
+    <div class="sub-head"><h2 class="title" id="src-title">Follow Up Boss documentation</h2></div>
+    <div class="sub-body">
+      <ul class="sources">
+        <li><a class="textlink" href="https://docs.followupboss.com/reference/events-post">Events: POST /v1/events</a></li>
+        <li><a class="textlink" href="https://docs.followupboss.com/docs/lead-provider-integration-guide">Lead provider integration guide</a></li>
+        <li><a class="textlink" href="https://docs.followupboss.com/reference/idx-integration">IDX integration</a></li>
+        <li><a class="textlink" href="https://docs.followupboss.com/reference/identification">Identification (X-System headers)</a></li>
+        <li><a class="textlink" href="https://docs.followupboss.com/reference/authentication">Authentication</a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="colophon">
+  <div class="wrap">
+    <p class="lock-stacked" style="margin:0"><span class="wm">The Oberdorfer</span><span class="wm">Team</span><span class="aff">at REWAP Brokerage LLC</span></p>
+    <div class="legal">
+      <p>The Oberdorfer Team is a team of real estate professionals affiliated with REWAP Brokerage LLC, Worcester, Massachusetts. Brokerage services are provided by REWAP Brokerage LLC. Equal Housing Opportunity.</p>
+      <p>Concept prepared by Jeremy Anderson for Brandon and Kait Oberdorfer, October 2026. Follow Up Boss is a third-party CRM; field names follow its public API documentation.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/demo-nav.js" defer></script>
+</body>
+</html>
