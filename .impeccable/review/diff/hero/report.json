@@ -1,0 +1,472 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-10-07T21:15:01.533Z",
+  "label": "hero-repro",
+  "comp": ".impeccable/mocks/comp-a.png",
+  "build": ".impeccable/review/hero-repro.png",
+  "spec": ".impeccable/build/spec.json",
+  "compSize": "2528x1696",
+  "buildSize": "2528x1696",
+  "align": "top",
+  "overall": 0.7962,
+  "verdict": "drift",
+  "scores": {
+    "overall": 0.7962,
+    "structure": 0.6876,
+    "color": 0.8731,
+    "colorIntersection": 0.78,
+    "paletteMatch": 0.9232,
+    "detail": 0.7914,
+    "detailRaw": 0.8226,
+    "detailAdded": 0.0625,
+    "bands": 0.9294
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#28382d",
+        "coverage": 0.5462
+      },
+      {
+        "hex": "#e8e8e7",
+        "coverage": 0.2484
+      },
+      {
+        "hex": "#a59a93",
+        "coverage": 0.106
+      },
+      {
+        "hex": "#161210",
+        "coverage": 0.0399
+      },
+      {
+        "hex": "#7c7978",
+        "coverage": 0.033
+      },
+      {
+        "hex": "#655546",
+        "coverage": 0.0266
+      }
+    ],
+    "build": [
+      {
+        "hex": "#29382d",
+        "coverage": 0.5544
+      },
+      {
+        "hex": "#e6e7e2",
+        "coverage": 0.3419
+      },
+      {
+        "hex": "#0d0f0b",
+        "coverage": 0.0438
+      },
+      {
+        "hex": "#535444",
+        "coverage": 0.029
+      },
+      {
+        "hex": "#9ea497",
+        "coverage": 0.0202
+      },
+      {
+        "hex": "#787e76",
+        "coverage": 0.0107
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "wordmark",
+      "x": 0.0344,
+      "y": 0.0259,
+      "w": 0.3699,
+      "h": 0.0366,
+      "kind": "text",
+      "score": {
+        "overall": 0.7221,
+        "structure": 0.5903,
+        "color": 0.9431,
+        "colorIntersection": 0.9096,
+        "paletteMatch": 0.9611,
+        "detail": 0.6747,
+        "detailRaw": 0.6903,
+        "detailAdded": 0.0313,
+        "bands": 0.9
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 4,
+          "y": 7,
+          "w": 923,
+          "h": 42
+        },
+        "build": {
+          "x": 0,
+          "y": 9,
+          "w": 935,
+          "h": 40
+        }
+      }
+    },
+    {
+      "id": "affiliation",
+      "x": 0.0344,
+      "y": 0.0637,
+      "w": 0.1345,
+      "h": 0.0236,
+      "kind": "text",
+      "score": {
+        "overall": 0.6308,
+        "structure": 0.5331,
+        "color": 0.8487,
+        "colorIntersection": 0.7897,
+        "paletteMatch": 0.8805,
+        "detail": 0.674,
+        "detailRaw": 0.7469,
+        "detailAdded": 0.1458,
+        "bands": 0.51
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 3,
+          "y": 10,
+          "w": 329,
+          "h": 32
+        },
+        "build": {
+          "x": 1,
+          "y": 8,
+          "w": 339,
+          "h": 32
+        }
+      }
+    },
+    {
+      "id": "issue-line",
+      "x": 0.7009,
+      "y": 0.0413,
+      "w": 0.2666,
+      "h": 0.0259,
+      "kind": "text",
+      "score": {
+        "overall": 0.6421,
+        "structure": 0.6143,
+        "color": 0.8829,
+        "colorIntersection": 0.7915,
+        "paletteMatch": 0.9322,
+        "detail": 0.4301,
+        "detailRaw": 0.5812,
+        "detailAdded": 0.3021,
+        "bands": 0.4971
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 7,
+          "y": 10,
+          "w": 658,
+          "h": 25
+        },
+        "build": {
+          "x": 5,
+          "y": 5,
+          "w": 653,
+          "h": 26
+        }
+      }
+    },
+    {
+      "id": "cover-stock",
+      "x": 0.0356,
+      "y": 0.1073,
+      "w": 0.9288,
+      "h": 0.8567,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.7399,
+        "structure": 0.5887,
+        "color": 0.8434,
+        "colorIntersection": 0.7266,
+        "paletteMatch": 0.9063,
+        "detail": 0.7288,
+        "detailRaw": 0.786,
+        "detailAdded": 0.1146,
+        "bands": 0.9385
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 65,
+          "w": 2348,
+          "h": 1359
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 2348,
+          "h": 1453
+        }
+      }
+    },
+    {
+      "id": "headline",
+      "x": 0.0633,
+      "y": 0.283,
+      "w": 0.3896,
+      "h": 0.286,
+      "kind": "text",
+      "score": {
+        "overall": 0.6869,
+        "structure": 0.6124,
+        "color": 0.9403,
+        "colorIntersection": 0.9056,
+        "paletteMatch": 0.959,
+        "detail": 0.5898,
+        "detailRaw": 0.7564,
+        "detailAdded": 0.3333,
+        "bands": 0.5714
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 16,
+          "w": 961,
+          "h": 460
+        },
+        "build": {
+          "x": 1,
+          "y": 12,
+          "w": 969,
+          "h": 422
+        }
+      }
+    },
+    {
+      "id": "standfirst",
+      "x": 0.0633,
+      "y": 0.5867,
+      "w": 0.2809,
+      "h": 0.059,
+      "kind": "text",
+      "score": {
+        "overall": 0.6811,
+        "structure": 0.6447,
+        "color": 0.9127,
+        "colorIntersection": 0.855,
+        "paletteMatch": 0.9437,
+        "detail": 0.5658,
+        "detailRaw": 0.7272,
+        "detailAdded": 0.3229,
+        "bands": 0.4571
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 3,
+          "y": 10,
+          "w": 693,
+          "h": 83
+        },
+        "build": {
+          "x": 0,
+          "y": 8,
+          "w": 710,
+          "h": 78
+        }
+      }
+    },
+    {
+      "id": "open-button",
+      "x": 0.0633,
+      "y": 0.671,
+      "w": 0.1076,
+      "h": 0.0531,
+      "kind": "control",
+      "score": {
+        "overall": 0.782,
+        "structure": 0.7793,
+        "color": 0.8323,
+        "colorIntersection": 0.6992,
+        "paletteMatch": 0.904,
+        "detail": 0.6998,
+        "detailRaw": 0.705,
+        "detailAdded": 0.0104,
+        "bands": 0.7697
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 41,
+          "y": 32,
+          "w": 190,
+          "h": 31
+        },
+        "build": {
+          "x": 47,
+          "y": 33,
+          "w": 175,
+          "h": 28
+        }
+      }
+    },
+    {
+      "id": "cover-photo",
+      "x": 0.5736,
+      "y": 0.1421,
+      "w": 0.3679,
+      "h": 0.6899,
+      "kind": "image",
+      "score": {
+        "overall": 0.5337,
+        "structure": 0.1863,
+        "color": 0.5173,
+        "colorIntersection": 0.2748,
+        "paletteMatch": 0.648,
+        "detail": 0.7101,
+        "detailRaw": 0.7622,
+        "detailAdded": 0.1042,
+        "bands": 0.5714
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 930,
+          "h": 1170
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 930,
+          "h": 1170
+        }
+      }
+    },
+    {
+      "id": "fig-caption",
+      "x": 0.5744,
+      "y": 0.8361,
+      "w": 0.2769,
+      "h": 0.0212,
+      "kind": "text",
+      "score": {
+        "overall": 0.7526,
+        "structure": 0.7994,
+        "color": 0.8714,
+        "colorIntersection": 0.7892,
+        "paletteMatch": 0.9157,
+        "detail": 0.5006,
+        "detailRaw": 0.7454,
+        "detailAdded": 0.4896,
+        "bands": 0.6
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 5,
+          "y": 14,
+          "w": 684,
+          "h": 25
+        },
+        "build": {
+          "x": 0,
+          "y": 17,
+          "w": 700,
+          "h": 24
+        }
+      }
+    },
+    {
+      "id": "index-rule",
+      "x": 0.0356,
+      "y": 0.8974,
+      "w": 0.9288,
+      "h": 0.0071,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.5615,
+        "structure": 0.8375,
+        "color": 0.951,
+        "colorIntersection": 0.8893,
+        "paletteMatch": 0.9843,
+        "detail": 0.1224,
+        "detailRaw": 0.263,
+        "detailAdded": 0.2813,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 34,
+          "w": 2348,
+          "h": 2
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 2348,
+          "h": 48
+        }
+      }
+    },
+    {
+      "id": "contents-index",
+      "x": 0.0633,
+      "y": 0.9198,
+      "w": 0.8762,
+      "h": 0.033,
+      "kind": "text",
+      "score": {
+        "overall": 0.7119,
+        "structure": 0.832,
+        "color": 0.8942,
+        "colorIntersection": 0.8318,
+        "paletteMatch": 0.9278,
+        "detail": 0.4824,
+        "detailRaw": 0.6074,
+        "detailAdded": 0.25,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 42,
+          "y": 14,
+          "w": 2160,
+          "h": 32
+        },
+        "build": {
+          "x": 0,
+          "y": 5,
+          "w": 2199,
+          "h": 32
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/side-by-side.png",
+    "heatmap": "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/heatmap.png",
+    "regionFiles": [
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/wordmark.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/affiliation.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/issue-line.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/cover-stock.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/headline.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/standfirst.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/open-button.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/cover-photo.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/fig-caption.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/index-rule.png",
+      "/home/claude/oberdorfer-team/.impeccable/review/diff/hero/regions/contents-index.png"
+    ]
+  }
+}
